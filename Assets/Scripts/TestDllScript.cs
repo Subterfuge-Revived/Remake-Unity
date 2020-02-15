@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using SubterfugeCore;
-using System;
+﻿using UnityEngine;
+using SubterfugeCore.Core;
 using UnityEngine.UI;
 
 public class TestDllScript : MonoBehaviour
@@ -12,15 +9,15 @@ public class TestDllScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        GameServer server = new GameServer();
-        Debug.Log("There are " + GameServer.timeMachine.getState().getOutposts().Count.ToString() + " outposts.");
+        Game game = new Game();
+        Debug.Log("There are " + Game.timeMachine.getState().getOutposts().Count.ToString() + " outposts.");
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameServer.timeMachine.advance(1);
-        Debug.Log("Current tick: " + GameServer.timeMachine.getCurrentTick().getTick().ToString());
-        textElement.text = "Current Tick: " + GameServer.timeMachine.getCurrentTick().getTick().ToString();
+        Game.timeMachine.advance(1);
+        Debug.Log("Current tick: " + Game.timeMachine.getCurrentTick().getTick().ToString());
+        textElement.text = "Current Tick: " + Game.timeMachine.getCurrentTick().getTick().ToString();
     }
 }
