@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Aidan\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Aidan\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_subterfuge-unity.491364888.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Aidan\Desktop\Coding\C#\Subterfuge\subterfuge-unity" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Api" t="Include">
+            <e p="Api.cs" t="Include" />
+          </e>
+          <e p="CameraController.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="GameSelect" t="Include">
+            <e p="LoadAvaliableRooms.cs" t="Include" />
+          </e>
+          <e p="Login" t="Include">
+            <e p="CheckUserLogin.cs" t="Include" />
+          </e>
+          <e p="MainMenu" t="Include">
+            <e p="LoadUser.cs" t="Include" />
+            <e p="PlayGameButton.cs" t="Include" />
+          </e>
+          <e p="OutpostManager.cs" t="Include" />
+          <e p="OutpostSpawn.cs" t="Include" />
+          <e p="TestDllScript.cs" t="Include" />
+          <e p="WorldWrap.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="subterfuge-unity.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
