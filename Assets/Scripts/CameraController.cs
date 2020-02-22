@@ -1,7 +1,9 @@
 ﻿﻿using System.Collections;
 using System.Collections.Generic;
-using SubterfugeCore.Core.Entities.Locations;
-using UnityEngine;
+ using SubterfugeCore.Core;
+ using SubterfugeCore.Core.Entities.Locations;
+ using SubterfugeCore.Core.GameEvents;
+ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class CameraController : MonoBehaviour
     private float speed;
     private RaycastHit2D hit;
     private GameManager gameManager;
+    
+    // Variables for tracking sub launches.
+    private Outpost launchOutpost = null;
+    private Outpost destinationOutpost = null;
 
     void OnStart()
     {
@@ -21,18 +27,56 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If left mouse button is down, the camera is being moved. Set the drag origin and create a velocity for the camera
         if (Input.GetMouseButtonDown(0))
         {
+            // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
+            {
+                // Clicked object is an outpost, don't move the camera.
+                launchOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
+                dragOrigin = Input.mousePosition;
+                Debug.Log("Initially clicked an outpost!");
+                return;
+            }
+            else
+            {
+                Debug.Log("Reset outpost click.");
+                launchOutpost = null;
+            }
+            
             rb.velocity = new Vector2(0,0);
             dragOrigin = Input.mousePosition;
-            return;
+            return;   
         }
 
+        // If the mouse button is released, apply velocity to the map to scroll
         if (Input.GetMouseButtonUp(0))
         {
+            // If the first click was on an outpost, check if the second is on another outpost for a launch.
+            if (launchOutpost != null)
+            {
+                // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
+                {
+                    // Clicked object is an outpost, don't move the camera.
+                    destinationOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
+                    
+                    // Launch a sub
+                    LaunchEvent launchEvent = new LaunchEvent(Game.timeMachine.getCurrentTick().getNextTick(), launchOutpost, 1, destinationOutpost);
+                    Game.timeMachine.addEvent(launchEvent);
+                    Debug.Log("Launched a sub!");
+                    launchOutpost = null;
+                    destinationOutpost = null;
+                    dragOrigin = Input.mousePosition;
+                }
+            }
             rb.velocity = -((Input.mousePosition - dragOrigin) / Time.deltaTime) * 0.01f;
         }
 
+        // If the mouse is not pressed, slow the map down over time to a stop
         if (!Input.GetMouseButton(0))
         {
             if (Mathf.Abs(rb.velocity.x) > 0 || Mathf.Abs(rb.velocity.y) > 0)
@@ -49,11 +93,12 @@ public class CameraController : MonoBehaviour
             return;
         }
         if (dragOrigin == Input.mousePosition) return;
+        if (launchOutpost != null) return;
 
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
 
         dragOrigin = Input.mousePosition;
-        Vector3 move = new Vector3(-pos.x*10, -pos.y*10, 0);
+        Vector3 move = new Vector3(-pos.x*25, -pos.y*25, 0);
         transform.Translate(move, Space.World);
     }
 }

@@ -29,8 +29,8 @@ public class OutpostSpawn : MonoBehaviour
         GameConfiguration config = new GameConfiguration(players);
         config.seed = 1234;
         config.dormantsPerPlayer = 3;
-        config.maxiumumOutpostDistance = 100;
-        config.minimumOutpostDistance = 5;
+        config.maxiumumOutpostDistance = 50;
+        config.minimumOutpostDistance = 10;
         config.outpostsPerPlayer = 18;   
         
         Game server = new Game(config);
@@ -39,6 +39,7 @@ public class OutpostSpawn : MonoBehaviour
         outposts = Game.timeMachine.getState().getOutposts();
 
         foreach (Outpost outpost in outposts) {
+            /*
             var location = new Vector3(rand.Next(-15,15), rand.Next(-15,15), 0);
             if (outpostLocations.Count > 0)
             {
@@ -51,6 +52,8 @@ public class OutpostSpawn : MonoBehaviour
                     }
                 }
             }
+            */
+            Vector3 location = new Vector3(outpost.getCurrentLocation().X, outpost.getCurrentLocation().Y, 0);
             switch (outpost.getOutpostType())
             {
                 case OutpostType.GENERATOR:
@@ -74,6 +77,8 @@ public class OutpostSpawn : MonoBehaviour
             }
 
             outpostObject.GetComponent<OutpostManager>().ID = outpost.getGuid();
+            // Set a reference to the original outpost
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
             outpostLocations.Add(location);
         }
 

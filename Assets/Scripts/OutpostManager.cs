@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SubterfugeCore.Core;
-using UnityEditor.UI;
-using UnityEngine.XR;
+ using SubterfugeCore.Core.Entities.Locations;
+ using UnityEditor.UI;
+ using UnityEngine.UI;
+ using UnityEngine.XR;
 
 public class OutpostManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class OutpostManager : MonoBehaviour
     public System.Guid ID;
     private float downtime;
     private bool expanded = false;
+
+    public Outpost outpost;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,6 @@ public class OutpostManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetMouseButtonDown(0))
         {
             downtime = Time.time;
@@ -46,19 +49,16 @@ public class OutpostManager : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject && expanded == false)
                 {
-                    Debug.Log("Expand: " + gameObject.name);
                     hit.collider.gameObject.GetComponent<OutpostManager>().Expand();
                     //gameManager.SelectedOutpost = hit.transform.GetComponent<OutpostManager>().ID;
                 }
                 else
                 {
-                    Debug.Log("Contract: " + gameObject.name);
                     gameObject.GetComponent<OutpostManager>().Contract();
                 }
             }
             else
             {
-                Debug.Log("Contract: " + gameObject.name);
                 gameObject.GetComponent<OutpostManager>().Contract();
             }
             
