@@ -196,7 +196,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 30, y: 30}
+  m_Size: {x: 1000, y: 1000}
   m_AdaptiveModeThreshold: 0
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 358695947}
   - component: {fileID: 358695948}
   - component: {fileID: 358695949}
+  - component: {fileID: 358695950}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -267,6 +268,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9638ec474e0ea634685b1443de94cec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &358695950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358695946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e1632ad391a104c9cfb30428759f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sub: {fileID: 6104506753303573396, guid: 6aa54417b5ef6fb469cd8ba1429e7aca, type: 3}
 --- !u!1 &771011585
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +403,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
