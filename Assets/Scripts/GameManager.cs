@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (frameCounter % 10 == 0)
+        if (frameCounter % 15 == 0)
         {
             // Advance the game but at a slow-ish rate
             Game.timeMachine.advance(1);

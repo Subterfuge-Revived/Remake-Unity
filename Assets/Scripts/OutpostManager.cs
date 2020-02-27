@@ -26,6 +26,41 @@ public class OutpostManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set color based on the owner
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        int playerId = 0;
+        if (outpost.getOwner() != null)
+        {
+            playerId = outpost.getOwner().getId();
+        }
+        switch (playerId)
+        {
+            case 0:
+                renderer.color = Color.white;
+                break;
+            case 1:
+                renderer.color = Color.red;
+                break;
+            case 2:
+                renderer.color = Color.blue;
+                break;
+            case 3:
+                renderer.color = Color.green;
+                break;
+            case 4:
+                renderer.color = Color.cyan;
+                break;
+            case 5:
+                renderer.color = Color.magenta;
+                break;
+            case 6:
+                renderer.color = Color.yellow;
+                break;
+            case 7:
+                renderer.color = Color.black;
+                break;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             downtime = Time.time;

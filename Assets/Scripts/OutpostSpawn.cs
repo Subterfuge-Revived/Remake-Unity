@@ -24,6 +24,9 @@ public class OutpostSpawn : MonoBehaviour
     {
         //Generate Players
         players.Add(new Player(1));
+        players.Add(new Player(2));
+        players.Add(new Player(3));
+        players.Add(new Player(4));
         
         //Build config
         GameConfiguration config = new GameConfiguration(players);
@@ -31,7 +34,7 @@ public class OutpostSpawn : MonoBehaviour
         config.dormantsPerPlayer = 3;
         config.maxiumumOutpostDistance = 50;
         config.minimumOutpostDistance = 10;
-        config.outpostsPerPlayer = 18;   
+        config.outpostsPerPlayer = 5;   
         
         Game server = new Game(config);
         List<Outpost> outposts;
