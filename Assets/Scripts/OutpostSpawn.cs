@@ -32,8 +32,8 @@ public class OutpostSpawn : MonoBehaviour
         GameConfiguration config = new GameConfiguration(players);
         config.seed = 1234;
         config.dormantsPerPlayer = 3;
-        config.maxiumumOutpostDistance = 50;
-        config.minimumOutpostDistance = 10;
+        config.maxiumumOutpostDistance = 100;
+        config.minimumOutpostDistance = 30;
         config.outpostsPerPlayer = 5;   
         
         Game server = new Game(config);

@@ -4,29 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using SubterfugeCore.Core;
  using SubterfugeCore.Core.Entities.Locations;
+ using TMPro;
  using UnityEditor.UI;
  using UnityEngine.UI;
  using UnityEngine.XR;
+ using Object = System.Object;
 
-public class OutpostManager : MonoBehaviour
+ public class OutpostManager : MonoBehaviour
 {
 
     private Animator OutpostAnimator;
     public System.Guid ID;
     private float downtime;
     private bool expanded = false;
+    private TextMeshPro textMesh;
 
     public Outpost outpost;
     // Start is called before the first frame update
     void Start()
     {
         OutpostAnimator = gameObject.GetComponent<Animator>();
+        textMesh = gameObject.GetComponentInChildren<TextMeshPro>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Set color based on the owner
+        textMesh.text = outpost.getDrillerCount().ToString();
+
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
         if (outpost.getOwner() != null)

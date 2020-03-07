@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -10,6 +11,7 @@ using Object = UnityEngine.Object;
 public class SubManager : MonoBehaviour
 {
     public Sub sub;
+    private TextMeshPro textMesh;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +56,15 @@ public class SubManager : MonoBehaviour
                 renderer.color = Color.black;
                 break;
         }
+        
+        
+        textMesh = gameObject.GetComponentInChildren<TextMeshPro>();
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        textMesh.text = sub.getDrillerCount().ToString();
         if (Game.timeMachine.getState().subExists(sub))
         {
             // Update the position and rotation of the sub.
