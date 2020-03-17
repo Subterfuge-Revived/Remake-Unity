@@ -94,7 +94,7 @@ public class Api : MonoBehaviour
             return null;
         }
     }
-    
+
     public async Task<List<GameRoom>> GetOpenRooms()
     {
         try
@@ -120,4 +120,119 @@ public class Api : MonoBehaviour
             return null;
         }
     }
+
+
+    public async Task<JoinLobbyResponse> JoinLobby(int roomId)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "join_room"),
+                new KeyValuePair<string, string>("room_id", roomId.ToString()),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            JoinLobbyResponse roomListResponse = JsonConvert.DeserializeObject<JoinLobbyResponse>(responseContent);
+            return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    
+    public async Task<LeaveLobbyResponse> LeaveLobby(int roomId)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "leave_room"),
+                new KeyValuePair<string, string>("room_id", roomId.ToString()),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            LeaveLobbyResponse roomListResponse = JsonConvert.DeserializeObject<LeaveLobbyResponse>(responseContent);
+            return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    public async Task<StartLobbyEarlyResponse> StartLobbyEarly(int roomId)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "start_early"),
+                new KeyValuePair<string, string>("room_id", roomId.ToString()),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            StartLobbyEarlyResponse roomListResponse = JsonConvert.DeserializeObject<StartLobbyEarlyResponse>(responseContent);
+            return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    
+    public async Task<CreateLobbyResponse> CreateLobby(string title, int max_players, int min_rating, bool rated, bool anonymous, string goal, string map)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "new_room"),
+                new KeyValuePair<string, string>("description", title),
+                new KeyValuePair<string, string>("max_players", max_players.ToString()),
+                new KeyValuePair<string, string>("min_rating", min_rating.ToString()),
+                new KeyValuePair<string, string>("rated", rated.ToString()),
+                new KeyValuePair<string, string>("anonymity", anonymous.ToString()),
+                new KeyValuePair<string, string>("goal", goal),
+                new KeyValuePair<string, string>("map", map),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            CreateLobbyResponse roomListResponse = JsonConvert.DeserializeObject<CreateLobbyResponse>(responseContent);
+            return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    
 }

@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +26,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpecialistCarrier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/RoomManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDllScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,17 +50,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TestDllScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SubManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/HudScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HudScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpecialistCarrier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OutpostManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/RoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
       </list>
     </option>
@@ -117,7 +129,7 @@
       <workItem from="1582590803059" duration="862000" />
       <workItem from="1582768876164" duration="2962000" />
       <workItem from="1583542342009" duration="9167000" />
-      <workItem from="1584373180628" duration="4360000" />
+      <workItem from="1584373180628" duration="11002000" />
     </task>
     <servers />
   </component>
@@ -265,10 +277,10 @@
           <line>110</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" initialLine="110">
             <startOffsets>
-              <option value="3475" />
+              <option value="3471" />
             </startOffsets>
             <endOffsets>
-              <option value="3543" />
+              <option value="3539" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

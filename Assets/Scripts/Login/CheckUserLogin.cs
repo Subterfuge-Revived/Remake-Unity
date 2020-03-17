@@ -26,6 +26,9 @@ public class CheckUserLogin : MonoBehaviour
             LoginResponse response = await api.Login(username, password);
             if (response.success)
             {
+                // Save the player
+                ApplicationState.player = new Player(response.user.id, response.user.name);
+                
                 // Go to the main menu.
                 PlayerPrefs.SetString("token", response.token);
                 SceneManager.LoadScene("MainMenu");

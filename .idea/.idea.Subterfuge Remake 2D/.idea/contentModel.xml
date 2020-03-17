@@ -13,9 +13,15 @@
           <e p="Api" t="Include">
             <e p="Api.cs" t="Include" />
           </e>
+          <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="GameLobby" t="Include">
+            <e p="RoomManager.cs" t="Include" />
+            <e p="ShowLobbyInfo.cs" t="Include" />
+          </e>
           <e p="GameManager.cs" t="Include" />
           <e p="GameSelect" t="Include">
+            <e p="GameRoomButton.cs" t="Include" />
             <e p="LoadAvaliableRooms.cs" t="Include" />
           </e>
           <e p="HudScript.cs" t="Include" />

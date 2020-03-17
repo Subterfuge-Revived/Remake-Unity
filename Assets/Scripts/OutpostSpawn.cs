@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities.Locations;
 using SubterfugeCore.Core.Generation;
+using SubterfugeCore.Core.Network;
 using SubterfugeCore.Core.Players;
 
 public class OutpostSpawn : MonoBehaviour
@@ -22,15 +23,25 @@ public class OutpostSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Generate Players
-        players.Add(new Player(1));
-        players.Add(new Player(2));
-        players.Add(new Player(3));
-        players.Add(new Player(4));
+        // Get the gameroom from the applications state
+        GameRoom room = ApplicationState.currentGameRoom;
+        
+        // Generate players
+        foreach (NetworkUser networkUser in room.players)
+        {
+            if (room.anonimity)
+            {
+                players.Add(new Player(networkUser.id, "Player " + players.Count + 1)); 
+            }
+            else
+            {
+                players.Add(new Player(networkUser.id, networkUser.name));      
+            }
+        }
         
         //Build config
         GameConfiguration config = new GameConfiguration(players);
-        config.seed = 1234;
+        config.seed = room.seed;
         config.dormantsPerPlayer = 3;
         config.maxiumumOutpostDistance = 100;
         config.minimumOutpostDistance = 30;

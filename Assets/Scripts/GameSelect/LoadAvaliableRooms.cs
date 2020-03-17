@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using SubterfugeCore.Core.Network;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,27 +8,42 @@ using UnityEngine.UI;
 public class LoadAvaliableRooms : MonoBehaviour
 {
 
-    public Button scrollItemTemplate;
+    public GameRoomButton scrollItemTemplate;
+    private Api api = null;
+    private List<GameRoom> gameRooms = null;
 
     // Start is called before the first frame update
     async void Start()
     {
+        LoadGameRooms();
+    }
+
+    public async void LoadGameRooms()
+    {
         gameObject.AddComponent<Api>();
-        Api api = gameObject.GetComponent<Api>();
+        api = gameObject.GetComponent<Api>();
         List<GameRoom> roomResponse = await api.GetOpenRooms();
+        
+        // Destroy all existing rooms.
+        GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
+        foreach (GameRoomButton gameRoomButton in existingButtons)
+        {
+            Destroy(gameRoomButton.gameObject);
+        }
 
         string rooms = "";
         foreach(GameRoom room in roomResponse)
         {
             // Create a new templated item
-            Button scrollItem = (Button)Instantiate(scrollItemTemplate);
+            GameRoomButton scrollItem = (GameRoomButton)Instantiate(scrollItemTemplate);
             scrollItem.gameObject.SetActive(true);
+            scrollItem.room = room;
             
             // Set the text
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ descrip: " + room.description + ", seed: " + room.seed + "]";
+                text.text = "[ Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.player_count + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
             }
             else
             {
