@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SubterfugeCore;
 using SubterfugeCore.Core.Network;
+using SubterfugeCore.Core.Players;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -44,6 +45,7 @@ public class Api : MonoBehaviour
         if (loginResponse.success)
         {
             // Save player login information to their device so they don't need to sign in again.
+            ApplicationState.player = new Player(loginResponse.user);
             PlayerPrefs.SetString("username", username);
             PlayerPrefs.SetString("password", password);
             PlayerPrefs.SetString("token", loginResponse.token);
@@ -202,7 +204,7 @@ public class Api : MonoBehaviour
         }
     }
     
-    public async Task<CreateLobbyResponse> CreateLobby(string title, int max_players, int min_rating, bool rated, bool anonymous, string goal, string map)
+    public async Task<CreateLobbyResponse> CreateLobby(string title, int max_players, int min_rating, bool rated, bool anonymous, int goal, int map)
     {
         try
         {
@@ -216,8 +218,8 @@ public class Api : MonoBehaviour
                 new KeyValuePair<string, string>("min_rating", min_rating.ToString()),
                 new KeyValuePair<string, string>("rated", rated.ToString()),
                 new KeyValuePair<string, string>("anonymity", anonymous.ToString()),
-                new KeyValuePair<string, string>("goal", goal),
-                new KeyValuePair<string, string>("map", map),
+                new KeyValuePair<string, string>("goal", goal.ToString()),
+                new KeyValuePair<string, string>("map", map.ToString()),
             });
 
             HttpResponseMessage response = await client.PostAsync(url, formContent);

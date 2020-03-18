@@ -10,15 +10,14 @@ public class LoadAvaliableRooms : MonoBehaviour
 
     public GameRoomButton scrollItemTemplate;
     private Api api = null;
-    private List<GameRoom> gameRooms = null;
 
     // Start is called before the first frame update
     async void Start()
     {
-        LoadGameRooms();
+        await LoadGameRooms();
     }
 
-    public async void LoadGameRooms()
+    public async Task LoadGameRooms()
     {
         gameObject.AddComponent<Api>();
         api = gameObject.GetComponent<Api>();
@@ -31,7 +30,6 @@ public class LoadAvaliableRooms : MonoBehaviour
             Destroy(gameRoomButton.gameObject);
         }
 
-        string rooms = "";
         foreach(GameRoom room in roomResponse)
         {
             // Create a new templated item
@@ -43,21 +41,16 @@ public class LoadAvaliableRooms : MonoBehaviour
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.player_count + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
+                text.text = "[ Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
             }
             else
             {
                 Debug.Log("No Text.");
             }
 
-            Debug.Log("[ descrip: " + room.description + ", seed: " + room.seed + "]");
-
             // Set the button's parent to the scroll item template.
             scrollItem.transform.SetParent(scrollItemTemplate.transform.parent, false);
-            
-            // rooms += "[ descrip: " + room.description + ", seed: " + room.seed + "]";
         }
-        // gameObject.GetComponent<Text>().text = rooms;
     }
 
     // Update is called once per frame

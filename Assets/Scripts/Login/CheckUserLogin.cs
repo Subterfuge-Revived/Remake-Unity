@@ -27,7 +27,7 @@ public class CheckUserLogin : MonoBehaviour
             if (response.success)
             {
                 // Save the player
-                ApplicationState.player = new Player(response.user.id, response.user.name);
+                ApplicationState.player = new Player(response.user);
                 
                 // Go to the main menu.
                 PlayerPrefs.SetString("token", response.token);

@@ -16,7 +16,8 @@
           <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="GameLobby" t="Include">
-            <e p="RoomManager.cs" t="Include" />
+            <e p="GameActionButton.cs" t="Include" />
+            <e p="LeaveGameButton.cs" t="Include" />
             <e p="ShowLobbyInfo.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
