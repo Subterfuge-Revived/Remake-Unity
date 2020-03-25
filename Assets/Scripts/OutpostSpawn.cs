@@ -23,6 +23,7 @@ public class OutpostSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         // Get the gameroom from the applications state
         GameRoom room = ApplicationState.currentGameRoom;
         
@@ -38,10 +39,15 @@ public class OutpostSpawn : MonoBehaviour
                 players.Add(new Player(networkUser.id, networkUser.name));      
             }
         }
+        */
         
+        players.Add(new Player(1));
+        players.Add(new Player(2));
+
         //Build config
         GameConfiguration config = new GameConfiguration(players);
-        config.seed = room.seed;
+        config.seed = 1234;
+        //config.seed = room.seed;
         config.dormantsPerPlayer = 3;
         config.maxiumumOutpostDistance = 100;
         config.minimumOutpostDistance = 30;
@@ -53,7 +59,7 @@ public class OutpostSpawn : MonoBehaviour
         outposts = Game.timeMachine.getState().getOutposts();
 
         foreach (Outpost outpost in outposts) {
-            /*
+            
             var location = new Vector3(rand.Next(-15,15), rand.Next(-15,15), 0);
             if (outpostLocations.Count > 0)
             {
@@ -66,8 +72,8 @@ public class OutpostSpawn : MonoBehaviour
                     }
                 }
             }
-            */
-            Vector3 location = new Vector3(outpost.getCurrentLocation().X, outpost.getCurrentLocation().Y, 0);
+            /*
+            Vector3 location = new Vector3(outpost.getCurrentLocation().X, outpost.getCurrentLocation().Y, 0);*/
             switch (outpost.getOutpostType())
             {
                 case OutpostType.GENERATOR:

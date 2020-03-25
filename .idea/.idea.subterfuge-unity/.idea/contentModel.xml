@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Aidan\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Aidan\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_subterfuge-unity.491364888.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Aidan\Desktop\Coding\C#\Subterfuge\subterfuge-unity" t="IncludeRecursive">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_subterfuge-unity.-1760062117.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Assets" t="Include">
+          <e p="Gui" t="Include">
+            <e p="GameElements.txt" t="Include" />
+          </e>
+        </e>
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
         </e>
@@ -13,11 +18,19 @@
           <e p="Api" t="Include">
             <e p="Api.cs" t="Include" />
           </e>
+          <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="GameLobby" t="Include">
+            <e p="GameActionButton.cs" t="Include" />
+            <e p="LeaveGameButton.cs" t="Include" />
+            <e p="ShowLobbyInfo.cs" t="Include" />
+          </e>
           <e p="GameManager.cs" t="Include" />
           <e p="GameSelect" t="Include">
+            <e p="GameRoomButton.cs" t="Include" />
             <e p="LoadAvaliableRooms.cs" t="Include" />
           </e>
+          <e p="HudScript.cs" t="Include" />
           <e p="Login" t="Include">
             <e p="CheckUserLogin.cs" t="Include" />
           </e>
@@ -27,14 +40,45 @@
           </e>
           <e p="OutpostManager.cs" t="Include" />
           <e p="OutpostSpawn.cs" t="Include" />
+          <e p="SpecialistCarrier.cs" t="Include" />
+          <e p="SubManager.cs" t="Include" />
+          <e p="SubSpawn.cs" t="Include" />
           <e p="TestDllScript.cs" t="Include" />
           <e p="WorldWrap.cs" t="Include" />
         </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
       </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="Packages" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
       <e p="subterfuge-unity.sln" t="IncludeFlat" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
