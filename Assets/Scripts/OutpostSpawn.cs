@@ -23,7 +23,6 @@ public class OutpostSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
         // Get the gameroom from the applications state
         GameRoom room = ApplicationState.currentGameRoom;
         
@@ -39,15 +38,10 @@ public class OutpostSpawn : MonoBehaviour
                 players.Add(new Player(networkUser.id, networkUser.name));      
             }
         }
-        */
-        
-        players.Add(new Player(1));
-        players.Add(new Player(2));
 
         //Build config
         GameConfiguration config = new GameConfiguration(players);
-        config.seed = 1234;
-        //config.seed = room.seed;
+        config.seed = room.seed;
         config.dormantsPerPlayer = 3;
         config.maxiumumOutpostDistance = 100;
         config.minimumOutpostDistance = 30;

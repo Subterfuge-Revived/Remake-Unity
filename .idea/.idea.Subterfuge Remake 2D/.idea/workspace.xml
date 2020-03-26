@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +24,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EBF11174-2519-413D-8CBD-EC5EF1EE6412/17/99c370ff/GameRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,15 +62,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpecialistCarrier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OutpostManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/RoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" />
       </list>
     </option>
   </component>
@@ -85,10 +95,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23668">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23668" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -126,6 +136,7 @@
       <workItem from="1583542342009" duration="9167000" />
       <workItem from="1584373180628" duration="11219000" />
       <workItem from="1584487878059" duration="6358000" />
+      <workItem from="1585191961885" duration="2274000" />
     </task>
     <servers />
   </component>

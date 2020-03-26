@@ -105,7 +105,36 @@ public class Api : MonoBehaviour
             var formContent = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
-                new KeyValuePair<string, string>("type", "get_room_data")
+                new KeyValuePair<string, string>("type", "get_room_data"),
+                new KeyValuePair<string, string>("room_status", "open")
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            List<GameRoom> roomListResponse = JsonConvert.DeserializeObject<List<GameRoom>>(responseContent);
+            return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    
+    public async Task<List<GameRoom>> GetOngoingRooms()
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "get_room_data"),
+                new KeyValuePair<string, string>("room_status", "ongoing"),
+                new KeyValuePair<string, string>("filter_player", "true")
             });
 
             HttpResponseMessage response = await client.PostAsync(url, formContent);
