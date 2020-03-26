@@ -22,3 +22,10 @@
 *.mat filter=lfs diff=lfs merge=lfs -text
 *.shader filter=lfs diff=lfs merge=lfs -text
 *.cginc filter=lfs diff=lfs merge=lfs -text
+*.manifest filter=lfs diff=lfs merge=lfs -text
+*.yml filter=lfs diff=lfs merge=lfs -text
+*.config filter=lfs diff=lfs merge=lfs -text
+/Assets/NuGet/LICENSE filter=lfs diff=lfs merge=lfs -text
+*.p7s filter=lfs diff=lfs merge=lfs -text
+*.nupkg filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
