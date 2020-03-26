@@ -1,41 +1,69 @@
-# Timing
+# Creating a new Game
 
-A majority of the game is all about timing. The `TimeMachine` and `GameTick` objects are extremely important to running
-the game's simulation to specific points in time. Let's start with the basics:
+In order to create a new game, you can use a combination of the `Game` and `GameConfiguration` objects.
+First, create a new `GameConfiguration` object to load specific information about the game's generation parameters.
+Once the `GameConfiguration` object has been created, you can pass it into the `Game` constructor to create a new
+game based off of the configuration parameters. It is important to note that a `GameConfiguration` object requires a player list.
 
-### Moving through time
+```cs
+// Create a list of players for the game
+List<Player> players = new List<Player>();
+players.Add(new Player(1));
+players.Add(new Player(2));
+players.Add(new Player(3));
+players.Add(new Player(4));
+// Add more if needed
+            
+// pass in players to GameConfiguration constructor
+GameConfiguration config = new GameConfiguration(players);
 
-In order to move through time, the `TimeMachine` exposes a few functions that let you run the simulation to specific
-points in time. These functions are:
+// Configure the map generation as required with the GameConfiguration object.
+config.seed = 1234;
+config.dormantsPerPlayer = 3;
+config.maxiumumOutpostDistance = 100;
+config.minimumOutpostDistance = 5;
+config.outpostsPerPlayer = 7;     
 
-- `advance(int ticks)` advances by `ticks` ticks 
-- `rewind(int ticks)` rewinds by `ticks` ticks
-- `goTo(GameEvent event)` goes to a specific `GameEvent`
-- `goTo(GameTick tick)` goes to a specific `GameTick`
-
-These functions let you easily go to specific points in time. After using these functions, you can get the simulated 
-game at that point in time with `Game.timeMachine.getState()` as normal.
-
-### The GameTick object
-
-In order to get a specific moment in time, the `GameTick` object has a few methods to make this easy. The following
-code block shows a number of methods you can use to create a `GameTick` from a specific time.
-
-```
-// This creates a GameTick from the current time.
-// Note: Do not use new DateTime() to get the current time.
-// Instead use the NtpConnector object to ensure users are getting the DateTime from the server.
-// If a Game object has been created, this method calculates the offset from the game's start time
-// to determine the current tick
-GameTick.fromDate(NtpConnector.GetNetworkTime()); 
-
-// This creates a GameTick from a tick number.
-GameTick.fromTickNumber(55);
-
-// Get the current game's GameTick
-Game.timeMachine.getCurrentTick();
+// Pass the game config to the game
+Game game = new Game(config)
 ```
 
-Once you have obtained a `GameTick` object, you can call `.advance(int)` or `.rewind(int)` on the tick itself to move
-relatively to that `GameTick` object. Once you offset yourself from the original, you can then use the `TimeMachine`
-to go to your tick with `goTo(offsetGameTick)`.
+Once the game has been created, most interaction will be done through the `TimeMachine` class. This class manages the
+game's simulation and allows you to advance and rewind through the game as well as get the `GameState` at the current
+tick.
+
+The `TimeMachine` is globally accessible and can be obtained anywhere after a `Game` has been created 
+by using the following snippet:
+```cs
+TimeMachine timeMachine = Game.timeMachine
+```
+
+Once you have access to the `TimeMachine` object, you can get the current game's state with the `getState()` method.
+The GameState lets you access anything related to the game. For example, all subs, all outposts, all players,
+all specialists, and more. The following code snippet shows how you can use the `GameState` to get some basic info.
+
+```cs
+GameState currentState = Game.timeMachine.getState()
+
+// Get all outposts
+List<Outpost> outpostList = currentState.getOutposts();
+foreach(Outpost o : outpostList) {
+    Console.WriteLine(o.getDrillerCount());
+}
+
+// Get all subs
+List<Sub> subList = currentState.getSubs();
+foreach(Sub s : subList) {
+    Console.WriteLine(s.getDrillerCount());
+}
+
+// Get a list of the players
+List<Player> playerList = currentState.getPlayers();
+foreach(Player p : playerList) {
+    Console.WriteLine(p.getPlayerName());
+}
+
+```
+
+There is much more you can do with the `GameState` object and this is further documented by looking at the API
+documentation.

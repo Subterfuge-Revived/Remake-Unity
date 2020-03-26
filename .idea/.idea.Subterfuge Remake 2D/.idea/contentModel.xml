@@ -11,6 +11,11 @@
             <e p="GameElements.txt" t="Include" />
           </e>
         </e>
+        <e p="Documentation" t="Include">
+          <e p="manual" t="Include">
+            <e p="ModifyingTheGameState.cs" t="Include" />
+          </e>
+        </e>
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
         </e>
@@ -88,7 +93,6 @@
           <e p="Players" t="Include">
             <e p="Player.cs" t="Include" />
           </e>
-          <e p="README.txt" t="Include" />
           <e p="Timing" t="Include">
             <e p="GameTick.cs" t="Include" />
             <e p="NtpConnector.cs" t="Include" />

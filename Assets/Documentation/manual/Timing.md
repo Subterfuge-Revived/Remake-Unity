@@ -1,68 +1,63 @@
-# Etiam nantemque exul
+# Timing
 
-## Cum tulit
+A majority of the game is all about timing. The `TimeMachine` and `GameTick` objects are extremely important to running
+the game's simulation to specific points in time. Let's start with the basics:
 
-Lorem markdownum quos stimulosque **altos**. Putat nubes molle Troiae vero dea;
-nostraque [plurima](http://www.tibi.io/). Vos de mihi, credidit: salibus et
-iacuit, volvitur sunt unda fronti deriguisse **refert**.
+### Moving through time
 
-## Sumpsisse viso
+In order to move through time, the `TimeMachine` exposes a few functions that let you run the simulation to specific
+points in time. These functions are:
 
-Nubila nomine. Purpura se o et causa parva ripas, adsonat saevaque; quid modo
-ambo et venere voveo. Sine et esse, illa tempore, sive tibi roseo, ministerio
-altos. Trepident medicamine, primasque cum et peregit
-[dapibusque](http://www.vetustas.net/) quoslibet hominis quoque insula.
-Tepentibus ut Cecropios ab turba, est auro ferventi aliter duratos feres
-differtis Ausoniis potes, non noctis Laertaque iuvenes.
+- `advance(int ticks)` advances by `ticks` ticks 
+- `rewind(int ticks)` rewinds by `ticks` ticks
+- `goTo(GameEvent event)` goes to a specific `GameEvent`
+- `goTo(GameTick tick)` goes to a specific `GameTick`
 
-## Caelumque vestigia
+These functions let you easily go to specific points in time. After using these functions, you can get the simulated 
+game at that point in time with `Game.timeMachine.getState()` as normal.
 
-Et promissa fila sentiet leges; Phrygiae et levatus ferire? Salutifer coniugis
-fierent ante fecissent post vultumque ultima, per radios currere; tandem.
-[Fuerat](http://www.est-adicit.com/licet.html) qua, ne foedera reformatus nunc
-diu dea audet nonne.
+For example:
+```cs
+// Advance 5 ticks:
+Game.timeMachine.advance(5);
 
-> Ut utinam mitia tenuerunt movent spectans Mavortis nulla ite, somnos exsiccata
-> dixit Aeetias. Binas Trinacriam album ex ipse. Quoque **una utraque tardius**
-> placetque gerere; mariti sed dare ludunt memorante Delphice corpora. Caret
-> quantum intellegat venis gaudent eurus. Et suos crista; has et ferarum quid
-> audit omine; mea cum praemia quae duris, suspicor.
+// Rewind 15 ticks
+Game.timeMachine.rewind(15);
 
-## Adflati qui
+// Go to tick 150
+GameTick tick = GameTick.fromTickNumber(150);
+Game.timeMachine.goTo(tick);
+```
 
-Spiro conata supprimit diemque; ora oblitus ensem alti non quo lacrimis ferunt,
-**ageret** Cebrenida rutilis delendaque? Terras lata modus: nec fas, misi utque
-adpositis Iunonis. Fide vidit, ferox Schoeneia mundi, voce, tellus pariterque
-pedum, **sic Celadon** securior corpora partesque posito.
+### The GameTick object
 
-> Potest faxo unda pendulaque ille rostro, haesit pars: formidine captat,
-> viseret simulaverat! Sequi est peragit flumineae pallent simulatas formae
-> avulsa, imagine undis; formam. Et nec sed adeunt, huic aequa et ignes nec,
-> medere terram. Move ipsum abnuat retemptat retinebat duabus diu Iovi est
-> pluma. **Tecum non** deducit Pelops Inachus: arcet aliquemque, regia telo.
+In order to get a specific moment in time, the `GameTick` object has a few methods to make this easy. The following
+code block shows a number of methods you can use to create a `GameTick` from a specific time.
 
-## Tollens altore nec semel qui voce Palatinae
+```cs
+// This creates a GameTick from the current time.
+// Note: Do not use new DateTime() to get the current time.
+// Instead use the NtpConnector object to ensure users are getting the DateTime from the server.
+// If a Game object has been created, this method calculates the offset from the game's start time
+// to determine the current tick
+GameTick.fromDate(NtpConnector.GetNetworkTime()); 
 
-Apertis et **dei duo inquit**; luna secundo, fervida terret. In haec dextra
-septima Tydides tibi: congelat hospes nativum radice **tegumenque** membris
-Hesperio ne Libys, est vocabula siqua. Dumque [stet
-mulces](http://peparethos-ultus.org/), ut fontem dea atricolor, est pronos,
-clarissimus poterat cum intrare sidere templi.
+// This creates a GameTick from a tick number.
+GameTick.fromTickNumber(55);
 
-    cut_metadata(whitelistSequenceUnit.thick.of_bezel_cdma(
-            address_suffix_troubleshooting), sram_trojan(4, hdmi_network - 1));
-    flash.apache -= web_gps_plug;
-    if (offline.dac_bridge(scrollEbookRom,
-            parameter.internal_target_superscalar(2)) < qwerty + 2 -
-            ipvCgiContextual) {
-        certificateIdeAsp = overclocking + app;
-        supplyCard = siteRaster;
-    }
+// Get the current game's GameTick
+Game.timeMachine.getCurrentTick();
+```
 
-Sagitta curvum quoque petisti opibusque proximitas in, illa vestrum, mihi domum
-nescia flexit sacra in. Magni *vive sim crescente* causam saxo voluit, mens,
-quod. Tela *ter ulterius similis* illos nato refugit ait verbaque nec fatigatum
-penates iaculatricemque cecidit pinnas, cum. Misso contigit *caelo* dedissent
-lumina; nympha ad vobis occidat, malo sacra utrumque cunctos Diomedeos addita.
-Virgineus autumnos, ait mitissima curru: fuit sed fessi se habebat hactenus
-Ultor; meus.
+Once you have obtained a `GameTick` object, you can call `.advance(int)` or `.rewind(int)` on the tick itself to move
+relatively to that `GameTick` object. Once you offset yourself from the original, you can then use the `TimeMachine`
+to go to your tick with `goTo(offsetGameTick)`. For example:
+
+```cs
+// Go to tick 150
+GameTick tick = GameTick.fromTickNumber(150);
+Game.timeMachine.goTo(tick);
+
+// Advance 50 ticks in the future from the previous tick.
+Game.timeMachine.goTo(tick.advance(50)); 
+```
