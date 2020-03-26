@@ -25,7 +25,6 @@ public class WorldWrap : MonoBehaviour
             var p = mainCam.ViewportToWorldPoint(new Vector3(0, 0.5f, -mainCam.transform.position.z));
             ScreenSize = (mainCam.transform.position - p).x * 2;
         }
-
     }
     void LateUpdate()
     {

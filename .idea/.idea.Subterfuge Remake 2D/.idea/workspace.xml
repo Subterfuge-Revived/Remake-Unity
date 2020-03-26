@@ -2,16 +2,775 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.Api.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.Api.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.ApplicationState.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.ApplicationState.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.CameraController.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.CameraController.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.CheckUserLogin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.CheckUserLogin.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameActionButton.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameActionButton.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameManager.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameManager.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameRoomButton.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.GameRoomButton.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.HudScript.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.HudScript.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LeaveGameButton.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LeaveGameButton.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LoadAvaliableRooms.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LoadAvaliableRooms.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LoadUser.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.LoadUser.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.OutpostManager.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.OutpostManager.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.OutpostSpawn.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.OutpostSpawn.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.PlayGameButton.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.PlayGameButton.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.ShowLobbyInfo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.ShowLobbyInfo.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SpecialistCarrier.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SpecialistCarrier.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SubManager.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SubManager.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SubSpawn.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.SubSpawn.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.TestDllScript.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.TestDllScript.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.WorldWrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.WorldWrap.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/Global.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Base.GameObject.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Base.GameObject.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Base.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Base.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.Outpost.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.Outpost.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.OutpostType.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.OutpostType.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Locations.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.EffectTrigger.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.EffectTrigger.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.IScalableEffect.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.IScalableEffect.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.ISpecialistEffect.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.ISpecialistEffect.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Effects.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Queen.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Queen.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Specialist.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.Specialist.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.SpecialistManager.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.SpecialistManager.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Specialists.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Sub.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.Sub.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Entities.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Game.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Game.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Base.GameEvent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Base.GameEvent.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Base.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Base.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.CombatEvent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.CombatEvent.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.FactoryProduceDrillersEvent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.FactoryProduceDrillersEvent.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.LaunchEvent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.LaunchEvent.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.DrillerCombat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.DrillerCombat.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.FriendlySubArrive.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.FriendlySubArrive.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.IReversible.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.IReversible.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.OwnershipTransfer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.OwnershipTransfer.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.SpecialistCombat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.SpecialistCombat.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.ReversibleEvents.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Validators.Validator.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Validators.Validator.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Validators.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.Validators.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameEvents.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameState.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.GameState.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.GameConfiguration.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.GameConfiguration.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.MapGenerator.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.MapGenerator.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.OutpostPerPlayerException.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.OutpostPerPlayerException.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.PlayerCountException.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.PlayerCountException.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Generation.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ICombatable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ICombatable.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IDrillerCarrier.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IDrillerCarrier.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ILaunchable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ILaunchable.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ILocation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ILocation.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IOwnable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IOwnable.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IShieldable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.IShieldable.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ISpecialistCarrier.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ISpecialistCarrier.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ITargetable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.ITargetable.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Interfaces.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.CreateLobbyResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.CreateLobbyResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.GameRoom.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.GameRoom.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.JoinLobbyResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.JoinLobbyResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.LeaveLobbyResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.LeaveLobbyResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.LoginResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.LoginResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.NetworkResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.NetworkResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.NetworkUser.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.NetworkUser.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.RegisterResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.RegisterResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.RoomListResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.RoomListResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.StartLobbyEarlyResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.StartLobbyEarlyResponse.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Network.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Players.Player.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Players.Player.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Players.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Players.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.GameTick.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.GameTick.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.NtpConnector.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.NtpConnector.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.PriorityQueue-1.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.PriorityQueue-1.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.ReversePriorityQueue-1.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.ReversePriorityQueue-1.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.SeededRandom.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.SeededRandom.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.TimeMachine.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.TimeMachine.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.Timing.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/SubterfugeCore.Core.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/toc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/api/toc.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/docfx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual/Timing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual/intro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual/intro.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/build.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/03kg2esc.ymr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0gz5pdnx.g2v" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0liglerr.gxn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0u1ly3oh.qro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0y4lcvfe.sya" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0yr5mfry.ml3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/0yvwvgbo.rgt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1bk5w4qh.qei" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1g2lkfct.3lh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1jb2zcqq.t33" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1ri0qyhi.5ku" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1roc3cvw.wu5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1urr0yy1.xqy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/1z4qyjp3.eyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2bflivil.j53" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2moxk0w1.dm1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2ppfjq23.3ie" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2tstordn.voe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2vhmqe4g.gq1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2vm4nanj.e2e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/2x4ibmds.5qj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/32sg4xrf.u1y" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/353ia0dj.l2x" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/3lzz1bng.t0g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/3sx1ylio.bv0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/3teo31ul.ity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/3xrpxwfn.5b5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/440y0mwg.01l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4c1mywoq.nwl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4di3h5pr.hmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4gij5jrs.udx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4omqy2yy.e5y" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4osuzkow.ivk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4sdl2jpg.pz0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/4z1dnw0w.br2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5ea0too0.gsg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5eidvbma.f41" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5n2wkdbw.nka" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5qxplfi1.fjd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5rke2plm.1i5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/5yvnvon5.2he" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ac0vy1kv.qk4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ammz1kvv.tju" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/an0vgv5r.3sg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/atebbdw1.v3l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/aw5bj2uu.muu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/b30mvz3a.ecg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/b42nxapa.zjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/b4dgrhrf.adp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bfv0omys.urh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bgpdrxpg.rid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bgye4ew4.3ai" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bkgfnpbz.r3t" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bl4zgeoz.pwa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bnl3tk4o.tuj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/boz3fu4b.hqm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bozndjez.yjh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bp3vle4t.fyn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bwzno1sk.rdu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bxh5ul4w.2wl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/bxvmix4x.fki" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/by1f3bhb.asy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/c1dat3k3.lzr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/cgze0hgi.eyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/cjeqq2dn.tgr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/crabexnq.u0w" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/cx2lnxjy.wq2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dcjgvbgv.dwq" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dedxyuhc.gmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/den4ziww.phb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/divgmo45.r50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dmgubmk3.t4r" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dmi0zmlz.w1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dozhxygf.0lk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dtmdleqj.isb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/dwrprlm1.2sr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ekdk0nfn.zc3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/elhpq0bv.u2g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/eqmkfkfx.5ry" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/eqteaipg.dfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ergpfaqv.txn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/erp22eqm.hwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/es5my4zt.pul" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ew5xpwjv.vs4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/eyixjm5z.cpo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/f0zlviuu.0os" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/f4dvtest.xro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/f4iz32zt.anc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/fgix5i52.car" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/flnqpt2h.i5k" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/fnsgf4pw.5zs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/fqjs0pkx.pfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/fv0tvaax.g01" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/fwkv5vlg.ejw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/g2kzldqr.zte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/g4gcnlad.mye" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/g4pqemv0.i0b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gfhav3cm.ze0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gkkpv5ju.4tz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/glneeket.i5g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gmrmtxfp.wbj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gqutsz2s.z2u" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gryg3gxz.bsm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gtroca0q.fgd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/gukt1fcl.agg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hea1z12b.qkd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hekvre5u.rvs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hhzdbv5s.5ip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hoygbb5q.mbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hqm5lgqf.ig2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/hvmmyadj.2rh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/i02g1fuk.kx1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/iax5iok2.dua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/iedfiku2.fbe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/iggl0hc3.55u" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ijr2zaca.1ju" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/is5iaryc.hgb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/iza4vv4p.n5t" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jchwibta.2k4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jiibxvqr.hur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jorbrlhj.a1o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jowsc2ed.gwl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jp2z20g2.agj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jqidrww5.vui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jrva5hk0.5zp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ju0kko5p.dcc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jvynw4rn.svv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/jwdnpfau.ouu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/k24mhj1p.hty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/k50ur2ec.t3c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kaokx32o.ju4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kinka155.s5l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kls02hgj.lgg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kqvg5pxm.yw5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/krl4p4j5.ssd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ku5p5ras.ngs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kvfndvic.5jo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kzaags04.21h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/kzhsybqo.4jf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/l0iulte5.sx2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/l2etmnv3.gcx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/l5na0x0c.ztd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/laqge3tu.qib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ld2ug20c.wt2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/llw2xwjt.rv1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/lwntiftu.z2c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/lyj2gudf.2wm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/m5kmlmdl.5fi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/masqvjtj.2ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mjswu51s.uej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mkza3llw.kdv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mlolirp0.0ee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mnfzj331.mzw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mrg5wzx3.5s0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mvtn5k5z.hfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mw30n3py.4wh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mw3byfp2.e4c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/mx2hltzh.xsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/my5biyw4.fmz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/n0qf4gvd.1rm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/n3fjbjwt.zax" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ni5ihhbh.asw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/nkk41ueo.z35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/no244a4x.cwa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/npxskobu.tbh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/nv1o5zpj.fqy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/nzmjkpxh.txy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/o1aexexi.p2s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/o31m5mvv.vpq" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/obewib4l.mvw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/oiz2vxau.a25" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/okn1kj4i.vwt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/osnhr10k.ir3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ovggzals.0fz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pag1fpzv.oh4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pb4lytgy.iad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pemg4w0b.xfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pjrk1men.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pkqmtdei.d0y" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/plclvfek.sok" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pn4mbzqa.1sw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/pzpvbvvo.u4b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/q04pdvqt.0s5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/q1btkwmu.rnm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/q1l5govx.vj0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/q4b5mmxm.ptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/q5ixjmv0.elp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qaeodorh.duo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qfefmem4.423" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qjwi52zy.b51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qo5rtfqe.bmb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qr50k32m.0gf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/qs5xr23v.pnh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/r4lu4yaz.zsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rbsjxjn5.b2b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rdja31ao.3ro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rf0gxymd.4vo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rhagsbmz.1a5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ri2jg24e.v0o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ria5nlw4.za1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rl3shzma.h2w" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rphvhj5m.q03" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rvglt4pw.n5z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/rwxlk02q.ekz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ry1muqh5.bub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/s1lyqlgx.nw0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/s2a0isuh.c0g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/s2m0n05v.edx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/scky4x2f.3mj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/scsdo41w.rll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sfwtl3do.2tg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sgmgg55t.3vh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/shw5e0hc.421" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sibrz5zt.ovp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sjlfxe0p.ghw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sk1o4e2j.gbn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/sknhqvhw.l4i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/srlynjq4.uwv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/swb1bhty.fnv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/szmjcml3.tnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/t2hopwcg.kbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/t30krgut.ewy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/taemcazz.bf5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/tddjtmch.m4r" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/tirergea.fel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/tmisubbd.mko" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/tqgxrtfk.0d5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/tukklrmn.j2u" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/u4zcx5jb.qrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ucwrkeia.lgy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/uh1wwprg.lwp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ul4ky0v2.2bj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/un11a2y0.2ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/unntjua5.eoa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/uw45y1gp.aeh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/v0t1prkm.vzt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/v0ufk5yo.k1z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/v2basxk2.cff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vju1rs0v.ont" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vn3yyx1b.4pn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vnuybrsh.tqm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vtjmpwfk.3yv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vvrq5d4p.tz1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/vypwd0m3.j13" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wbjhn0it.1ry" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wffmnk1a.3sp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wgalakr5.inn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wgwe0mgu.tsb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wl5s4vhh.sek" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wnkmmvhj.vac" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wotqsjl5.knj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wqpyuxh0.jep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wtttgugg.m2f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wxk2td22.v1d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/wy234kvg.nm0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/x2axgh44.uea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/x5rodgtq.kfz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xanflmin.ot5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xctydqro.kvp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xdpkrrml.eth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xdvxpmce.efb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xgnwkifh.rco" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xnk4ubu1.yuu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xnziuetq.za1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xpi2rrc0.xu0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/xxvwngf2.ver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/y2gfivlj.3qs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/y2ggp4gb.vvn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ydjuvw2a.ub1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ykq10lrf.tf3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ypdm4jy0.ccl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ypthinup.fy3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/ywkb2n3w.0gc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z0qmottc.ggv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z10cbn1d.fsh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z1dswkfk.f0q" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z1xggqr5.thv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z2hnouz1.mqt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z2qkaaoc.ebu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z3lgkx0p.qes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/z5fiego0.wvp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/za4a22zu.i4i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zdveefyc.wmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zfrqo0cz.pmg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zfudomej.i0e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zlkt1lal.utl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zmjktnpp.tlt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zqgmccv5.pqw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zsd43jre.f4l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/obj/.cache/build/yyn1qb4a.om3/zwuenhuu.4dc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleManual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleManual.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleScriptingApi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleScriptingApi.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/toc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Documentation/toc.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet.config.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Editor/DotNetZip.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Editor/DotNetZip.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Editor/NugetForUnity.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Editor/NugetForUnity.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/LICENSE.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/README.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/README.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Resources/defaultIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/NuGet/Resources/defaultIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/index.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/intro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/intro.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/toc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/toc.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/docfx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/docfx.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/index.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/toc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/toc.yml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/docfx.console.2.51.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/docfx.console.2.51.0.nupkg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_site.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Base/GameObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Base/GameObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Locations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Locations/Outpost.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Locations/Outpost.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Locations/OutpostType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Locations/OutpostType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/AddDrillerEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/AddDrillerEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/DestroyDrillerEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/DestroyDrillerEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/EffectTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/EffectTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/IScalableEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/IScalableEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/ISpecialistEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/ISpecialistEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/StealDrillerEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Effects/StealDrillerEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Queen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Queen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Specialist.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/Specialist.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/SpecialistManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Specialists/SpecialistManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Sub.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Entities/Sub.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Game.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Base/GameEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Base/GameEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/CombatEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/CombatEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/FactoryProduceDrillersEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/FactoryProduceDrillersEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/LaunchEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/LaunchEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/DrillerCombat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/DrillerCombat.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/FriendlySubArrive.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/FriendlySubArrive.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/IReversible.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/IReversible.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/OwnershipTransfer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/OwnershipTransfer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/SpecialistCombat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/ReversibleEvents/SpecialistCombat.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Validators.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Validators/Validator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameEvents/Validators/Validator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/GameState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Generation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Generation/GameConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Generation/GameConfiguration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Generation/MapGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Generation/MapGenerator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ICombatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ICombatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IDrillerCarrier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IDrillerCarrier.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ILaunchable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ILaunchable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ILocation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ILocation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IOwnable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IOwnable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ISerializable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ISerializable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IShieldable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/IShieldable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ISpecialistCarrier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ISpecialistCarrier.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ITargetable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Interfaces/ITargetable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/CreateLobbyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/CreateLobbyResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/JoinLobbyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/JoinLobbyResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/LeaveLobbyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/LeaveLobbyResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/LoginResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/LoginResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/NetworkResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/NetworkResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/NetworkUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/NetworkUser.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/RegisterResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/RegisterResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/RoomListResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/RoomListResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/StartLobbyEarlyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Network/StartLobbyEarlyResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Players.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Players/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Players/Player.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/README.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/Commands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/GameTick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/GameTick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/NtpConnector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/NtpConnector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/PriorityQueue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/PriorityQueue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/ReversePriorityQueue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/ReversePriorityQueue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/SeededRandom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/SeededRandom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/TimeMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lib/Timing/TimeMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/packages.config.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/AutoMapper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/CommandLine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/DotLiquid.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Dotnet.ProjInfo.Helpers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Dotnet.ProjInfo.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/FSharp.Compiler.Service.MSBuild.v12.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/FSharp.Compiler.Service.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/FSharp.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/HtmlAgilityPack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Jint.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Markdig.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Build.Locator.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.CSharp.Features.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.Features.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.FlowAnalysis.Utilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.VisualBasic.Features.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.VisualBasic.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.Workspaces.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.CodeAnalysis.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DiaSymReader.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.ConceptualDocuments.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.Engine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.ManagedReference.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.OverwriteDocuments.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.ResourceFiles.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.RestApi.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.SchemaDriven.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.TableOfContents.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Build.UniversalReference.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.DataContracts.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.DataContracts.ManagedReference.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.DataContracts.RestApi.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.DataContracts.UniversalReference.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Dfm.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Glob.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.HtmlToPdf.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.MarkdigEngine.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.MarkdigEngine.Validators.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.MarkdigEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.MarkdownLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Metadata.ManagedReference.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Metadata.ManagedReference.FSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Metadata.ManagedReference.Roslyn.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Metadata.ManagedReference.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.Plugins.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.DocAsCode.YamlSerialization.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.Diagnostics.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.FileSystems.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.Host.HttpListener.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.Hosting.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.StaticFiles.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.Owin.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.VisualStudio.RemoteControl.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Microsoft.VisualStudio.Utilities.Internal.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Newtonsoft.Json.Schema.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.DependencyResolver.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Frameworks.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.LibraryModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Packaging.Core.Types.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Packaging.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Packaging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.ProjectModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Protocol.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/NuGet.Versioning.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Nustache.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/Owin.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/SQLitePCLRaw.core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Collections.Immutable.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Composition.AttributedModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Composition.Convention.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Composition.Hosting.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Composition.Runtime.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Composition.TypedParts.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Reflection.Metadata.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Text.Encoding.CodePages.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Threading.Tasks.Dataflow.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/YamlDotNet.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/docfx.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/docfx.exe.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/docfx.console.2.51.0/tools/itextsharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Documentation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Documentation/docfx.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Documentation/api.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Documentation/manual/Timing.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,24 +787,25 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpecialistCarrier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDllScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Documentation/docfx.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -67,10 +827,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OutpostSpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml" />
+        <option value="$PROJECT_DIR$/Assets/Documentation/manual/coniunctis.md" />
+        <option value="$PROJECT_DIR$/Assets/Documentation/manual/intro.md" />
+        <option value="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml" />
+        <option value="$PROJECT_DIR$/Assets/lib/AsdfgTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Documentation/docfx.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +854,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -136,7 +904,12 @@
       <workItem from="1583542342009" duration="9167000" />
       <workItem from="1584373180628" duration="11219000" />
       <workItem from="1584487878059" duration="6358000" />
-      <workItem from="1585191961885" duration="2274000" />
+      <workItem from="1585191961885" duration="2435000" />
+      <workItem from="1585244165547" duration="5019000" />
+      <workItem from="1585249219795" duration="382000" />
+      <workItem from="1585250223277" duration="764000" />
+      <workItem from="1585251138333" duration="613000" />
+      <workItem from="1585252201206" duration="335000" />
     </task>
     <servers />
   </component>
@@ -271,6 +1044,10 @@
     <state width="1877" height="180" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
     <state width="1877" height="132" key="GridCell.Tab.3.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1583557398446" />
     <state width="1877" height="307" key="GridCell.Tab.3.right/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1584505876119" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1585251076676">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1585251076676" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1581806750517">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -317,20 +1094,7 @@
               <option value="995" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" initialLine="16">
-            <startOffsets>
-              <option value="467" />
-            </startOffsets>
-            <endOffsets>
-              <option value="522" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
