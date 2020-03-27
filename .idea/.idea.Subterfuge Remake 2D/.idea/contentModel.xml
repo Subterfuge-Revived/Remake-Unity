@@ -112,12 +112,14 @@
             <e p="HudScript.cs" t="Include" />
             <e p="OutpostManager.cs" t="Include" />
             <e p="OutpostSpawn.cs" t="Include" />
+            <e p="RulerSlider.cs" t="Include" />
             <e p="SendSubModal.cs" t="Include" />
             <e p="SouceLaunchInformation.cs" t="Include" />
             <e p="SpecialistCarrier.cs" t="Include" />
             <e p="SubLaunchInformation.cs" t="Include" />
             <e p="SubManager.cs" t="Include" />
             <e p="SubSpawn.cs" t="Include" />
+            <e p="TimeMachineSlider.cs" t="Include" />
           </e>
           <e p="GameLobby" t="Include">
             <e p="GameActionButton.cs" t="Include" />
