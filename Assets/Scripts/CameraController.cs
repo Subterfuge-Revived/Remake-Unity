@@ -18,6 +18,9 @@ using System.Collections.Generic;
     // Variables for tracking sub launches.
     private Outpost launchOutpost = null;
     private Outpost destinationOutpost = null;
+    
+    // Track object being held/dragged
+    private bool draggingMap = false;
 
     void OnStart()
     {
@@ -28,77 +31,48 @@ using System.Collections.Generic;
     // Update is called once per frame
     void Update()
     {
-        // Cancel any camera panning if a UI element was clicked.
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        // If the camera has a velocity, dampen the camera.
+        if (rb.velocity.magnitude > 0)
+        {
+            if (rb.velocity.magnitude < 0.01) rb.velocity = new Vector2(0, 0);
+            else rb.velocity -= rb.velocity * (Time.deltaTime * CameraDampen);
+        }
         
-        // If left mouse button is down, the camera is being moved. Set the drag origin and create a velocity for the camera
+        // If the pointer is not over the map AND if the initial touch/click point was not the map or outposts, return.
+        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap)) return;
+
+        // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
         if (Input.GetMouseButtonDown(0))
         {
-            // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
+            rb.velocity = new Vector2(0, 0);
+            // Firstly, check that the pressed location wasn't an outpost.
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
+            if (hit.collider == null || !hit.collider.gameObject.CompareTag("Outpost"))
             {
-                // Clicked object is an outpost, don't move the camera.
-                launchOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
+                // The pressed location was not an outpost. Create a dragOrigin and velocity for the camera.
+                Debug.Log("Left mouse down on map (not outpost).");
                 dragOrigin = Input.mousePosition;
-                Debug.Log("Initially clicked an outpost!");
+                draggingMap = true;
                 return;
             }
-            else
-            {
-                Debug.Log("Reset outpost click.");
-                launchOutpost = null;
-            }
-            
-            rb.velocity = new Vector2(0,0);
+        }
+        
+        // If the left mouse button is being held AND the initial touch/click point was on the map, pan the camera.
+        if ((Input.GetMouseButton(0)) && (draggingMap))
+        {
+            if (dragOrigin == Input.mousePosition) return;
+
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin);
+
             dragOrigin = Input.mousePosition;
-            return;   
+            transform.Translate(-pos, Space.World);
         }
 
-        // If the mouse button is released, apply velocity to the map to scroll
-        if (Input.GetMouseButtonUp(0))
+        // If the left mouse button is released AND the initial touch/click was on the map, begin pan dampening.
+        if ((Input.GetMouseButtonUp(0)) && (draggingMap))
         {
-            // If the first click was on an outpost, check if the second is on another outpost for a launch.
-            if (launchOutpost != null)
-            {
-                // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-                if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
-                {
-                    launchOutpost = null;
-                    destinationOutpost = null;
-                    dragOrigin = Input.mousePosition;
-                }
-            }
-            rb.velocity = -((Input.mousePosition - dragOrigin) / Time.deltaTime) * 0.01f;
+            rb.velocity = -((Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin)) / Time.deltaTime);
+            draggingMap = false;
         }
-
-        // If the mouse is not pressed, slow the map down over time to a stop
-        if (!Input.GetMouseButton(0))
-        {
-            if (Mathf.Abs(rb.velocity.x) > 0 || Mathf.Abs(rb.velocity.y) > 0)
-            {
-                if ((Mathf.Abs(rb.velocity.x) > 0 && Mathf.Abs(rb.velocity.x) < 0.01) || (Mathf.Abs(rb.velocity.y) > 0 && Mathf.Abs(rb.velocity.y) < 0.0))
-                {
-                    rb.velocity = new Vector2(0, 0);
-                }
-                else
-                {
-                    rb.velocity += new Vector2(-rb.velocity.x * Time.deltaTime * CameraDampen, -rb.velocity.y * Time.deltaTime * CameraDampen); //Slow camera down
-                }
-            }
-            return;
-        }
-        if (dragOrigin == Input.mousePosition) return;
-        if (launchOutpost != null) return;
-
-        Matrix4x4 m = Camera.main.worldToCameraMatrix;
-
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin);
-
-        dragOrigin = Input.mousePosition;
-        //Vector3 move = m.MultiplyPoint(pos);
-        //Vector3 move = new Vector3(-pos.x*300, -pos.y*300, 0);
-        transform.Translate(-pos, Space.World);
     }
 }
