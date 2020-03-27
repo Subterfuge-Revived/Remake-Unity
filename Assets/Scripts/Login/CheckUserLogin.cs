@@ -39,4 +39,9 @@ public class CheckUserLogin : MonoBehaviour
             }
         }
     }
+
+    public void onCreateAccount()
+    {
+        SceneManager.LoadScene("CreateAccount");
+    }
 }

@@ -4,11 +4,9 @@
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,12 +55,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lib/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lib/Generation/IdGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lib/Entities/Locations/Outpost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lib/Entities/Sub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
@@ -75,8 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml" />
-        <option value="$PROJECT_DIR$/Assets/Documentation/manual/coniunctis.md" />
         <option value="$PROJECT_DIR$/Assets/lib/AsdfgTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Documentation/docfx.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" />
@@ -103,7 +101,6 @@
         <option value="$PROJECT_DIR$/Assets/lib/GameEvents/Base/GameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/GameEvents/CombatEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/GameEvents/FactoryProduceDrillersEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/NetworkGameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Generation/IdGenerator.cs" />
@@ -126,6 +123,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
       </list>
     </option>
   </component>
@@ -200,7 +200,7 @@
       <workItem from="1585252201206" duration="335000" />
       <workItem from="1585259858273" duration="13995000" />
       <workItem from="1585288015785" duration="519000" />
-      <workItem from="1585338094827" duration="7030000" />
+      <workItem from="1585338094827" duration="8725000" />
     </task>
     <servers />
   </component>

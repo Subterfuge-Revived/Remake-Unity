@@ -322,5 +322,33 @@ public class Api : MonoBehaviour
             return null;
         }
     }
+
+    public async Task<RegisterResponse> registerAccount(string username, string password, string email)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("type", "register"),
+                new KeyValuePair<string, string>("username", username),
+                new KeyValuePair<string, string>("password", password),
+                new KeyValuePair<string, string>("email", email),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            RegisterResponse registerResponse = JsonConvert.DeserializeObject<RegisterResponse>(responseContent);
+            return registerResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
     
 }

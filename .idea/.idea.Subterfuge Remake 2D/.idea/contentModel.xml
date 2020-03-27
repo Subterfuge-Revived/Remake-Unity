@@ -107,6 +107,9 @@
           </e>
           <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="CreateAccount" t="Include">
+            <e p="CreateAccountController.cs" t="Include" />
+          </e>
           <e p="CreateGame" t="Include">
             <e p="CreateGameController.cs" t="Include" />
           </e>
