@@ -27,7 +27,7 @@ public class SubManager : MonoBehaviour
         int playerId = 0;
         if (sub.getOwner() != null)
         {
-            playerId = sub.getOwner().getId();
+            playerId = Game.timeMachine.getState().getPlayers().IndexOf(sub.getOwner()) + 1;
         }
         switch (playerId)
         {

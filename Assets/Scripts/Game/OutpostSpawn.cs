@@ -51,7 +51,6 @@ public class OutpostSpawn : MonoBehaviour
         
         //////// GENERATE DUMMY PLAYERS ////////
         // (comment out above code)
-        
         players.Add(new Player(1));
         players.Add(new Player(2));
 
@@ -61,7 +60,6 @@ public class OutpostSpawn : MonoBehaviour
         config.maxiumumOutpostDistance = 100;
         config.minimumOutpostDistance = 30;
         config.outpostsPerPlayer = 5; 
-        
         
         Game server = new Game(config);
         List<Outpost> outposts;

@@ -37,7 +37,7 @@ using SubterfugeCore.Core;
         int playerId = 0;
         if (outpost.getOwner() != null)
         {
-            playerId = outpost.getOwner().getId();
+            playerId = Game.timeMachine.getState().getPlayers().IndexOf(outpost.getOwner()) + 1;
         }
         switch (playerId)
         {
