@@ -14,7 +14,7 @@ using SubterfugeCore.Core;
 {
 
     private Animator OutpostAnimator;
-    public System.Guid ID;
+    public int ID;
     private float downtime;
     private bool expanded = false;
     private TextMeshPro textMesh;

@@ -54,18 +54,7 @@ public class OutpostSpawn : MonoBehaviour
 
         foreach (Outpost outpost in outposts) {
             
-            var location = new Vector3(rand.Next(-15,15), rand.Next(-15,15), 0);
-            if (outpostLocations.Count > 0)
-            {
-                foreach (Vector3 OutpostLocation in outpostLocations)
-                {
-                    while (Vector3.Distance(location, OutpostLocation) < 2)
-                    {
-                        Debug.Log(Vector3.Distance(location, OutpostLocation) + " Relocating");
-                        location = new Vector3(rand.Next(-15,15), rand.Next(-15,15), 0);
-                    }
-                }
-            }
+            Vector2 location = new Vector2(outpost.getCurrentLocation().X, outpost.getCurrentLocation().Y);
             /*
             Vector3 location = new Vector3(outpost.getCurrentLocation().X, outpost.getCurrentLocation().Y, 0);*/
             switch (outpost.getOutpostType())
@@ -90,7 +79,7 @@ public class OutpostSpawn : MonoBehaviour
                     break;
             }
 
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.getGuid();
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.getId();
             // Set a reference to the original outpost
             outpostObject.GetComponent<OutpostManager>().outpost = outpost;
             outpostLocations.Add(location);

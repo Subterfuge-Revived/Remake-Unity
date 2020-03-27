@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SubterfugeCore;
+using SubterfugeCore.Core.GameEvents.Base;
 using SubterfugeCore.Core.Network;
 using SubterfugeCore.Core.Players;
 using UnityEngine;
@@ -258,6 +259,62 @@ public class Api : MonoBehaviour
 
             CreateLobbyResponse roomListResponse = JsonConvert.DeserializeObject<CreateLobbyResponse>(responseContent);
             return roomListResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+
+    public async Task<SubmitEventResponse> submitGameEvent(GameEvent gameEvent)
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "submit_event"),
+                new KeyValuePair<string, string>("room_id", ApplicationState.currentGameRoom.room_id.ToString()),
+                new KeyValuePair<string, string>("occurs_at", gameEvent.getTick().getTick().ToString()),
+                new KeyValuePair<string, string>("event_msg", gameEvent.toJSON()),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            SubmitEventResponse submitEventResponse = JsonConvert.DeserializeObject<SubmitEventResponse>(responseContent);
+            return submitEventResponse;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return null;
+        }
+    }
+    
+    public async Task<List<NetworkGameEvent>> getGameEvents()
+    {
+        try
+        {
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("session_id", PlayerPrefs.GetString("token")),
+                new KeyValuePair<string, string>("type", "get_events"),
+                new KeyValuePair<string, string>("room_id", ApplicationState.currentGameRoom.room_id.ToString()),
+            });
+
+            HttpResponseMessage response = await client.PostAsync(url, formContent);
+            // Read the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+            Debug.Log(responseContent);
+
+            List<NetworkGameEvent> gameEventResponse = JsonConvert.DeserializeObject<List<NetworkGameEvent>>(responseContent);
+            return gameEventResponse;
         }
         catch (Exception e)
         {

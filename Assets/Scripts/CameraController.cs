@@ -4,8 +4,9 @@ using System.Collections.Generic;
  using SubterfugeCore.Core.Entities.Locations;
  using SubterfugeCore.Core.GameEvents;
  using UnityEngine;
+ using UnityEngine.EventSystems;
 
-public class CameraController : MonoBehaviour
+ public class CameraController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float CameraDampen = 5;
@@ -27,6 +28,9 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Cancel any camera panning if a UI element was clicked.
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        
         // If left mouse button is down, the camera is being moved. Set the drag origin and create a velocity for the camera
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,13 +65,6 @@ public class CameraController : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
                 {
-                    // Clicked object is an outpost, don't move the camera.
-                    destinationOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
-                    
-                    // Launch a sub
-                    LaunchEvent launchEvent = new LaunchEvent(Game.timeMachine.getCurrentTick().getNextTick(), launchOutpost, 1, destinationOutpost);
-                    Game.timeMachine.addEvent(launchEvent);
-                    Debug.Log("Launched a sub!");
                     launchOutpost = null;
                     destinationOutpost = null;
                     dragOrigin = Input.mousePosition;
