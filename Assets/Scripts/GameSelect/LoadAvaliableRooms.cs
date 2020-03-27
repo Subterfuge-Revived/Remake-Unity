@@ -43,7 +43,7 @@ public class LoadAvaliableRooms : MonoBehaviour
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
+                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + "/" + room.max_players + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
             }
             else
             {
@@ -79,7 +79,7 @@ public class LoadAvaliableRooms : MonoBehaviour
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
+                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + "/" + room.max_players + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
             }
             else
             {
@@ -109,5 +109,10 @@ public class LoadAvaliableRooms : MonoBehaviour
         // Load the game scene
         SceneManager.LoadScene("Game");
         return null;
+    }
+    
+    public void onCreateGameClicked()
+    {
+        SceneManager.LoadScene("CreateGame");
     }
 }
