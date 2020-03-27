@@ -70,7 +70,11 @@ using System.Collections.Generic;
                     dragOrigin = Input.mousePosition;
                 }
             }
-            rb.velocity = -((Input.mousePosition - dragOrigin) / Time.deltaTime) * 0.01f;
+            // The first click was not on an outpost, apply velocity to the map to scroll.
+            else
+            {
+                rb.velocity = -((Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin)) / Time.deltaTime);
+            }
         }
 
         // If the mouse is not pressed, slow the map down over time to a stop
@@ -92,13 +96,9 @@ using System.Collections.Generic;
         if (dragOrigin == Input.mousePosition) return;
         if (launchOutpost != null) return;
 
-        Matrix4x4 m = Camera.main.worldToCameraMatrix;
-
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin);
 
         dragOrigin = Input.mousePosition;
-        //Vector3 move = m.MultiplyPoint(pos);
-        //Vector3 move = new Vector3(-pos.x*300, -pos.y*300, 0);
         transform.Translate(-pos, Space.World);
     }
 }
