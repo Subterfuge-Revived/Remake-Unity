@@ -14,6 +14,8 @@ using System.Collections.Generic;
     public float cameraZoomScrollSpeed = 0.33f; // Make this configurable in User Settings?
     public float maxZoomOrthographicSize = 3;
     public float minZoomOrthographicSize = 100;
+    public float mapHeight = 150; // This is the map height for the particular game. This only applies to rectangular maps.
+    public float mapWidth = 150; // This is the map width for the particular game. This only applies to rectangular maps.
     private Vector3 dragOrigin;
     private float speed;
     private RaycastHit2D hit;
@@ -52,10 +54,15 @@ using System.Collections.Generic;
             else rb.velocity *= 1 - (Time.deltaTime * cameraPanDampen);
         }
         
-        // If the camera has a zoom velocity, dampen the zoom.
-        
+        // If the camera has a zoom velocity, dampen the zoom. (Not yet implemented)
+
         // If the pointer is not over the map AND if the initial touch/click point was not the map or outposts, return.
-        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap)) return;
+        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap))
+        {
+            // But first, set the camera center modulo map dimensions.
+            transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
+            return;
+        }
 
         // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
         if (Input.GetMouseButtonDown(0))
@@ -95,5 +102,8 @@ using System.Collections.Generic;
         {
             SmartZoom(Input.mousePosition, Mathf.Pow(2, (Input.mouseScrollDelta.y * cameraZoomScrollSpeed)));
         }
+
+        // Set the camera center modulo map dimensions.
+        transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
     }
 }
