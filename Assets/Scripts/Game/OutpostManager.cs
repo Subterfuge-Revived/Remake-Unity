@@ -20,6 +20,18 @@ using SubterfugeCore.Core;
     private TextMeshPro textMesh;
 
     public Outpost outpost;
+
+    public readonly Color subOlive = new Color(0.439f, 0.463f, 0.290f);
+    public readonly Color subRed = new Color(0.667f, 0.122f, 0.137f);
+    public readonly Color subSky = new Color(0.482f, 0.659f, 0.851f);
+    public readonly Color subOrange = new Color(0.824f, 0.553f, 0.161f);
+    public readonly Color subTeal = new Color(0.353f, 0.6f, 0.541f);
+    public readonly Color subBiege = new Color(0.608f, 0.565f, 0.482f);
+    public readonly Color subPink = new Color(0.784f, 0.467f, 0.694f);
+    public readonly Color subPurple = new Color(0.42f, 0.333f, 0.557f);
+    public readonly Color subNavy = new Color(0.227f, 0.294f, 0.639f);
+    public readonly Color subBrown = new Color(0.545f, 0.369f, 0.235f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,28 +54,28 @@ using SubterfugeCore.Core;
         switch (playerId)
         {
             case 0:
-                renderer.color = Color.white;
+                renderer.color = subSky;
                 break;
             case 1:
-                renderer.color = Color.red;
+                renderer.color = subRed;
                 break;
             case 2:
-                renderer.color = Color.blue;
+                renderer.color = subOlive;
                 break;
             case 3:
-                renderer.color = Color.green;
+                renderer.color = subOrange;
                 break;
             case 4:
-                renderer.color = Color.cyan;
+                renderer.color = subPink;
                 break;
             case 5:
-                renderer.color = Color.magenta;
+                renderer.color = subBrown;
                 break;
             case 6:
-                renderer.color = Color.yellow;
+                renderer.color = subPurple;
                 break;
             case 7:
-                renderer.color = Color.black;
+                renderer.color = subBiege;
                 break;
         }
         
