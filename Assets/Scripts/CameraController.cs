@@ -9,18 +9,34 @@ using System.Collections.Generic;
  public class CameraController : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float CameraDampen = 5;
+    public float cameraPanDampen = 5;
+    public float cameraZoomDampen = 5;
+    public float cameraZoomScrollSpeed = 0.33f; // Make this configurable in User Settings?
+    public float maxZoomOrthographicSize = 3;
+    public float minZoomOrthographicSize = 100;
+    public float mapHeight = 150; // This is the map height for the particular game. This only applies to rectangular maps.
+    public float mapWidth = 150; // This is the map width for the particular game. This only applies to rectangular maps.
     private Vector3 dragOrigin;
     private float speed;
     private RaycastHit2D hit;
     private GameManager gameManager;
     
     // Variables for tracking sub launches.
-    private Outpost launchOutpost = null;
-    private Outpost destinationOutpost = null;
+    // private Outpost launchOutpost = null;
+    // private Outpost destinationOutpost = null;
     
     // Track object being held/dragged
     private bool draggingMap = false;
+
+    void SmartZoom(Vector3 zoomCenter, float zoomFactor)
+    {
+        var posBeforeZoom = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Camera.main.orthographicSize /= zoomFactor;
+        if (Camera.main.orthographicSize < maxZoomOrthographicSize) Camera.main.orthographicSize = maxZoomOrthographicSize;
+        if (Camera.main.orthographicSize > minZoomOrthographicSize) Camera.main.orthographicSize = minZoomOrthographicSize;
+        var posAfterZoom = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.Translate(posBeforeZoom - posAfterZoom, Space.World);
+    }
 
     void OnStart()
     {
@@ -35,15 +51,23 @@ using System.Collections.Generic;
         if (rb.velocity.magnitude > 0)
         {
             if (rb.velocity.magnitude < 0.01) rb.velocity = new Vector2(0, 0);
-            else rb.velocity -= rb.velocity * (Time.deltaTime * CameraDampen);
+            else rb.velocity *= 1 - (Time.deltaTime * cameraPanDampen);
         }
         
+        // If the camera has a zoom velocity, dampen the zoom. (Not yet implemented)
+
         // If the pointer is not over the map AND if the initial touch/click point was not the map or outposts, return.
-        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap)) return;
+        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap))
+        {
+            // But first, set the camera center modulo map dimensions.
+            transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
+            return;
+        }
 
         // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
         if (Input.GetMouseButtonDown(0))
         {
+            // Reset all already-existing map movement.
             rb.velocity = new Vector2(0, 0);
             // Firstly, check that the pressed location wasn't an outpost.
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -61,18 +85,25 @@ using System.Collections.Generic;
         if ((Input.GetMouseButton(0)) && (draggingMap))
         {
             if (dragOrigin == Input.mousePosition) return;
-
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin);
-
+            Vector3 pos = Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.Translate(pos, Space.World);
             dragOrigin = Input.mousePosition;
-            transform.Translate(-pos, Space.World);
         }
 
         // If the left mouse button is released AND the initial touch/click was on the map, begin pan dampening.
         if ((Input.GetMouseButtonUp(0)) && (draggingMap))
         {
-            rb.velocity = -((Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.ScreenToWorldPoint(dragOrigin)) / Time.deltaTime);
+            rb.velocity = ((Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition)) / Time.deltaTime);
             draggingMap = false;
         }
+        
+        // If the mouse wheel is being scrolled, zoom the camera.
+        if (Input.mouseScrollDelta.magnitude > 0)
+        {
+            SmartZoom(Input.mousePosition, Mathf.Pow(2, (Input.mouseScrollDelta.y * cameraZoomScrollSpeed)));
+        }
+
+        // Set the camera center modulo map dimensions.
+        transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
     }
 }
