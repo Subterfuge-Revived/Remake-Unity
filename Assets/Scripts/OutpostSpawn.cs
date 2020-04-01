@@ -45,7 +45,21 @@ public class OutpostSpawn : MonoBehaviour
         config.dormantsPerPlayer = 3;
         config.maxiumumOutpostDistance = 100;
         config.minimumOutpostDistance = 30;
-        config.outpostsPerPlayer = 5;   
+        config.outpostsPerPlayer = 5;
+        
+        //////// GENERATE DUMMY PLAYERS ////////
+        // (comment out above code)
+        /*
+        players.Add(new Player(1));
+        players.Add(new Player(2));
+
+        GameConfiguration config = new GameConfiguration(players);
+        config.seed = 1234;
+        config.dormantsPerPlayer = 3;
+        config.maxiumumOutpostDistance = 100;
+        config.minimumOutpostDistance = 30;
+        config.outpostsPerPlayer = 5; 
+        */
         
         Game server = new Game(config);
         List<Outpost> outposts;
@@ -53,7 +67,6 @@ public class OutpostSpawn : MonoBehaviour
         outposts = Game.timeMachine.getState().getOutposts();
 
         foreach (Outpost outpost in outposts) {
-            
             var location = new Vector3(rand.Next(-15,15), rand.Next(-15,15), 0);
             if (outpostLocations.Count > 0)
             {
