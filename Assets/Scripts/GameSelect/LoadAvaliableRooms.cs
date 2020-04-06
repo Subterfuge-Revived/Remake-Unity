@@ -10,18 +10,16 @@ public class LoadAvaliableRooms : MonoBehaviour
 {
 
     public GameRoomButton scrollItemTemplate;
-    private Api api = null;
+    Api api = new Api();
 
     // Start is called before the first frame update
     async void Start()
     {
-        gameObject.AddComponent<Api>();
         LoadOpenRooms();
     }
 
     public async void LoadOpenRooms()
     {
-        api = gameObject.GetComponent<Api>();
         List<GameRoom> roomResponse = await api.GetOpenRooms();
         
         // Destroy all existing rooms.
@@ -57,7 +55,6 @@ public class LoadAvaliableRooms : MonoBehaviour
     
     public async void LoadOngoingRooms()
     {
-        api = gameObject.GetComponent<Api>();
         List<GameRoom> roomResponse = await api.GetOngoingRooms();
         
         // Destroy all existing rooms.
@@ -114,5 +111,10 @@ public class LoadAvaliableRooms : MonoBehaviour
     public void onCreateGameClicked()
     {
         SceneManager.LoadScene("CreateGame");
+    }
+
+    public void onBackClick()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

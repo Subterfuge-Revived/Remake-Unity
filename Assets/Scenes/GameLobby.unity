@@ -542,7 +542,6 @@ GameObject:
   - component: {fileID: 981619318}
   - component: {fileID: 981619317}
   - component: {fileID: 981619316}
-  - component: {fileID: 981619320}
   m_Layer: 5
   m_Name: LeaveGameButton
   m_TagString: Untagged
@@ -662,18 +661,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981619314}
   m_CullTransparentMesh: 0
---- !u!114 &981619320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981619314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de935a57949e9394090042957c1e2030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1174444273
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +910,6 @@ GameObject:
   - component: {fileID: 1595114464}
   - component: {fileID: 1595114463}
   - component: {fileID: 1595114466}
-  - component: {fileID: 1595114467}
   m_Layer: 5
   m_Name: ActionButton
   m_TagString: Untagged
@@ -1043,18 +1029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionButton: {fileID: 1595114463}
---- !u!114 &1595114467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595114461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de935a57949e9394090042957c1e2030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1824292657
 GameObject:
   m_ObjectHideFlags: 0

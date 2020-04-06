@@ -13,17 +13,11 @@ public class CreateGameController : MonoBehaviour
     public Toggle rankedToggle;
     public Toggle anonToggle;
 
-    public Api api;
-    // Start is called before the first frame update
-    void Start()
-    {
-        api = gameObject.GetComponent<Api>();
-    }
+    public Api api = new Api();
 
     public async void onCreateGame()
     {
-        CreateLobbyResponse response =
-            await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, 0, 0);
+        CreateLobbyResponse response = await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, 0, 0);
         
         SceneManager.LoadScene("GameSelect");
     }

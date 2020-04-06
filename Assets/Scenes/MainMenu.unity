@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 1349508669}
   - component: {fileID: 1349508668}
   m_Layer: 0
-  m_Name: Puzzles (1)
+  m_Name: Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,7 +1140,7 @@ GameObject:
   - component: {fileID: 1902395899}
   - component: {fileID: 1902395898}
   m_Layer: 0
-  m_Name: Puzzles (2)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

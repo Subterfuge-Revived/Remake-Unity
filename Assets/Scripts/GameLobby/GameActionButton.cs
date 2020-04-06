@@ -62,7 +62,7 @@ public class GameActionButton : MonoBehaviour
 
     public async void onJoinLobby()
     {
-        Api api = GetComponent<Api>();
+        Api api = new Api();
         JoinLobbyResponse joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.room_id);
         NetworkUser user = new NetworkUser();
         user.id = ApplicationState.player.getId();
@@ -76,7 +76,7 @@ public class GameActionButton : MonoBehaviour
     
     public async void onStartEarly()
     {
-        Api api = GetComponent<Api>();
+        Api api = new Api();
         StartLobbyEarlyResponse startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.room_id);
 
         if (startEarlyResponse.success == true)
