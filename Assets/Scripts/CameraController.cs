@@ -57,7 +57,7 @@ using UnityEngine.EventSystems;
         
         // If the camera has a zoom velocity, dampen the zoom. (Not yet implemented)
 
-        // If the pointer is not over the map AND if the initial touch/click point was not the map or outposts, return.
+        // If the pointer is over the map OR if the initial touch/click point was the map or outposts, continue.
         if ((!EventSystem.current.IsPointerOverGameObject()) || (draggingMap))
         {
 	        // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
@@ -101,7 +101,7 @@ using UnityEngine.EventSystems;
         }
 
         // Set the camera center modulo map dimensions by wrapping the transform inside an RftVector.
-        RftVector cam = new RftVector(new Rft(mapHeight,mapWidth), transform.position.x, transform.position.y);
+        RftVector cam = new RftVector(new Rft(mapHeight, mapWidth), transform.position.x, transform.position.y);
         transform.SetPositionAndRotation(new Vector3((float)cam.x, (float)cam.y, transform.position.z), transform.rotation);
     }
 }
