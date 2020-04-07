@@ -1,10 +1,11 @@
 ﻿﻿using System.Collections;
 using System.Collections.Generic;
- using SubterfugeCore.Core;
- using SubterfugeCore.Core.Entities.Locations;
- using SubterfugeCore.Core.GameEvents;
- using UnityEngine;
- using UnityEngine.EventSystems;
+using SubterfugeCore.Core;
+using SubterfugeCore.Core.Entities.Locations;
+using SubterfugeCore.Core.GameEvents;
+ using SubterfugeCore.Core.Map;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
  public class CameraController : MonoBehaviour
 {
@@ -47,7 +48,7 @@ using System.Collections.Generic;
     // Update is called once per frame
     void Update()
     {
-        // If the camera has a velocity, dampen the camera.
+        // If the camera has a velocity, dampen the velocity.
         if (rb.velocity.magnitude > 0)
         {
             if (rb.velocity.magnitude < 0.01) rb.velocity = new Vector2(0, 0);
@@ -57,53 +58,50 @@ using System.Collections.Generic;
         // If the camera has a zoom velocity, dampen the zoom. (Not yet implemented)
 
         // If the pointer is not over the map AND if the initial touch/click point was not the map or outposts, return.
-        if ((EventSystem.current.IsPointerOverGameObject()) && (!draggingMap))
+        if ((!EventSystem.current.IsPointerOverGameObject()) || (draggingMap))
         {
-            // But first, set the camera center modulo map dimensions.
-            transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
-            return;
-        }
-
-        // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Reset all already-existing map movement.
-            rb.velocity = new Vector2(0, 0);
-            // Firstly, check that the pressed location wasn't an outpost.
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider == null || !hit.collider.gameObject.CompareTag("Outpost"))
-            {
-                // The pressed location was not an outpost. Create a dragOrigin and velocity for the camera.
-                Debug.Log("Left mouse down on map (not outpost).");
-                dragOrigin = Input.mousePosition;
-                draggingMap = true;
-                return;
-            }
-        }
+	        // When the left mouse button is clicked, create a dragOrigin and velocity for the camera.
+	        if (Input.GetMouseButtonDown(0))
+	        {
+		        // Reset all already-existing map movement.
+		        rb.velocity = new Vector2(0, 0);
+		        // Firstly, check that the pressed location wasn't an outpost.
+		        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+		        if (hit.collider == null || !hit.collider.gameObject.CompareTag("Outpost"))
+		        {
+			        // The pressed location was not an outpost. Create a dragOrigin and velocity for the camera.
+			        Debug.Log("Left mouse down on map (not outpost).");
+			        dragOrigin = Input.mousePosition;
+			        draggingMap = true;
+			        return;
+		        }
+	        }
         
-        // If the left mouse button is being held AND the initial touch/click point was on the map, pan the camera.
-        if ((Input.GetMouseButton(0)) && (draggingMap))
-        {
-            if (dragOrigin == Input.mousePosition) return;
-            Vector3 pos = Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.Translate(pos, Space.World);
-            dragOrigin = Input.mousePosition;
-        }
+	        // If the left mouse button is being held AND the initial touch/click point was on the map, pan the camera.
+	        if ((Input.GetMouseButton(0)) && (draggingMap))
+	        {
+		        if (dragOrigin == Input.mousePosition) return;
+		        Vector3 pos = Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		        transform.Translate(pos, Space.World);
+		        dragOrigin = Input.mousePosition;
+	        }
 
-        // If the left mouse button is released AND the initial touch/click was on the map, begin pan dampening.
-        if ((Input.GetMouseButtonUp(0)) && (draggingMap))
-        {
-            rb.velocity = ((Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition)) / Time.deltaTime);
-            draggingMap = false;
-        }
+	        // If the left mouse button is released AND the initial touch/click was on the map, begin pan dampening.
+	        if ((Input.GetMouseButtonUp(0)) && (draggingMap))
+	        {
+		        rb.velocity = ((Camera.main.ScreenToWorldPoint(dragOrigin) - Camera.main.ScreenToWorldPoint(Input.mousePosition)) / Time.deltaTime);
+		        draggingMap = false;
+	        }
         
-        // If the mouse wheel is being scrolled, zoom the camera.
-        if (Input.mouseScrollDelta.magnitude > 0)
-        {
-            SmartZoom(Input.mousePosition, Mathf.Pow(2, (Input.mouseScrollDelta.y * cameraZoomScrollSpeed)));
+	        // If the mouse wheel is being scrolled, zoom the camera.
+	        if (Input.mouseScrollDelta.magnitude > 0)
+	        {
+		        SmartZoom(Input.mousePosition, Mathf.Pow(2, (Input.mouseScrollDelta.y * cameraZoomScrollSpeed)));
+	        }
         }
 
-        // Set the camera center modulo map dimensions.
-        transform.SetPositionAndRotation(new Vector3(transform.position.x % mapWidth, transform.position.y % mapHeight, transform.position.z), transform.rotation);
+        // Set the camera center modulo map dimensions by wrapping the transform inside an RftVector.
+        RftVector cam = new RftVector(new Rft(mapHeight,mapWidth), transform.position.x, transform.position.y);
+        transform.SetPositionAndRotation(new Vector3((float)cam.x, (float)cam.y, transform.position.z), transform.rotation);
     }
 }
