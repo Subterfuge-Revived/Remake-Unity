@@ -45,7 +45,7 @@ public class LeaveGameButton : MonoBehaviour
 
     public async void onLeaveLobby()
     {
-        Api api = GetComponent<Api>();
+        Api api = new Api();
         LeaveLobbyResponse leaveResponse = await api.LeaveLobby(ApplicationState.currentGameRoom.room_id);
         
         // Reload the scene to update lobby.

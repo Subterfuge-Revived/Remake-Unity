@@ -12,12 +12,11 @@ public class CreateAccountController : MonoBehaviour
     public Text username;
     public Text password;
     public Text email;
-    public Api api;
+    public Api api = new Api();
     public Text responseInfo;
     
     public void Start()
     {
-        api = gameObject.GetComponent<Api>();
     }
 
     public async void onRegister()

@@ -5,6 +5,7 @@ using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities;
 using SubterfugeCore.Core.Entities.Locations;
 using SubterfugeCore.Core.GameEvents;
+using SubterfugeCore.Core.GameEvents.Base;
 using SubterfugeCore.Core.Network;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
@@ -18,19 +19,19 @@ public class GameManager : MonoBehaviour
     public Outpost launchOutpost;
     public Outpost destinationOutpost;
     public Slider drillerSlider;
-    public Api api;
+    public Api api = new Api();
     
     // Start is called before the first frame update
     async void Start()
     {
         launchHud.SetActive(false);
         api = gameObject.GetComponent<Api>();
-        List<NetworkGameEvent> gameEvents = await api.getGameEvents();
+        List<GameEvent> gameEvents = await api.getGameEvents(ApplicationState.currentGameRoom.room_id);
         
         // Parse game events here.
-        foreach(NetworkGameEvent gameEvent in gameEvents)
+        foreach(GameEvent gameEvent in gameEvents)
         {
-            Game.timeMachine.addEvent(LaunchEvent.fromJSON(gameEvent.event_msg));
+            Game.timeMachine.addEvent(gameEvent);
         }
     }
 
@@ -59,15 +60,25 @@ public class GameManager : MonoBehaviour
                 {
                     // Clicked object is an outpost, don't move the camera.
                     destinationOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
-
-                    SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
-                    sourcePanel.source = launchOutpost;
-                    SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
-                    informationPanel.destination = destinationOutpost;
-                    informationPanel.sourceOutpost = launchOutpost;
-                    drillerSlider.maxValue = launchOutpost.getDrillerCount();
                     
-                    this.SetLaunchHub(true);
+                    // only show the hud if the souce outpost is owned by the current player & the destination is not the source.
+                    if (launchOutpost != destinationOutpost &&
+                        launchOutpost.getOwner().getId() == ApplicationState.player.getId())
+                    {
+
+                        SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
+                        sourcePanel.source = launchOutpost;
+                        SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
+                        informationPanel.destination = destinationOutpost;
+                        informationPanel.sourceOutpost = launchOutpost;
+                        drillerSlider.maxValue = launchOutpost.getDrillerCount();
+
+                        this.SetLaunchHub(true);
+                    }
+                    else
+                    {
+                        launchOutpost = null;
+                    }
                 }
             } else if (showLaunchHud)
             {
@@ -93,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         LaunchEvent launchEvent = new LaunchEvent(Game.timeMachine.currentTick, launchOutpost, (int)drillerSlider.value, destinationOutpost);
         Game.timeMachine.addEvent(launchEvent);
-        api.submitGameEvent(launchEvent);
+        api.submitGameEvent(launchEvent, ApplicationState.currentGameRoom.room_id);
         this.SetLaunchHub(false);
     }
     
