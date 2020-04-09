@@ -21,18 +21,18 @@ public class CreateAccountController : MonoBehaviour
 
     public async void onRegister()
     {
-        RegisterResponse response = await api.registerAccount(username.text, password.text, email.text);
-        if (response.success)
+        RegisterResponse response = await api.RegisterAccount(username.text, password.text, email.text);
+        if (response.Success)
         {
-            ApplicationState.player = new Player(response.user.id, response.user.name);
+            ApplicationState.player = new Player(response.User.Id, response.User.Name);
             PlayerPrefs.SetString("username", username.text);
             PlayerPrefs.SetString("password", password.text);
-            PlayerPrefs.SetString("token", response.token);
+            PlayerPrefs.SetString("token", response.Token);
             SceneManager.LoadScene("MainMenu");
         }
         else
         {
-            responseInfo.text = response.message;
+            responseInfo.text = response.Message;
         }
     }
 

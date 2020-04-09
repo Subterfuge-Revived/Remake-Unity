@@ -1,9 +1,9 @@
 ﻿﻿using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
-using SubterfugeCore.Core.Entities.Locations;
+using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.GameEvents;
- using SubterfugeCore.Core.Map;
+ using SubterfugeCore.Core.Topologies;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -102,6 +102,6 @@ using UnityEngine.EventSystems;
 
         // Set the camera center modulo map dimensions by wrapping the transform inside an RftVector.
         RftVector cam = new RftVector(new Rft(mapHeight, mapWidth), transform.position.x, transform.position.y);
-        transform.SetPositionAndRotation(new Vector3((float)cam.x, (float)cam.y, transform.position.z), transform.rotation);
+        transform.SetPositionAndRotation(new Vector3((float)cam.X, (float)cam.Y, transform.position.z), transform.rotation);
     }
 }

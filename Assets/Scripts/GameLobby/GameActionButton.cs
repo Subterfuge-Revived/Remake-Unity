@@ -14,10 +14,10 @@ public class GameActionButton : MonoBehaviour
     {
         // Determine if the current user is the creator of the game
         GameRoom room = ApplicationState.currentGameRoom;
-        if (room.creator_id == ApplicationState.player.getId())
+        if (room.CreatorId == ApplicationState.player.GetId())
         {
             // Determine if there are more players than just the creator.
-            if (room.players.Count > 1)
+            if (room.Players.Count > 1)
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
@@ -35,9 +35,9 @@ public class GameActionButton : MonoBehaviour
         else
         {
             bool isInGame = false;
-            foreach(NetworkUser player in room.players)
+            foreach(NetworkUser player in room.Players)
             {
-                if (!isInGame && player.id == ApplicationState.player.getId())
+                if (!isInGame && player.Id == ApplicationState.player.GetId())
                 {
                     isInGame = true;
                 }
@@ -63,12 +63,12 @@ public class GameActionButton : MonoBehaviour
     public async void onJoinLobby()
     {
         Api api = new Api();
-        JoinLobbyResponse joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.room_id);
+        JoinLobbyResponse joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.RoomId);
         NetworkUser user = new NetworkUser();
-        user.id = ApplicationState.player.getId();
-        user.name = ApplicationState.player.getPlayerName();
+        user.Id = ApplicationState.player.GetId();
+        user.Name = ApplicationState.player.GetPlayerName();
         
-        ApplicationState.currentGameRoom.players.Add(user);
+        ApplicationState.currentGameRoom.Players.Add(user);
         
         // Reload the scene to update lobby.
         SceneManager.LoadScene("GameLobby");
@@ -77,9 +77,9 @@ public class GameActionButton : MonoBehaviour
     public async void onStartEarly()
     {
         Api api = new Api();
-        StartLobbyEarlyResponse startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.room_id);
+        StartLobbyEarlyResponse startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.RoomId);
 
-        if (startEarlyResponse.success == true)
+        if (startEarlyResponse.Success == true)
         {
             SceneManager.LoadScene("Game");
         }

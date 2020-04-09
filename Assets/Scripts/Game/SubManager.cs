@@ -17,17 +17,17 @@ public class SubManager : MonoBehaviour
     void Start()
     {
         // Update the position and rotation of the sub.
-        Vector3 location = new Vector3(sub.getCurrentLocation().X, sub.getCurrentLocation().Y, 0);
+        Vector3 location = new Vector3(sub.GetCurrentPosition().X, sub.GetCurrentPosition().Y, 0);
         Transform transform = GetComponent<Transform>();
         transform.localPosition = location;
-        transform.rotation = Quaternion.Euler(0, 0, (int)(sub.getRotation() * (360 / (2 * Math.PI))) - 135);
+        transform.rotation = Quaternion.Euler(0, 0, (int)(sub.GetRotation() * (360 / (2 * Math.PI))) - 135);
         
         // Set color based on the owner
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
-        if (sub.getOwner() != null)
+        if (sub.GetOwner() != null)
         {
-            playerId = Game.timeMachine.getState().getPlayers().IndexOf(sub.getOwner()) + 1;
+            playerId = Game.TimeMachine.GetState().GetPlayers().IndexOf(sub.GetOwner()) + 1;
         }
         switch (playerId)
         {
@@ -64,14 +64,14 @@ public class SubManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = sub.getDrillerCount().ToString();
-        if (Game.timeMachine.getState().subExists(sub))
+        textMesh.text = sub.GetDrillerCount().ToString();
+        if (Game.TimeMachine.GetState().SubExists(sub))
         {
             // Update the position and rotation of the sub.
-            Vector3 location = new Vector3(sub.getCurrentLocation().X, sub.getCurrentLocation().Y, 0);
+            Vector3 location = new Vector3(sub.GetCurrentPosition().X, sub.GetCurrentPosition().Y, 0);
             Transform transform = GetComponent<Transform>();
             transform.localPosition = location;
-            transform.rotation = Quaternion.Euler(0, 0, (int) (sub.getRotation() * (360 / (2 * Math.PI))) - 135);
+            transform.rotation = Quaternion.Euler(0, 0, (int) (sub.GetRotation() * (360 / (2 * Math.PI))) - 135);
         }
         else
         {

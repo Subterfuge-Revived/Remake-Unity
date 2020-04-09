@@ -26,13 +26,13 @@ namespace Login
                 // Try to login.
                 Api api = new Api();
                 LoginResponse response = await api.Login(username, password);
-                if (response.success)
+                if (response.Success)
                 {
                     // Save the player
-                    ApplicationState.player = new Player(response.user);
+                    ApplicationState.player = new Player(response.User);
                 
                     // Go to the main menu.
-                    PlayerPrefs.SetString("token", response.token);
+                    PlayerPrefs.SetString("token", response.Token);
                     SceneManager.LoadScene("MainMenu");
                 }
                 else
@@ -46,18 +46,18 @@ namespace Login
         {
             Api api = new Api();
             LoginResponse response = await api.Login(username.text, password.text);
-            if (response.success)
+            if (response.Success)
             {
                 // Save the player
-                ApplicationState.player = new Player(response.user);
+                ApplicationState.player = new Player(response.User);
                 
                 // Go to the main menu.
-                PlayerPrefs.SetString("token", response.token);
+                PlayerPrefs.SetString("token", response.Token);
                 SceneManager.LoadScene("MainMenu");
             }
             else
             {
-                loginInfo.text = response.message;
+                loginInfo.text = response.Message;
             }
         }
 

@@ -35,13 +35,13 @@ public class LoadAvaliableRooms : MonoBehaviour
             GameRoomButton scrollItem = (GameRoomButton)Instantiate(scrollItemTemplate);
             scrollItem.gameObject.SetActive(true);
             scrollItem.room = room;
-            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { goToGameLobby(room); });
+            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGameLobby(room); });
             
             // Set the text
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + "/" + room.max_players + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
+                text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed + ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " + room.Anonimity + ", Created By: " + room.CreatorId + "]";
             }
             else
             {
@@ -70,13 +70,13 @@ public class LoadAvaliableRooms : MonoBehaviour
             GameRoomButton scrollItem = (GameRoomButton)Instantiate(scrollItemTemplate);
             scrollItem.gameObject.SetActive(true);
             scrollItem.room = room;
-            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { goToGame(room); });
+            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGame(room); });
             
             // Set the text
             Text text = scrollItem.GetComponentInChildren<Text>();
             if (text != null)
             {
-                text.text = "[ GameId: " + room.room_id + " Title: " + room.description + ", Seed: " + room.seed + ", Players: " + room.players.Count + "/" + room.max_players + ", Anonymous: " + room.anonimity + ", Created By: " + room.creator_id + "]";
+                text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed + ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " + room.Anonimity + ", Created By: " + room.CreatorId + "]";
             }
             else
             {
@@ -88,7 +88,7 @@ public class LoadAvaliableRooms : MonoBehaviour
         }
     }
 
-    public Button.ButtonClickedEvent goToGameLobby(GameRoom room)
+    public Button.ButtonClickedEvent GoToGameLobby(GameRoom room)
     {
         // Set the gameroom to the selected game
         ApplicationState.currentGameRoom = room;
@@ -98,7 +98,7 @@ public class LoadAvaliableRooms : MonoBehaviour
         return null;
     }
 
-    public Button.ButtonClickedEvent goToGame(GameRoom room)
+    public Button.ButtonClickedEvent GoToGame(GameRoom room)
     {
         // Set the gameroom to the selected game
         ApplicationState.currentGameRoom = room;

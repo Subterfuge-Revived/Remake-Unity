@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities;
-using SubterfugeCore.Core.Entities.Locations;
+using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.GameEvents;
 using SubterfugeCore.Core.GameEvents.Base;
 using SubterfugeCore.Core.Network;
@@ -26,12 +26,12 @@ public class GameManager : MonoBehaviour
     {
         launchHud.SetActive(false);
         api = gameObject.GetComponent<Api>();
-        List<GameEvent> gameEvents = await api.getGameEvents(ApplicationState.currentGameRoom.room_id);
+        List<GameEvent> gameEvents = await api.GetGameEvents(ApplicationState.currentGameRoom.RoomId);
         
         // Parse game events here.
         foreach(GameEvent gameEvent in gameEvents)
         {
-            Game.timeMachine.addEvent(gameEvent);
+            Game.TimeMachine.AddEvent(gameEvent);
         }
     }
 
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                     
                     // only show the hud if the souce outpost is owned by the current player & the destination is not the source.
                     if (launchOutpost != destinationOutpost &&
-                        launchOutpost.getOwner().getId() == ApplicationState.player.getId())
+                        launchOutpost.GetOwner().GetId() == ApplicationState.player.GetId())
                     {
 
                         SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
                         SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
                         informationPanel.destination = destinationOutpost;
                         informationPanel.sourceOutpost = launchOutpost;
-                        drillerSlider.maxValue = launchOutpost.getDrillerCount();
+                        drillerSlider.maxValue = launchOutpost.GetDrillerCount();
 
                         this.SetLaunchHub(true);
                     }
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void AdvanceTimemachine(int ticks)
     {
-        Game.timeMachine.advance(ticks);
+        Game.TimeMachine.Advance(ticks);
     }
 
     public void SetLaunchHub(bool state)
@@ -102,9 +102,9 @@ public class GameManager : MonoBehaviour
 
     public void launchSub()
     {
-        LaunchEvent launchEvent = new LaunchEvent(Game.timeMachine.currentTick, launchOutpost, (int)drillerSlider.value, destinationOutpost);
-        Game.timeMachine.addEvent(launchEvent);
-        api.submitGameEvent(launchEvent, ApplicationState.currentGameRoom.room_id);
+        LaunchEvent launchEvent = new LaunchEvent(Game.TimeMachine.CurrentTick, launchOutpost, (int)drillerSlider.value, destinationOutpost);
+        Game.TimeMachine.AddEvent(launchEvent);
+        api.SubmitGameEvent(launchEvent, ApplicationState.currentGameRoom.RoomId);
         this.SetLaunchHub(false);
     }
     

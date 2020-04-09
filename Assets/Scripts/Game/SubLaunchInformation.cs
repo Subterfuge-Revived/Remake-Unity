@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using SubterfugeCore.Core.Entities.Locations;
+using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +18,7 @@ public class SubLaunchInformation : MonoBehaviour
     void Start()
     {
         slider.minValue = 0;
-        slider.maxValue = sourceOutpost.getDrillerCount();
+        slider.maxValue = sourceOutpost.GetDrillerCount();
     }
 
     // Update is called once per frame
@@ -26,6 +26,6 @@ public class SubLaunchInformation : MonoBehaviour
     {
         SubInformation.text = "Drillers: " + slider.value + "\n" +
                               "Specialists: \n" +
-                              "Destination: " + destination.getId();
+                              "Destination: " + destination.GetId();
     }
 }

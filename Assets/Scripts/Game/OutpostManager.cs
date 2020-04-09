@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SubterfugeCore.Core;
- using SubterfugeCore.Core.Entities.Locations;
+ using SubterfugeCore.Core.Entities.Positions;
  using TMPro;
  using UnityEditor.UI;
  using UnityEngine.UI;
@@ -43,13 +43,13 @@ using SubterfugeCore.Core;
     void Update()
     {
         // Set color based on the owner
-        textMesh.text = outpost.getDrillerCount().ToString();
+        textMesh.text = outpost.GetDrillerCount().ToString();
 
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
-        if (outpost.getOwner() != null)
+        if (outpost.GetOwner() != null)
         {
-            playerId = Game.timeMachine.getState().getPlayers().IndexOf(outpost.getOwner()) + 1;
+            playerId = Game.TimeMachine.GetState().GetPlayers().IndexOf(outpost.GetOwner()) + 1;
         }
         switch (playerId)
         {

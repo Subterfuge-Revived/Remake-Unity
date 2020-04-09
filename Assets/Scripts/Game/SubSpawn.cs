@@ -21,28 +21,28 @@ public class SubSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Sub sub in Game.timeMachine.getState().getSubList())
+        foreach (Sub sub in Game.TimeMachine.GetState().GetSubList())
         {
             if (!subSpawned(sub))
             {
-                Vector3 location = new Vector3(sub.getCurrentLocation().X, sub.getCurrentLocation().Y, 0);
+                Vector3 location = new Vector3(sub.GetCurrentPosition().X, sub.GetCurrentPosition().Y, 0);
                 subObject = Instantiate(this.sub, location, Quaternion.identity);
                 subObject.GetComponent<SubManager>().sub = sub;
                 
-                if (!spawnedSubs.ContainsKey(sub.getOwner()))
+                if (!spawnedSubs.ContainsKey(sub.GetOwner()))
                 {
-                    spawnedSubs[sub.getOwner()] = new List<Sub>();
+                    spawnedSubs[sub.GetOwner()] = new List<Sub>();
                 }
-                spawnedSubs[sub.getOwner()].Add(sub);
+                spawnedSubs[sub.GetOwner()].Add(sub);
             }
         }
     }
 
     private bool subSpawned(Sub sub)
     {
-        if (spawnedSubs.ContainsKey(sub.getOwner()))
+        if (spawnedSubs.ContainsKey(sub.GetOwner()))
         {
-            foreach (Sub playerSub in spawnedSubs[sub.getOwner()])
+            foreach (Sub playerSub in spawnedSubs[sub.GetOwner()])
             {
                 if (playerSub.Equals(sub))
                 {

@@ -15,7 +15,7 @@ public class TimeMachineSlider : MonoBehaviour
     void Start()
     {
         // Determine current game tick.
-        // GameTick tick = Game.timeMachine.getCurrentTick();
+        // GameTick tick = Game.TimeMachine.GetCurrentTick();
         
         // populate the rulers
         Canvas image = Instantiate(rulerCanvas);

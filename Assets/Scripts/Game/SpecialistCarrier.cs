@@ -25,7 +25,7 @@ public class SpecialistCarrier : MonoBehaviour
      void Update()
      {
          // Show all specialists above the object.
-         foreach (Specialist s in specialistCarrier.getSpecialistManager().getSpecialists())
+         foreach (Specialist s in specialistCarrier.GetSpecialistManager().GetSpecialists())
          {
              SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
              renderer.sprite = Resources.Load<Sprite>("Specialists/Queen");

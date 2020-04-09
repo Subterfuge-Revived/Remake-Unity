@@ -11,7 +11,7 @@ public class RulerSlider : MonoBehaviour, IDragHandler
 {
     private int tickNumber = 0;
     private float currentPosition = 0;
-    public Text currentTick;
+    public Text CurrentTick;
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +23,10 @@ public class RulerSlider : MonoBehaviour, IDragHandler
     void Update()
     {
         tickNumber = (int)Math.Floor(currentPosition / -6);
-        currentTick.text = tickNumber.ToString();
+        CurrentTick.text = tickNumber.ToString();
         if (tickNumber >= 0)
         {
-            Game.timeMachine.goTo(GameTick.fromTickNumber(tickNumber));
+            Game.TimeMachine.GoTo(GameTick.FromTickNumber(tickNumber));
         }
     }
 

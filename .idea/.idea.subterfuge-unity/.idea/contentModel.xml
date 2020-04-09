@@ -11,14 +11,8 @@
             <e p="GameElements.txt" t="Include" />
           </e>
         </e>
-        <e p="JsonDotNet" t="Include">
-          <e p="link.xml" t="Include" />
-        </e>
         <e p="LaunchModalSourceInformation.cs" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="Api" t="Include">
-            <e p="Api.cs" t="Include" />
-          </e>
           <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CreateAccount" t="Include">
