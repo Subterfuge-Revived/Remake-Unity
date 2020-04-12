@@ -1,16 +1,13 @@
-[![languages](https://img.shields.io/github/languages/top/Subterfuge-Revived/Remake-Frontend)]()
-[![code-size](https://img.shields.io/github/languages/code-size/Subterfuge-Revived/Remake-Frontend)]()
-[![commit-activity](https://img.shields.io/github/commit-activity/y/Subterfuge-Revived/Remake-Frontend)](https://github.com/Subterfuge-Revived/Remake-Frontend/pulse/yearly)
-[![license](https://img.shields.io/github/license/Subterfuge-Revived/Remake-Frontend)](LICENSE)
+[![languages](https://img.shields.io/github/languages/top/Subterfuge-Revived/Remake-Unity)]()
+[![code-size](https://img.shields.io/github/languages/code-size/Subterfuge-Revived/Remake-Unity)]()
+[![commit-activity](https://img.shields.io/github/commit-activity/y/Subterfuge-Revived/Remake-Unity)](https://github.com/Subterfuge-Revived/Remake-Unity/pulse/yearly)
+[![license](https://img.shields.io/github/license/Subterfuge-Revived/Remake-Unity)](LICENSE)
 [![discord](https://img.shields.io/discord/617149385196961792)](https://discord.gg/GNk7Xw4)
-[![issues](https://img.shields.io/github/issues/Subterfuge-Revived/Remake-Frontend)](https://github.com/Subterfuge-Revived/Remake-Backend/issues?q=is%3Aopen)
-[![issues-closed-raw](https://img.shields.io/github/issues-closed/Subterfuge-Revived/Remake-Frontend)](https://github.com/Subterfuge-Revived/Remake-Frontend/issues?q=is%3Aclosed+)
+[![issues](https://img.shields.io/github/issues/Subterfuge-Revived/Remake-Unity)](https://github.com/Subterfuge-Revived/Remake-Unity/issues?q=is%3Aopen)
+[![issues-closed-raw](https://img.shields.io/github/issues-closed/Subterfuge-Revived/Remake-Unity)](https://github.com/Subterfuge-Revived/Remake-Unity/issues?q=is%3Aclosed+)
 ### Quick note:
 
 This document is in an unfinished state, if you find that something is wrong or missing let us know.
-
-# Remake-Unity
-TODO
 
 ## Unity Setup
 
