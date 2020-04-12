@@ -14,17 +14,15 @@ TODO
 
 ## Unity Setup
 
-1. Install Unity Hub if you don't have it already
-https://unity3d.com/get-unity/download
+1. [Install Unity Hub](https://unity3d.com/get-unity/download) if you don't have it already
 
 2. Once unity hub is installed, activate a new license (pro or personal is fine).
 
 3. After getting a license, Install unity version 2019.3.0f6 to be safe. I'm sure updated versions are fine, but this is what I started the project at.
 
-4. Download Git to gain access to the code
-        https://git-scm.com/downloads
+4. [Download Git](https://git-scm.com/downloads) to gain access to the code
 
-5. Clone the unity repository to a folder of your choice with git clone https://github.com/Subterfuge-Revived/Remake-Frontend.git
+5. Clone the unity repository to a folder of your choice with `git clone https://github.com/Subterfuge-Revived/Remake-Frontend.git`
 
 6. In unity hub click "Import Project" and path yourself to the project folder. Once imported, start the project with unity.
 
