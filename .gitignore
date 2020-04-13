@@ -60,3 +60,8 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Docfx generated site
+/Assets/_site/*
+/Assets/Documentation/obj/*
+/Assets/Documentation/api/*
