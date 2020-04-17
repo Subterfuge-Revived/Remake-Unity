@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     async void Start()
     {
         launchHud.SetActive(false);
-        api = gameObject.GetComponent<Api>();
         List<GameEvent> gameEvents = await api.GetGameEvents(ApplicationState.currentGameRoom.RoomId);
         
         // Parse game events here.
