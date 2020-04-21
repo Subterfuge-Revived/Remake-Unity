@@ -20,8 +20,8 @@ public class LoadAvaliableRooms : MonoBehaviour
 
     public async void LoadOpenRooms()
     {
-        List<GameRoom> roomResponse = await api.GetOpenRooms();
-        
+        NetworkResponse<List<GameRoom>> roomResponse = await api.GetOpenRooms();
+
         // Destroy all existing rooms.
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
         foreach (GameRoomButton gameRoomButton in existingButtons)
@@ -29,33 +29,42 @@ public class LoadAvaliableRooms : MonoBehaviour
             Destroy(gameRoomButton.gameObject);
         }
 
-        foreach(GameRoom room in roomResponse)
+        if (roomResponse.IsSuccessStatusCode())
         {
-            // Create a new templated item
-            GameRoomButton scrollItem = (GameRoomButton)Instantiate(scrollItemTemplate);
-            scrollItem.gameObject.SetActive(true);
-            scrollItem.room = room;
-            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGameLobby(room); });
-            
-            // Set the text
-            Text text = scrollItem.GetComponentInChildren<Text>();
-            if (text != null)
+
+            foreach (GameRoom room in roomResponse.Response)
             {
-                text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed + ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " + room.Anonimity + ", Created By: " + room.CreatorId + "]";
-            }
-            else
-            {
-                Debug.Log("No Text.");
+                // Create a new templated item
+                GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate);
+                scrollItem.gameObject.SetActive(true);
+                scrollItem.room = room;
+                scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGameLobby(room); });
+
+                // Set the text
+                Text text = scrollItem.GetComponentInChildren<Text>();
+                if (text != null)
+                {
+                    text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed +
+                                ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " +
+                                room.Anonimity + ", Created By: " + room.CreatorId + "]";
+                }
+                else
+                {
+                    Debug.Log("No Text.");
+                }
+
+                // Set the button's parent to the scroll item template.
+                scrollItem.transform.SetParent(scrollItemTemplate.transform.parent, false);
+
             }
 
-            // Set the button's parent to the scroll item template.
-            scrollItem.transform.SetParent(scrollItemTemplate.transform.parent, false);
+            // TODO: Add some text to notify user they are offline.
         }
     }
-    
+
     public async void LoadOngoingRooms()
     {
-        List<GameRoom> roomResponse = await api.GetOngoingRooms();
+        NetworkResponse<List<GameRoom>> roomResponse = await api.GetOngoingRooms();
         
         // Destroy all existing rooms.
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
@@ -64,28 +73,35 @@ public class LoadAvaliableRooms : MonoBehaviour
             Destroy(gameRoomButton.gameObject);
         }
 
-        foreach(GameRoom room in roomResponse)
+        if (roomResponse.IsSuccessStatusCode())
         {
-            // Create a new templated item
-            GameRoomButton scrollItem = (GameRoomButton)Instantiate(scrollItemTemplate);
-            scrollItem.gameObject.SetActive(true);
-            scrollItem.room = room;
-            scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGame(room); });
-            
-            // Set the text
-            Text text = scrollItem.GetComponentInChildren<Text>();
-            if (text != null)
-            {
-                text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed + ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " + room.Anonimity + ", Created By: " + room.CreatorId + "]";
-            }
-            else
-            {
-                Debug.Log("No Text.");
-            }
 
-            // Set the button's parent to the scroll item template.
-            scrollItem.transform.SetParent(scrollItemTemplate.transform.parent, false);
+            foreach (GameRoom room in roomResponse.Response)
+            {
+                // Create a new templated item
+                GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate);
+                scrollItem.gameObject.SetActive(true);
+                scrollItem.room = room;
+                scrollItem.GetComponent<Button>().onClick.AddListener(delegate { GoToGame(room); });
+
+                // Set the text
+                Text text = scrollItem.GetComponentInChildren<Text>();
+                if (text != null)
+                {
+                    text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed +
+                                ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " +
+                                room.Anonimity + ", Created By: " + room.CreatorId + "]";
+                }
+                else
+                {
+                    Debug.Log("No Text.");
+                }
+
+                // Set the button's parent to the scroll item template.
+                scrollItem.transform.SetParent(scrollItemTemplate.transform.parent, false);
+            }
         }
+        // TODO: Add some text to notify the user that they are offline.
     }
 
     public Button.ButtonClickedEvent GoToGameLobby(GameRoom room)

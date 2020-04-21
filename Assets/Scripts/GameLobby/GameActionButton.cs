@@ -63,28 +63,40 @@ public class GameActionButton : MonoBehaviour
     public async void onJoinLobby()
     {
         Api api = new Api();
-        JoinLobbyResponse joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.RoomId);
-        NetworkUser user = new NetworkUser();
-        user.Id = ApplicationState.player.GetId();
-        user.Name = ApplicationState.player.GetPlayerName();
+        NetworkResponse<JoinLobbyResponse> joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.RoomId);
+
+        if (joinResponse.IsSuccessStatusCode())
+        {
+            NetworkUser user = new NetworkUser();
+            user.Id = ApplicationState.player.GetId();
+            user.Name = ApplicationState.player.GetPlayerName();
         
-        ApplicationState.currentGameRoom.Players.Add(user);
+            ApplicationState.currentGameRoom.Players.Add(user);
         
-        // Reload the scene to update lobby.
-        SceneManager.LoadScene("GameLobby");
+            // Reload the scene to update lobby.
+            SceneManager.LoadScene("GameLobby");   
+        }
+        else
+        {
+            // TODO: Add some text to notify the user they are offline.
+            // Potentially add the user's request to a queue that gets attempted when they regain connectivity.
+        }
     }
     
     public async void onStartEarly()
     {
         Api api = new Api();
-        StartLobbyEarlyResponse startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.RoomId);
+        NetworkResponse<StartLobbyEarlyResponse> startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.RoomId);
 
-        if (startEarlyResponse.Success == true)
+        if (startEarlyResponse.IsSuccessStatusCode())
         {
             SceneManager.LoadScene("Game");
         }
         else
         {
+            // TODO: Tell the user that they are offline or send the error message.
+            // If offline, potentailly add their request to a queue.
+            
             // Reload the scene to update lobby. Handle error here.
             SceneManager.LoadScene("GameLobby");
         }

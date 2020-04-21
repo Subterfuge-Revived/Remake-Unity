@@ -24,15 +24,15 @@ namespace Login
                 // TODO: Set a loading indicator variable here to let the user know that we are trying to log them in automatically.
             
                 // Try to login.
-                Api api = new Api();
-                LoginResponse response = await api.Login(username, password);
-                if (response.Success)
+                Api api = new Api("http://18.220.154.6/api");
+                NetworkResponse<LoginResponse> response = await api.Login(username, password);
+                if (response.IsSuccessStatusCode())
                 {
                     // Save the player
-                    ApplicationState.player = new Player(response.User);
+                    ApplicationState.player = new Player(response.Response.User);
                 
                     // Go to the main menu.
-                    PlayerPrefs.SetString("token", response.Token);
+                    PlayerPrefs.SetString("token", response.Response.Token);
                     SceneManager.LoadScene("MainMenu");
                 }
                 else
@@ -45,19 +45,19 @@ namespace Login
         public async void onLogin()
         {
             Api api = new Api();
-            LoginResponse response = await api.Login(username.text, password.text);
-            if (response.Success)
+            NetworkResponse<LoginResponse> response = await api.Login(username.text, password.text);
+            if (response.IsSuccessStatusCode())
             {
                 // Save the player
-                ApplicationState.player = new Player(response.User);
+                ApplicationState.player = new Player(response.Response.User);
                 
                 // Go to the main menu.
-                PlayerPrefs.SetString("token", response.Token);
+                PlayerPrefs.SetString("token", response.Response.Token);
                 SceneManager.LoadScene("MainMenu");
             }
             else
             {
-                loginInfo.text = response.Message;
+                loginInfo.text = response.ErrorContent.Message;
             }
         }
 

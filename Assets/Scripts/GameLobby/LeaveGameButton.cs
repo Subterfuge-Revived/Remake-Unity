@@ -46,10 +46,17 @@ public class LeaveGameButton : MonoBehaviour
     public async void onLeaveLobby()
     {
         Api api = new Api();
-        LeaveLobbyResponse leaveResponse = await api.LeaveLobby(ApplicationState.currentGameRoom.RoomId);
-        
-        // Reload the scene to update lobby.
-        ApplicationState.currentGameRoom = null;
-        SceneManager.LoadScene("GameSelect");
+        NetworkResponse<LeaveLobbyResponse> leaveResponse = await api.LeaveLobby(ApplicationState.currentGameRoom.RoomId);
+
+        if (leaveResponse.IsSuccessStatusCode())
+        {
+            // Reload the scene to update lobby.
+            ApplicationState.currentGameRoom = null;
+            SceneManager.LoadScene("GameSelect");
+        }
+        else
+        {
+            // TODO: Add some text to tell the user they are offline.
+        }
     }
 }

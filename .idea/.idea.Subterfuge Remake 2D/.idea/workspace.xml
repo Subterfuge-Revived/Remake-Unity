@@ -2,77 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet.config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Editor/DotNetZip.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Editor/DotNetZip.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Editor/NugetForUnity.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Editor/NugetForUnity.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/LICENSE.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/README.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/README.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Resources/defaultIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NuGet/Resources/defaultIcon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/api/index.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/intro.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/toc.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/articles/toc.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/docfx.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/docfx.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/index.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/toc.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/content/toc.yml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/docfx.console.2.51.0.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/docfx.console.2.51.0/docfx.console.2.51.0.nupkg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/packages.config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,43 +23,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EBF11174-2519-413D-8CBD-EC5EF1EE6412/17/99c370ff/GameRoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SouceLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Documentation/docfx.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SouceLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Documentation/docfx.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -168,13 +107,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -200,10 +139,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10064">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10064" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -403,10 +342,10 @@
           <line>28</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="28">
             <startOffsets>
-              <option value="959" />
+              <option value="1001" />
             </startOffsets>
             <endOffsets>
-              <option value="980" />
+              <option value="1036" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
@@ -416,10 +355,10 @@
           <line>47</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="47">
             <startOffsets>
-              <option value="1592" />
+              <option value="1681" />
             </startOffsets>
             <endOffsets>
-              <option value="1663" />
+              <option value="1754" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
