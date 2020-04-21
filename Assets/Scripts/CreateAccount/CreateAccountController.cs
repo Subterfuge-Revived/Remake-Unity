@@ -12,7 +12,7 @@ public class CreateAccountController : MonoBehaviour
     public Text username;
     public Text password;
     public Text email;
-    public Api api = new Api();
+    Api api = new Api("http://18.220.154.6/api");
     public Text responseInfo;
     
     public void Start()
