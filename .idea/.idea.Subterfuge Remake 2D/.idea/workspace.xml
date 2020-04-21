@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll.meta" afterDir="false" />
-    </list>
+    <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,13 +95,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
       </list>
     </option>
   </component>
