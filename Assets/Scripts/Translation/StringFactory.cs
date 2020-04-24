@@ -65,6 +65,9 @@ namespace Translation
             return Language.ToString();
         }
 
+        /// <summary>
+        /// Sets the default strings if no translations can be found from the server.
+        /// </summary>
         private static void SetDefaultStrings()
         {
             Strings[GameString.Generic_Button_Back] = "Back";

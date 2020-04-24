@@ -1,5 +1,8 @@
 ﻿namespace Translation
 {
+    /// <summary>
+    /// Enumeration of possible languages that the user can configure.
+    /// </summary>
     public enum Language
     {
         English,
