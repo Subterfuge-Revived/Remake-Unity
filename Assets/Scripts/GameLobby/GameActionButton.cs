@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core.Network;
+using Translation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,14 +22,14 @@ public class GameActionButton : MonoBehaviour
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = "Start Game Early";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_StartEarly);
                 actionButton.onClick.AddListener(onStartEarly);
             }
             else
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = "Waiting for players";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Label_WaitingForPlayers);
                 actionButton.interactable = false;
             }
         }
@@ -47,14 +48,14 @@ public class GameActionButton : MonoBehaviour
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = "Waiting for players";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Label_WaitingForPlayers);
                 actionButton.interactable = false;                
             }
             else
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = "Join Game";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_JoinGame);
                 actionButton.onClick.AddListener(onJoinLobby);
             }
         }

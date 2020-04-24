@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="" />
+    <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/GameString.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/GameString.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/Language.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/Language.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/StringFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/StringFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/Translator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Translation/Translator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreateGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreateGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Translation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Translation.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Translation/Language.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Translation/GameString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,22 +63,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Documentation/docfx.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/GameTick.test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/LaunchEvent.test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/MapGenerator.test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/Outpost.test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/PriorityQueue.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/SeededRandom.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Sub.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/TimeMachine.test.cs" />
@@ -95,13 +113,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/Strings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/GameStrings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/Translator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/Language.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/StringFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Translation/GameString.cs" />
       </list>
     </option>
   </component>
@@ -179,6 +203,7 @@
       <workItem from="1585338094827" duration="9182000" />
       <workItem from="1585768747223" duration="2143000" />
       <workItem from="1586121471661" duration="7288000" />
+      <workItem from="1587691440406" duration="755000" />
     </task>
     <servers />
   </component>
@@ -330,10 +355,10 @@
           <line>28</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="28">
             <startOffsets>
-              <option value="1001" />
+              <option value="959" />
             </startOffsets>
             <endOffsets>
-              <option value="1036" />
+              <option value="980" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
@@ -343,10 +368,10 @@
           <line>47</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="47">
             <startOffsets>
-              <option value="1681" />
+              <option value="1592" />
             </startOffsets>
             <endOffsets>
-              <option value="1754" />
+              <option value="1663" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />

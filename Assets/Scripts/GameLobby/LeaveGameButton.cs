@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core.Network;
+using Translation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,12 +29,12 @@ public class LeaveGameButton : MonoBehaviour
             if (room.CreatorId == ApplicationState.player.GetId())
             {
                 Text buttonText = leaveButton.GetComponentInChildren<Text>();
-                buttonText.text = "Delete Lobby";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_CancelGame);
             }
             else
             {
                 Text buttonText = leaveButton.GetComponentInChildren<Text>();
-                buttonText.text = "Leave Game";
+                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_LeaveGame);
             }
             leaveButton.onClick.AddListener(onLeaveLobby);            
         }
