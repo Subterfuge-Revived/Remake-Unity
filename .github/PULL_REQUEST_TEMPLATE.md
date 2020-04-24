@@ -50,10 +50,9 @@ Next Version Number:
 
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code
-- [ ] I have [documented any new API endpoints in the postman collection](https://learning.postman.com/docs/postman/api-documentation/documenting-your-api/#documenting-an-existing-collection)
-- [ ] I have [added examples in postman](https://blog.postman.com/2017/05/17/mock-responses-in-postman-by-using-examples/) for all status codes.
 - [ ] I have made corresponding changes to the README (if required)
-- [ ] My changes generate no new warnings and do not break existing endpoints
+- [ ] My changes generate no new warnings
+- [ ] I have not hard coded any strings and have used the `StringFactory` Class or `Translator` Component for ALL strings.
 
 # Questions / Discussion
 

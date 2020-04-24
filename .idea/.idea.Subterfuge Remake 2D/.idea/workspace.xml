@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/api.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/api/.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/docfx.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/docfx.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/filterConfig.yml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/Timing.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/Timing.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/intro.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleManual.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleManual.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleScriptingApi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/resources/ExampleScriptingApi.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/toc.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Documentation/toc.yml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_site.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +27,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Translation/Language.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,7 +34,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Translation/GameString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,14 +46,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Tests/SeededRandom.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Sub.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/TimeMachine.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/asdfg.cs" />
@@ -130,6 +102,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/GameString.cs" />
+        <option value="$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" />
       </list>
     </option>
   </component>
@@ -369,7 +342,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs</url>
-          <line>47</line>
+          <line>44</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="47">
             <startOffsets>
               <option value="1592" />
