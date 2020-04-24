@@ -51,6 +51,12 @@
             <e p="LoadUser.cs" t="Include" />
             <e p="PlayGameButton.cs" t="Include" />
           </e>
+          <e p="Translation" t="Include">
+            <e p="GameString.cs" t="Include" />
+            <e p="Language.cs" t="Include" />
+            <e p="StringFactory.cs" t="Include" />
+            <e p="Translator.cs" t="Include" />
+          </e>
           <e p="WorldWrap.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
@@ -80,12 +86,6 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
-        </e>
-        <e p="Translation" t="Include">
-          <e p="GameString.cs" t="Include" />
-          <e p="Language.cs" t="Include" />
-          <e p="StringFactory.cs" t="Include" />
-          <e p="Translator.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

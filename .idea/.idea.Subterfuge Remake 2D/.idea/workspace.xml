@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreateGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreateGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +23,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EBF11174-2519-413D-8CBD-EC5EF1EE6412/17/99c370ff/GameRoom.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +51,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Tests/Sub.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/TimeMachine.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/asdfg.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/GameState.test.cs" />
@@ -103,6 +114,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" />
       </list>
     </option>
   </component>
@@ -181,6 +193,7 @@
       <workItem from="1585768747223" duration="2143000" />
       <workItem from="1586121471661" duration="7288000" />
       <workItem from="1587691440406" duration="755000" />
+      <workItem from="1587747266604" duration="787000" />
     </task>
     <servers />
   </component>
