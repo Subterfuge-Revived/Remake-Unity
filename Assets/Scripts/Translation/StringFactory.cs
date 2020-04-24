@@ -1,7 +1,13 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Translation
 {
+    /// <summary>
+    /// A factory for creating strings. Before use, ensure that the strings are loaded
+    /// before using.
+    /// </summary>
     public class StringFactory
     {
         /// <summary>
@@ -9,128 +15,106 @@ namespace Translation
         /// </summary>
         public static Language Language { get; set; }
         
-        public static string getString(GameString gameString)
+        /// <summary>
+        /// A dictionary of strings to display on the screen.
+        /// The dictionary is set by default to english if it cannot load.
+        /// The strings should be loaded before use.
+        /// </summary>
+        public static Dictionary<GameString, string> strings { get; set; }
+
+        /// <summary>
+        /// Load the strings from our database or values.
+        /// If unable to load any strings, the defaults are loaded.
+        /// </summary>
+        public void loadStrings()
         {
             // TODO: Add the Google sheets API and query from a google sheet
-            return getDefaultString(gameString);
+            this.setDefaultStrings();
         }
 
+        /// <summary>
+        /// Gets a string representation of the game string.
+        /// </summary>
+        /// <param name="gameString">The game string to convert to text</param>
+        /// <returns>The textual representation of the string</returns>
+        public static string getString(GameString gameString)
+        {
+            if (strings.ContainsKey(gameString))
+            {
+                return strings[gameString];
+            }
+            throw new Exception("String does not exist.");
+        }
+
+        /// <summary>
+        /// Gets the language representation of the string. For example "en" for english.
+        /// This is used for a lookup of the string
+        /// </summary>
+        /// <returns>The language code</returns>
         private string getLanguageString()
         {
             // TODO: Determine the language shorthand notations from the crowd sourced translation tool
             return Language.ToString();
         }
 
-        private static string getDefaultString(GameString gameString)
+        private void setDefaultStrings()
         {
-            switch (gameString)
-            {
-                case GameString.Generic_Button_Back:
-                    return "Back";
-                case GameString.Generic_Button_Cancel:
-                    return "Cancel";
-                case GameString.Generic_Button_Submit:
-                    return "Submit";
-                case GameString.Generic_Info_Loading:
-                    return "Loading";
-                case GameString.Login_Button_Login:
-                    return "Login";
-                case GameString.Login_Error_Unverified:
-                    return "Invalid Username or Password";
-                case GameString.Login_Label_Password:
-                    return "Password";
-                case GameString.Login_Label_Username:
-                    return "Username";
-                case GameString.Register_Button_Register:
-                    return "Register";
-                case GameString.Register_Label_Email:
-                    return "Email";
-                case GameString.CreateGame_Label_Anonymous:
-                    return "Anonymous";
-                case GameString.CreateGame_Label_Players:
-                    return "Players";
-                case GameString.CreateGame_Label_Ranked:
-                    return "Ranked";
-                case GameString.CreateGame_Label_Title:
-                    return "Create Game";
-                case GameString.Game_EventPanel_Title:
-                    return "Events";
-                case GameString.Game_GuiPanel_Chat:
-                    return "Chat";
-                case GameString.Game_GuiPanel_Events:
-                    return "Events";
-                case GameString.Game_GuiPanel_Log:
-                    return "Log";
-                case GameString.Game_GuiPanel_Statistics:
-                    return "Stats";
-                case GameString.GameLobby_Label_Anonymous:
-                    return "Anonymous";
-                case GameString.GameLobby_Label_Title:
-                    return "Title";
-                case GameString.GameSelect_Button_Ended:
-                    return "Ended";
-                case GameString.GameSelect_Button_Ongoing:
-                    return "Ongoing";
-                case GameString.GameSelect_Button_Open:
-                    return "Open";
-                case GameString.GameSelect_Button_Players:
-                    return "Players";
-                case GameString.GameSelect_Label_Title:
-                    return "Title";
-                case GameString.Login_Button_CreateAccount:
-                    return "Create Account";
-                case GameString.Login_Error_InputError:
-                    // TODO: Change this string based on username and password requirements
-                    return "TODO: Change this based on input requirements";
-                case GameString.Login_Error_InvalidCredentials:
-                    return "Invalid username or password";
-                case GameString.Login_Error_NoConnectivity:
-                    return "Unable to connect to the internet. Please check your connection.";
-                case GameString.Login_Info_NoAccount:
-                    return "No account?";
-                case GameString.MainMenu_Button_Account:
-                    return "Account";
-                case GameString.MainMenu_Button_Help:
-                    return "Help";
-                case GameString.MainMenu_Button_Multiplayer:
-                    return "Multiplayer";
-                case GameString.MainMenu_Button_Puzzles:
-                    return "Puzzles";
-                case GameString.MainMenu_Button_Settings:
-                    return "Settings";
-                case GameString.Register_Error_InvalidEmail:
-                    // TODO: That is not a valid email
-                    return "The email you have entered is invalid";
-                case GameString.Register_Error_InvalidPassword:
-                    // TODO: Update password requirements
-                    return "The password does not meet the password requirements.";
-                case GameString.Register_Error_InvalidUsername:
-                    // TODO: Update username requirements
-                    return "Your username must be between 8-20 characters";
-                case GameString.CreateGame_Button_CreateGame:
-                case GameString.CreateGame_Title_CreateGame:
-                case GameString.GameSelect_Button_CreateGame:
-                    return "Create Game";
-                case GameString.Game_ChatPanel_NewChat:
-                    return "New Chat";
-                case GameString.Game_ChatPanelTitle_Chats:
-                    return "Chats";
-                case GameString.Game_LaunchPanelButton_Launch:
-                    return "Launch";
-                case GameString.GameLobby_Button_CancelGame:
-                    return "Cancel Game";
-                case GameString.GameLobby_Button_JoinGame:
-                    return "Join Game";
-                case GameString.GameLobby_Button_LeaveGame:
-                    return "Leave Game";
-                case GameString.GameLobby_Button_StartEarly:
-                    return "Start Early";
-                case GameString.Game_LaunchPanelTitle_LaunchSub:
-                    return "Launch Sub";
-                case GameString.GameLobby_Label_WaitingForPlayers:
-                    return "Waiting for players";
-
-            }
+            strings[GameString.Generic_Button_Back] = "Back";
+            strings[GameString.Generic_Button_Cancel] = "Cancel";
+            strings[GameString.Generic_Button_Submit] = "Submit";
+            strings[GameString.Generic_Info_Loading] = "Loading";
+            strings[GameString.Login_Button_Login] = "Login";
+            strings[GameString.Login_Error_Unverified] = "Invalid Username or Password";
+            strings[GameString.Login_Label_Password] = "Password";
+            strings[GameString.Login_Label_Username] = "Username";
+            strings[GameString.Register_Button_Register] = "Register";
+            strings[GameString.Register_Label_Email] = "Email";
+            strings[GameString.CreateGame_Label_Anonymous] = "Anonymous";
+            strings[GameString.CreateGame_Label_Players] = "Players";
+            strings[GameString.CreateGame_Label_Ranked] = "Ranked";
+            strings[GameString.CreateGame_Label_Title] = "Create Game";
+            strings[GameString.Game_EventPanel_Title] = "Events";
+            strings[GameString.Game_GuiPanel_Chat] = "Chat";
+            strings[GameString.Game_GuiPanel_Events] = "Events";
+            strings[GameString.Game_GuiPanel_Log] = "Log";
+            strings[GameString.Game_GuiPanel_Statistics] = "Stats";
+            strings[GameString.GameLobby_Label_Anonymous] = "Anonymous";
+            strings[GameString.GameLobby_Label_Title] = "Title";
+            strings[GameString.GameSelect_Button_Ended] = "Ended";
+            strings[GameString.GameSelect_Button_Ongoing] = "Ongoing";
+            strings[GameString.GameSelect_Button_Open] = "Open";
+            strings[GameString.GameSelect_Button_Players] = "Players";
+            strings[GameString.GameSelect_Label_Title] = "Title";
+            strings[GameString.Login_Button_CreateAccount] = "Create Account";
+            
+            // TODO: Change this string based on username and password requirements
+            strings[GameString.Login_Error_InputError] = "TODO: Change this based on input requirements";
+            strings[GameString.Login_Error_InvalidCredentials] = "Invalid username or password";
+            strings[GameString.Login_Error_NoConnectivity] = "Unable to connect to the internet. Please check your connection.";
+            strings[GameString.Login_Info_NoAccount] = "No account?";
+            strings[GameString.MainMenu_Button_Account] = "Account";
+            strings[GameString.MainMenu_Button_Help] = "Help";
+            strings[GameString.MainMenu_Button_Multiplayer] = "Multiplayer";
+            strings[GameString.MainMenu_Button_Puzzles] = "Puzzles";
+            strings[GameString.MainMenu_Button_Settings] = "Settings";
+            // TODO: Update email requirements
+            strings[GameString.Register_Error_InvalidEmail] = "The email you have entered is invalid";
+            // TODO: Update password requirements
+            strings[GameString.Register_Error_InvalidPassword] = "The password does not meet the password requirements.";
+            // TODO: Update username requirements
+            strings[GameString.Register_Error_InvalidUsername] = "Your username must be between 8-20 characters";
+            strings[GameString.CreateGame_Button_CreateGame] = "Create Game";
+            strings[GameString.CreateGame_Title_CreateGame] = "Create Game";
+            strings[GameString.GameSelect_Button_CreateGame] = "Create Game";
+            strings[GameString.Game_ChatPanel_NewChat] = "New Chat";
+            strings[GameString.Game_ChatPanelTitle_Chats] = "Chats";
+            strings[GameString.Game_LaunchPanelButton_Launch] = "Launch";
+            strings[GameString.GameLobby_Button_CancelGame] = "Cancel Game";
+            strings[GameString.GameLobby_Button_JoinGame] = "Join Game";
+            strings[GameString.GameLobby_Button_LeaveGame] = "Leave Game";
+            strings[GameString.GameLobby_Button_StartEarly] = "Start Early";
+            strings[GameString.Game_LaunchPanelTitle_LaunchSub] = "Launch Sub";
+            strings[GameString.GameLobby_Label_WaitingForPlayers] = "Waiting for players";
         }
     }
 }
