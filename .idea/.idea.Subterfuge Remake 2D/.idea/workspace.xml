@@ -43,7 +43,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Language.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/GameString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,7 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Tests/asdfg.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/GameState.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" />
         <option value="$PROJECT_DIR$/Assets/Documentation/manual/intro.md" />
@@ -105,6 +106,7 @@
         <option value="$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Translation/Language.cs" />
       </list>
     </option>
   </component>
@@ -183,7 +185,7 @@
       <workItem from="1585768747223" duration="2143000" />
       <workItem from="1586121471661" duration="7288000" />
       <workItem from="1587691440406" duration="755000" />
-      <workItem from="1587747266604" duration="5609000" />
+      <workItem from="1587747266604" duration="6424000" />
     </task>
     <servers />
   </component>
