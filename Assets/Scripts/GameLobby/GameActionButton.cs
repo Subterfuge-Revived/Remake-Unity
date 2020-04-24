@@ -22,14 +22,14 @@ public class GameActionButton : MonoBehaviour
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_StartEarly);
+                buttonText.text = StringFactory.GetString(GameString.GameLobby_Button_StartEarly);
                 actionButton.onClick.AddListener(onStartEarly);
             }
             else
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = StringFactory.getString(GameString.GameLobby_Label_WaitingForPlayers);
+                buttonText.text = StringFactory.GetString(GameString.GameLobby_Label_WaitingForPlayers);
                 actionButton.interactable = false;
             }
         }
@@ -48,14 +48,14 @@ public class GameActionButton : MonoBehaviour
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = StringFactory.getString(GameString.GameLobby_Label_WaitingForPlayers);
+                buttonText.text = StringFactory.GetString(GameString.GameLobby_Label_WaitingForPlayers);
                 actionButton.interactable = false;                
             }
             else
             {
                 // Show start game early button.
                 Text buttonText = actionButton.GetComponentInChildren<Text>();
-                buttonText.text = StringFactory.getString(GameString.GameLobby_Button_JoinGame);
+                buttonText.text = StringFactory.GetString(GameString.GameLobby_Button_JoinGame);
                 actionButton.onClick.AddListener(onJoinLobby);
             }
         }

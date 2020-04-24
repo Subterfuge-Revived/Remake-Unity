@@ -16,7 +16,7 @@ namespace Translation
         public void Start()
         {
             Text textElement = this.GetComponent<Text>();
-            textElement.text = StringFactory.getString(textToTranslate);
+            textElement.text = StringFactory.GetString(textToTranslate);
         }
     }
 }
