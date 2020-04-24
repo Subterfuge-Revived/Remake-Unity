@@ -1,6 +1,0 @@
-- name: Game and GameState
-  href: intro.md
-- name: Time Machine Shenanigans
-  href: Timing.md
-- name: Modifying The GameState
-  href: ModifyingTheGameState.md
