@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" afterDir="false" />
     </list>
@@ -52,11 +53,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Tests/TimeMachine.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/asdfg.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/GameState.test.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" />
@@ -106,6 +107,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" />
       </list>
     </option>
@@ -185,7 +187,7 @@
       <workItem from="1585768747223" duration="2143000" />
       <workItem from="1586121471661" duration="7288000" />
       <workItem from="1587691440406" duration="755000" />
-      <workItem from="1587747266604" duration="2906000" />
+      <workItem from="1587747266604" duration="4405000" />
     </task>
     <servers />
   </component>

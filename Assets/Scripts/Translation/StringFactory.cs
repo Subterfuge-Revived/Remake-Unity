@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEngine.Assertions;
 
 namespace Translation
 {
@@ -13,23 +14,30 @@ namespace Translation
         /// <summary>
         /// The language that the user would like the string translated to.
         /// </summary>
-        public static Language Language { get; set; }
+        public static Language Language { get; set; } = Language.English;
         
         /// <summary>
         /// A dictionary of strings to display on the screen.
         /// The dictionary is set by default to english if it cannot load.
         /// The strings should be loaded before use.
         /// </summary>
-        public static Dictionary<GameString, string> strings { get; set; }
+        public static Dictionary<GameString, string> strings { get; set; } = new Dictionary<GameString, string>();
 
         /// <summary>
         /// Load the strings from our database or values.
         /// If unable to load any strings, the defaults are loaded.
         /// </summary>
-        public void loadStrings()
+        public static void loadStrings()
         {
             // TODO: Add the Google sheets API and query from a google sheet
-            this.setDefaultStrings();
+            setDefaultStrings();
+            
+            // Ensure that all game strings have been populated.
+            // When loading, if all strings are not populated, the `getString()` method will throw an error.
+            foreach(GameString s in Enum.GetValues(typeof(GameString)))
+            {
+                getString(s);
+            }
         }
 
         /// <summary>
@@ -43,7 +51,7 @@ namespace Translation
             {
                 return strings[gameString];
             }
-            throw new Exception("String does not exist.");
+            throw new Exception("Value for the string '" + gameString.ToString() + "' does not exist. Ensure a default has been set.");
         }
 
         /// <summary>
@@ -57,7 +65,7 @@ namespace Translation
             return Language.ToString();
         }
 
-        private void setDefaultStrings()
+        private static void setDefaultStrings()
         {
             strings[GameString.Generic_Button_Back] = "Back";
             strings[GameString.Generic_Button_Cancel] = "Cancel";
@@ -115,6 +123,14 @@ namespace Translation
             strings[GameString.GameLobby_Button_StartEarly] = "Start Early";
             strings[GameString.Game_LaunchPanelTitle_LaunchSub] = "Launch Sub";
             strings[GameString.GameLobby_Label_WaitingForPlayers] = "Waiting for players";
+            
+            
+            // Ensures that all game strings have been populated.
+            // When loading, if all strings are not populated, the `getString()` method will throw an error.
+            foreach(GameString s in Enum.GetValues(typeof(GameString)))
+            {
+                getString(s);
+            }
         }
     }
 }
