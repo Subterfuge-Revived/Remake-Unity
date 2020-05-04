@@ -15,8 +15,8 @@ using UnityEngine.EventSystems;
     public float cameraZoomScrollSpeed = 0.33f; // Make this configurable in User Settings?
     public float maxZoomOrthographicSize = 3;
     public float minZoomOrthographicSize = 100;
-    public float mapHeight = 150; // This is the map height for the particular game. This only applies to rectangular maps.
-    public float mapWidth = 150; // This is the map width for the particular game. This only applies to rectangular maps.
+    public float mapHeight = 400; // This is the map height for the particular game. This only applies to rectangular maps.
+    public float mapWidth = 200; // This is the map width for the particular game. This only applies to rectangular maps.
     private Vector3 dragOrigin;
     private float speed;
     private RaycastHit2D hit;
@@ -101,7 +101,7 @@ using UnityEngine.EventSystems;
         }
 
         // Set the camera center modulo map dimensions by wrapping the transform inside an RftVector.
-        RftVector cam = new RftVector(new Rft(mapHeight, mapWidth), transform.position.x, transform.position.y);
+        RftVector cam = new RftVector(RftVector.Map, transform.position.x, transform.position.y);
         transform.SetPositionAndRotation(new Vector3((float)cam.X, (float)cam.Y, transform.position.z), transform.rotation);
     }
 }

@@ -7,6 +7,7 @@ using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Network;
 using SubterfugeCore.Core.Players;
+using SubterfugeCore.Core.Topologies;
 
 public class OutpostSpawn : MonoBehaviour
 {
@@ -69,34 +70,92 @@ public class OutpostSpawn : MonoBehaviour
         foreach (Outpost outpost in outposts) {
             
             Vector2 location = new Vector2(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y);
+            
+            // Determine all quadrants to spawn in.
+            Vector2 locationNorth = location;
+            Vector2 locationSouth = location;
+            Vector2 locationEast = location;
+            Vector2 locationWest = location;
+            Vector2 locationNorthWest = location;
+            Vector2 locationNorthEast = location;
+            Vector2 locationSouthWest = location;
+            Vector2 locationSouthEast = location;
+            
+            
+            locationNorth.y += RftVector.Map.Height;
+            locationSouth.y -= RftVector.Map.Height;
+            locationEast.x += RftVector.Map.Width;
+            locationWest.x -= RftVector.Map.Width;
+
+            locationNorthEast.y += RftVector.Map.Height;
+            locationNorthEast.x += RftVector.Map.Width;
+            
+            locationNorthWest.y += RftVector.Map.Height;
+            locationNorthWest.x -= RftVector.Map.Width;
+            
+            locationSouthEast.y -= RftVector.Map.Height;
+            locationSouthEast.x += RftVector.Map.Width;
+            
+            locationSouthWest.y -= RftVector.Map.Height;
+            locationSouthWest.x -= RftVector.Map.Width;
+
+            Transform instanceType = null;
+            
+            
             /*
             Vector3 location = new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0);*/
             switch (outpost.GetOutpostType())
             {
                 case OutpostType.Generator:
-                    outpostObject = Instantiate(generator, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+                    instanceType = generator;
                     break;
                 case OutpostType.Factory:
-                    outpostObject = Instantiate(factory, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+                    instanceType = factory;
                     break;
                 case OutpostType.Mine:
-                    outpostObject = Instantiate(mine, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+                    instanceType = mine;
                     break;
                 case OutpostType.Watchtower:
-                    outpostObject = Instantiate(watchtower, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+                    instanceType = watchtower;
                     break;
                 case OutpostType.Destroyed:
-                    outpostObject = Instantiate(destroyed, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+                    instanceType = destroyed;
                     break;
                 default:
                     Debug.LogError("Could not spawn outpost");
                     break;
             }
-
+            
+            // Spawn all 9 regions.
+            outpostObject = Instantiate(instanceType, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
             outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            // Set a reference to the original outpost
             outpostObject.GetComponent<OutpostManager>().outpost = outpost;
             outpostLocations.Add(location);
+            
+            outpostObject = Instantiate(instanceType, locationNorth, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationSouth, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationNorthEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationNorthWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationSouthEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+            outpostObject = Instantiate(instanceType, locationSouthWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
+            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
         }
 
         Debug.Log("Spawned outposts");

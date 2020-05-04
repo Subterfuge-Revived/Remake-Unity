@@ -26,7 +26,10 @@ public class LoadAvaliableRooms : MonoBehaviour
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
         foreach (GameRoomButton gameRoomButton in existingButtons)
         {
-            Destroy(gameRoomButton.gameObject);
+            if (gameRoomButton.isActiveAndEnabled)
+            {
+                Destroy(gameRoomButton.gameObject);
+            }
         }
 
         if (roomResponse.IsSuccessStatusCode())
@@ -70,7 +73,10 @@ public class LoadAvaliableRooms : MonoBehaviour
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
         foreach (GameRoomButton gameRoomButton in existingButtons)
         {
-            Destroy(gameRoomButton.gameObject);
+            if (gameRoomButton.isActiveAndEnabled)
+            {
+                Destroy(gameRoomButton.gameObject);
+            }
         }
 
         if (roomResponse.IsSuccessStatusCode())
