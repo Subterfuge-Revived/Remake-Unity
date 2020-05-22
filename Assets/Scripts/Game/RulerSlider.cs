@@ -24,7 +24,7 @@ public class RulerSlider : MonoBehaviour, IDragHandler
     {
         tickNumber = (int)Math.Floor(currentPosition / -6);
         CurrentTick.text = tickNumber.ToString();
-        if (tickNumber >= 0)
+        if (tickNumber >= 0 && Game.TimeMachine.CurrentTick != GameTick.FromTickNumber(tickNumber))
         {
             Game.TimeMachine.GoTo(GameTick.FromTickNumber(tickNumber));
         }

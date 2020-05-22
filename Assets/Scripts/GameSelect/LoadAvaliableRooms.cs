@@ -20,7 +20,7 @@ public class LoadAvaliableRooms : MonoBehaviour
 
     public async void LoadOpenRooms()
     {
-        NetworkResponse<List<GameRoom>> roomResponse = await api.GetOpenRooms();
+        NetworkResponse<GameRoomResponse> roomResponse = await api.GetOpenRooms();
 
         // Destroy all existing rooms.
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
@@ -35,7 +35,7 @@ public class LoadAvaliableRooms : MonoBehaviour
         if (roomResponse.IsSuccessStatusCode())
         {
 
-            foreach (GameRoom room in roomResponse.Response)
+            foreach (GameRoom room in roomResponse.Response.array)
             {
                 // Create a new templated item
                 GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate);
@@ -47,7 +47,7 @@ public class LoadAvaliableRooms : MonoBehaviour
                 Text text = scrollItem.GetComponentInChildren<Text>();
                 if (text != null)
                 {
-                    text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed +
+                    text.text = "[ GameId: " + room.Room_Id + " Title: " + room.Description + ", Seed: " + room.Seed +
                                 ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " +
                                 room.Anonimity + ", Created By: " + room.CreatorId + "]";
                 }
@@ -67,7 +67,7 @@ public class LoadAvaliableRooms : MonoBehaviour
 
     public async void LoadOngoingRooms()
     {
-        NetworkResponse<List<GameRoom>> roomResponse = await api.GetOngoingRooms();
+        NetworkResponse<GameRoomResponse> roomResponse = await api.GetOngoingRooms();
         
         // Destroy all existing rooms.
         GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
@@ -82,7 +82,7 @@ public class LoadAvaliableRooms : MonoBehaviour
         if (roomResponse.IsSuccessStatusCode())
         {
 
-            foreach (GameRoom room in roomResponse.Response)
+            foreach (GameRoom room in roomResponse.Response.array)
             {
                 // Create a new templated item
                 GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate);
@@ -94,7 +94,7 @@ public class LoadAvaliableRooms : MonoBehaviour
                 Text text = scrollItem.GetComponentInChildren<Text>();
                 if (text != null)
                 {
-                    text.text = "[ GameId: " + room.RoomId + " Title: " + room.Description + ", Seed: " + room.Seed +
+                    text.text = "[ GameId: " + room.Room_Id + " Title: " + room.Description + ", Seed: " + room.Seed +
                                 ", Players: " + room.Players.Count + "/" + room.MaxPlayers + ", Anonymous: " +
                                 room.Anonimity + ", Created By: " + room.CreatorId + "]";
                 }

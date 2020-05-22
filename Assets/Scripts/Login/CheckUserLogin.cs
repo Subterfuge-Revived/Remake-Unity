@@ -16,7 +16,7 @@ namespace Login
         // Start is called before the first frame update
         async void Start()
         {
-            Api api = new Api("http://18.220.154.6/api");
+            Api api = new Api();
             string username = PlayerPrefs.GetString("username");
             string password = PlayerPrefs.GetString("password");
         

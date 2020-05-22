@@ -47,7 +47,7 @@ public class LeaveGameButton : MonoBehaviour
     public async void onLeaveLobby()
     {
         Api api = new Api();
-        NetworkResponse<LeaveLobbyResponse> leaveResponse = await api.LeaveLobby(ApplicationState.currentGameRoom.RoomId);
+        NetworkResponse<LeaveLobbyResponse> leaveResponse = await api.LeaveLobby(ApplicationState.currentGameRoom.Room_Id);
 
         if (leaveResponse.IsSuccessStatusCode())
         {

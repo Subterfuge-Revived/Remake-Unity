@@ -11,7 +11,7 @@ public class GameLoader : MonoBehaviour
     void Start()
     {
         // Set the API url.
-        Api api = new Api("http://18.220.154.6/api");
+        Api api = new Api("http://18.220.154.6");
         
         // Load language strings.
         StringFactory.LoadStrings();

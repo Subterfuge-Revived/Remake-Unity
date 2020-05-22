@@ -4,14 +4,16 @@
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,23 +25,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EBF11174-2519-413D-8CBD-EC5EF1EE6412/17/99c370ff/GameRoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/PlayGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,17 +48,34 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SouceLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Game.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Language.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/GameString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpecialistCarrier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/DrillerCombat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/CombatEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/76/b28143ca/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Language.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/GameString.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,8 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" />
-        <option value="$PROJECT_DIR$/Assets/Documentation/manual/intro.md" />
         <option value="$PROJECT_DIR$/Assets/Documentation/manual/Timing.md" />
         <option value="$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Documentation/manual/toc.yml" />
@@ -94,32 +107,34 @@
         <option value="$PROJECT_DIR$/Assets/lib/Timing/TimeMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/GameEvents/LaunchEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/lib/Network/GameRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Api/Api.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/Strings.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/GameStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/Translator.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/Language.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/StringFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Translation/GameString.cs" />
         <option value="$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Translation/Language.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLobby/LeaveGameButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" />
       </list>
     </option>
   </component>
@@ -145,10 +160,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10064">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7292">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10064" />
+      <option name="pid" value="7292" />
       <method v="2" />
     </configuration>
   </component>
@@ -200,6 +215,8 @@
       <workItem from="1587691440406" duration="755000" />
       <workItem from="1587747266604" duration="7108000" />
       <workItem from="1588612519802" duration="4951000" />
+      <workItem from="1589562805499" duration="2161000" />
+      <workItem from="1590181679848" duration="1499000" />
     </task>
     <servers />
   </component>
@@ -222,117 +239,125 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="938" height="219" key="GridCell.Tab.0.bottom" timestamp="1588616627692">
+    <state x="695" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590181944643">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="695" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590181944643" />
+    <state width="416" height="466" key="DebuggerActiveHint" timestamp="1590182277841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="416" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590182277841" />
+    <state width="1645" height="233" key="GridCell.Tab.0.bottom" timestamp="1590183181730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676955" />
-    <state width="938" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181730" />
     <state width="1877" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150263904" />
-    <state width="938" height="219" key="GridCell.Tab.0.center" timestamp="1588616627692">
+    <state width="1645" height="233" key="GridCell.Tab.0.center" timestamp="1590183181729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676955" />
-    <state width="938" height="219" key="GridCell.Tab.0.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.0.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181729" />
     <state width="1877" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150263904" />
-    <state width="938" height="219" key="GridCell.Tab.0.left" timestamp="1588616627692">
+    <state width="1645" height="233" key="GridCell.Tab.0.left" timestamp="1590183181729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676955" />
-    <state width="938" height="219" key="GridCell.Tab.0.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.0.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181729" />
     <state width="1877" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150263904" />
-    <state width="938" height="219" key="GridCell.Tab.0.right" timestamp="1588616627692">
+    <state width="1645" height="233" key="GridCell.Tab.0.right" timestamp="1590183181730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676955" />
-    <state width="938" height="219" key="GridCell.Tab.0.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.0.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181730" />
     <state width="1877" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150263904" />
-    <state width="938" height="219" key="GridCell.Tab.1.bottom" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.1.bottom" timestamp="1590183186857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806682461" />
-    <state width="938" height="219" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183186857" />
     <state width="1877" height="323" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150248736" />
-    <state width="938" height="219" key="GridCell.Tab.1.center" timestamp="1588616627692">
+    <state width="1645" height="233" key="GridCell.Tab.1.center" timestamp="1590183186857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806682461" />
-    <state width="938" height="219" key="GridCell.Tab.1.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.1.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183186857" />
     <state width="1877" height="323" key="GridCell.Tab.1.center/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150248736" />
-    <state width="938" height="219" key="GridCell.Tab.1.left" timestamp="1588616627692">
+    <state width="1645" height="233" key="GridCell.Tab.1.left" timestamp="1590183186857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806682461" />
-    <state width="938" height="219" key="GridCell.Tab.1.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627692" />
+    <state width="1645" height="233" key="GridCell.Tab.1.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183186857" />
     <state width="1877" height="323" key="GridCell.Tab.1.left/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150248736" />
-    <state width="938" height="219" key="GridCell.Tab.1.right" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.1.right" timestamp="1590183186857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806682461" />
-    <state width="938" height="219" key="GridCell.Tab.1.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.1.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183186857" />
     <state width="1877" height="323" key="GridCell.Tab.1.right/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1586150248736" />
-    <state width="938" height="219" key="GridCell.Tab.2.bottom" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.2.bottom" timestamp="1590183181595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181595" />
     <state width="1877" height="132" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
-    <state width="938" height="219" key="GridCell.Tab.2.center" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.2.center" timestamp="1590183181595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.2.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.2.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181595" />
     <state width="1877" height="132" key="GridCell.Tab.2.center/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630084" />
-    <state width="938" height="219" key="GridCell.Tab.2.left" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.2.left" timestamp="1590183181595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676878" />
-    <state width="938" height="219" key="GridCell.Tab.2.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.2.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181595" />
     <state width="1877" height="132" key="GridCell.Tab.2.left/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630084" />
-    <state width="938" height="219" key="GridCell.Tab.2.right" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.2.right" timestamp="1590183181595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.2.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.2.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181595" />
     <state width="1877" height="132" key="GridCell.Tab.2.right/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
-    <state width="938" height="219" key="GridCell.Tab.3.bottom" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.3.bottom" timestamp="1590183181596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586123" />
     <state width="1877" height="180" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181596" />
     <state width="1877" height="132" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
-    <state width="938" height="219" key="GridCell.Tab.3.center" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.3.center" timestamp="1590183181596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586123" />
     <state width="1877" height="180" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.3.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.3.center/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181596" />
     <state width="1877" height="132" key="GridCell.Tab.3.center/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
-    <state width="938" height="219" key="GridCell.Tab.3.left" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.3.left" timestamp="1590183181595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586122" />
     <state width="1877" height="180" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.3.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.3.left/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181595" />
     <state width="1877" height="132" key="GridCell.Tab.3.left/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
-    <state width="938" height="219" key="GridCell.Tab.3.right" timestamp="1588616627693">
+    <state width="1645" height="233" key="GridCell.Tab.3.right" timestamp="1590183181596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="296" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581807586123" />
     <state width="1877" height="180" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581806676879" />
-    <state width="938" height="219" key="GridCell.Tab.3.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1588616627693" />
+    <state width="1645" height="233" key="GridCell.Tab.3.right/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1590183181596" />
     <state width="1877" height="132" key="GridCell.Tab.3.right/0.0.1920.1040/1920.1.1920.1040@1920.1.1920.1040" timestamp="1585349630085" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1585251076676">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -351,26 +376,104 @@
           <line>26</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" initialLine="26">
             <startOffsets>
-              <option value="885" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="885" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs</url>
-          <line>132</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" initialLine="132">
+          <url>file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs</url>
+          <line>75</line>
+          <properties documentPath="$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs" initialLine="75">
             <startOffsets>
-              <option value="4885" />
+              <option value="2685" />
             </startOffsets>
             <endOffsets>
-              <option value="4916" />
+              <option value="2714" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs</url>
+          <line>94</line>
+          <properties documentPath="$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs" initialLine="94">
+            <startOffsets>
+              <option value="3413" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3443" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/DrillerCombat.cs</url>
+          <line>35</line>
+          <properties documentPath="$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/DrillerCombat.cs" initialLine="35">
+            <startOffsets>
+              <option value="1086" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1104" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs</url>
+          <line>116</line>
+          <properties documentPath="$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs" initialLine="116">
+            <startOffsets>
+              <option value="4112" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4122" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs</url>
+          <line>137</line>
+          <properties documentPath="$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs" initialLine="137">
+            <startOffsets>
+              <option value="4752" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4773" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs</url>
+          <line>67</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" initialLine="67">
+            <startOffsets>
+              <option value="2032" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2079" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs</url>
+          <line>66</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" initialLine="66">
+            <startOffsets>
+              <option value="1974" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2023" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -389,6 +492,11 @@
         <watch expression="sub.getOwner()" language="C#" custom="RiderImportsList:" />
         <watch expression="username.text" language="C#" custom="RiderImportsList:" />
         <watch expression="outpost" language="C#" custom="RiderImportsList:" />
+        <watch expression="CurrentTick" language="C#" custom="RiderImportsList:" />
+        <watch expression="tick" language="C#" custom="RiderImportsList:" />
+        <watch expression="loser" language="C#" custom="RiderImportsList:" />
+        <watch expression="winner" language="C#" custom="RiderImportsList:" />
+        <watch expression="Game.TimeMachine.GetState().GetSubList()" language="C#" custom="RiderImportsList:" />
       </configuration>
     </watches-manager>
   </component>

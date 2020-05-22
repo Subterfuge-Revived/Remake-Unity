@@ -17,7 +17,7 @@ public class CreateGameController : MonoBehaviour
 
     public async void onCreateGame()
     {
-        NetworkResponse<CreateLobbyResponse> response = await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, 0, 0);
+        NetworkResponse<CreateLobbyResponse> response = await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, "neptunium-200", 0);
 
         if (response.IsSuccessStatusCode())
         {

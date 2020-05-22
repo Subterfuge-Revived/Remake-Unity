@@ -64,7 +64,7 @@ public class GameActionButton : MonoBehaviour
     public async void onJoinLobby()
     {
         Api api = new Api();
-        NetworkResponse<JoinLobbyResponse> joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.RoomId);
+        NetworkResponse<JoinLobbyResponse> joinResponse = await api.JoinLobby(ApplicationState.currentGameRoom.Room_Id);
 
         if (joinResponse.IsSuccessStatusCode())
         {
@@ -87,7 +87,7 @@ public class GameActionButton : MonoBehaviour
     public async void onStartEarly()
     {
         Api api = new Api();
-        NetworkResponse<StartLobbyEarlyResponse> startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.RoomId);
+        NetworkResponse<StartLobbyEarlyResponse> startEarlyResponse = await api.StartLobbyEarly(ApplicationState.currentGameRoom.Room_Id);
 
         if (startEarlyResponse.IsSuccessStatusCode())
         {

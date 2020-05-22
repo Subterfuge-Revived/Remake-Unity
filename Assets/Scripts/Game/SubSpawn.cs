@@ -36,6 +36,28 @@ public class SubSpawn : MonoBehaviour
                 spawnedSubs[sub.GetOwner()].Add(sub);
             }
         }
+        
+        // Get all references to destroyed subs.
+        List<Sub> orphans = new List<Sub>();
+        
+        foreach(Player p in spawnedSubs.Keys)
+        {
+            // Check the subs exist.
+            foreach (Sub s in spawnedSubs[p])
+            {
+                if (!Game.TimeMachine.GetState().SubExists(s))
+                {
+                    // Remove the sub from the array.
+                    orphans.Add(s);
+                }   
+            }
+        }
+        
+        // Cleanup orphaned subs
+        foreach (Sub s in orphans)
+        {
+            spawnedSubs[s.GetOwner()].Remove(s);
+        }
     }
 
     private bool subSpawned(Sub sub)
