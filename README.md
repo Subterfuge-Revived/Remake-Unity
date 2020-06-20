@@ -19,7 +19,7 @@ This document is in an unfinished state, if you find that something is wrong or 
 
 4. [Download Git](https://git-scm.com/downloads) to gain access to the code
 
-5. Clone the unity repository to a folder of your choice with `git clone https://github.com/Subterfuge-Revived/Remake-Frontend.git`
+5. Clone the unity repository to a folder of your choice with `git clone https://github.com/Subterfuge-Revived/Remake-Unity.git`
 
 6. In unity hub click "Import Project" and path yourself to the project folder. Once imported, start the project with unity.
 
