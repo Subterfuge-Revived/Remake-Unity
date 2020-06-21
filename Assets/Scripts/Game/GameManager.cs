@@ -25,12 +25,19 @@ public class GameManager : MonoBehaviour
     async void Start()
     {
         launchHud.SetActive(false);
-        List<GameEvent> gameEvents = await api.GetGameEvents(ApplicationState.currentGameRoom.RoomId);
-        
-        // Parse game events here.
-        foreach(GameEvent gameEvent in gameEvents)
+        NetworkResponse<List<NetworkGameEvent>> gameEvents = await api.GetGameEvents(ApplicationState.currentGameRoom.RoomId);
+
+        if (gameEvents.IsSuccessStatusCode())
         {
-            Game.TimeMachine.AddEvent(gameEvent);
+            // Parse game events here.
+            foreach (NetworkGameEvent gameEvent in gameEvents.Response)
+            {
+                // convert to a game event
+                LaunchEvent launch = LaunchEvent.FromJson(gameEvent.EventMsg);
+                Game.TimeMachine.AddEvent(launch);
+            }
+        } else {
+             // TODO: Tell the user that they are offline or an error occurred.
         }
     }
 

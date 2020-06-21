@@ -17,9 +17,17 @@ public class CreateGameController : MonoBehaviour
 
     public async void onCreateGame()
     {
-        CreateLobbyResponse response = await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, 0, 0);
-        
-        SceneManager.LoadScene("GameSelect");
+        NetworkResponse<CreateLobbyResponse> response = await api.CreateLobby(gameTitle.text, (int)playerCount.value, 0, rankedToggle.isOn, anonToggle.isOn, 0, 0);
+
+        if (response.IsSuccessStatusCode())
+        {
+            SceneManager.LoadScene("GameSelect");
+        }
+        else
+        {
+            // TODO: Tell the user that their request failed. If error, show message, if timeout say offline.
+            // If offline, potentially add their requests to a queue.
+        }
     }
 
     public void onCancel()
