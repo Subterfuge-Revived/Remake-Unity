@@ -1,0 +1,10 @@
+"Generic_Info_Loading","Loading button","Generic_Info_Loading"
+"Generic_Button_Back","Back button","Generic_Button_Back"
+"Generic_Button_Cancel","Cancel button","Generic_Button_Cancel"
+"Generic_Button_Submit","Submit button","Generic_Button_Submit"
+
+"Login_Label_Username","Username label","Login_Label_Username"
+"Login_Label_Password","Password label","Login_Label_Password"
+"Login_Button_Login","Login button text","Login_Button_Login"
+"Login_Error_InvalidCredentials","Invalid Credentials warning","Login_Error_InvalidCredentials"
+"Login_Error_NoConnectivity","No network connection warning","Login_Error_NoConnectivity"
