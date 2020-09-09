@@ -8,3 +8,8 @@
 "Login_Button_Login","Login button text","Login_Button_Login"
 "Login_Error_InvalidCredentials","Invalid Credentials warning","Login_Error_InvalidCredentials"
 "Login_Error_NoConnectivity","No network connection warning","Login_Error_NoConnectivity"
+"Register_Button_Register","Register account button text","Register_Button_Register"
+"Register_Label_Email","Register account email input label","Register_Label_Email"
+"CreateGame_Label_Anonymous","Create game ""Anonymous"" setting label","CreateGame_Label_Anonymous"
+"CreateGame_Label_Players","Create game ""Players"" number slider label","CreateGame_Label_Players"
+"CreateGame_Label_Ranked","Create game ""Ranked"" mode toggle label","CreateGame_Label_Ranked"
