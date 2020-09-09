@@ -1,4 +1,4 @@
 files:
   - source: /Assets/lang/strings.csv
-    translation: /Assets/lang/%two_letters_code%_strings.csv
+    translation: /Assets/lang/%locale%_strings.csv
     scheme: 'source_phrase,context,translation'
