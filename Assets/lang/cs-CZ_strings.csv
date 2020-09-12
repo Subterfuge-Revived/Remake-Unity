@@ -24,7 +24,7 @@
 "GameSelect_Button_Ongoing","""Ongoing"" - Button text to filter out only currently ongoing games that you are in","Pokračující"
 "GameSelect_Button_Open","""Open"" - Button text to filter out only open lobbies that you can join while in game select menu","Otevřít"
 "GameSelect_Button_Players","""Players"" - A label indicating how many players are in a game on the game-select screen.","Hráči"
-"GameSelect_Label_Title","Title for the game select screen","GameSelect_Label_Title"
+"GameSelect_Label_Title","Title for the game select screen","Název hry"
 "Login_Button_CreateAccount","""Create Account"" - button text on the login screen to create an account.","Vytvořit Účet"
 "Login_Error_InputError","-- dont know what this is yet. Will be a warning message if the user inputs invalid characters or doesn't meet password requirements.","Login_Error_InputError"
 "Login_Info_NoAccount","""No Account?"" button which takes the user to an account registration page.","Žádný Účet"
