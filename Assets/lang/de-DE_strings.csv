@@ -42,7 +42,7 @@
 "Game_ChatPanel_NewChat","""New Chat"" - Button text, in game button for creating a new chat group.","Neuer Chat"
 "Game_ChatPanelTitle_Chats","""Chats"" - GUI title text for the chat panel in game.","Chats"
 "Game_LaunchPanelButton_Launch","""Launch"" - Button text, Button will confirm launching an attack at your enemies.","Starten"
-"GameLobby_Button_CancelGame","""Cancel Game"" - Button text. When pressed, closes the game lobby and cancels the match.","Spiel verlassen"
+"GameLobby_Button_CancelGame","""Cancel Game"" - Button text. When pressed, closes the game lobby and cancels the match.","Aufgeben und Spiel verlassen"
 "GameLobby_Button_JoinGame","""Join game"" - Button text. Button to join a game","Spiel beitreten"
 "GameLobby_Button_LeaveGame","""Leave game"" - Button text. Button to leave a game lobby you have joined before it begins.","Spiel abbrechen"
 "GameLobby_Button_StartEarly","""Start Early"" - Button text. Button will start a game before the maximum number of players have joined. Only usable by the game's creator.","Spiel jetzt starten"
