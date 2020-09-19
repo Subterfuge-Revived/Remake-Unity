@@ -22,7 +22,7 @@ public class WorldWrap : MonoBehaviour
 	    {
 		    for (int j = -1; j <= 1; j++)
 		    {
-			    positions.Add(new Vector2(j * v.Map.Width + v.X, i * v.Map.Height + v.Y));
+			    positions.Add(new Vector2(j * RftVector.Map.Width + v.X, i * RftVector.Map.Height + v.Y));
 		    }
 	    }
 	    return positions;
@@ -35,11 +35,11 @@ public class WorldWrap : MonoBehaviour
 	    float viewportTop = Camera.main.ViewportToWorldPoint(new Vector3(1,1,0)).y;
 	    float viewportBottom = Camera.main.ViewportToWorldPoint(new Vector3(0,0,0)).y;
 	    var positions = new List<Vector2>();
-	    for (float i = v.Y + (float)Math.Floor((viewportTop+objBottom-v.Y)/v.Map.Height) * v.Map.Height;
-		    i > viewportBottom - objTop; i -= v.Map.Height)
+	    for (float i = v.Y + (float)Math.Floor((viewportTop+objBottom-v.Y)/RftVector.Map.Height) * RftVector.Map.Height;
+		    i > viewportBottom - objTop; i -= RftVector.Map.Height)
 	    {
-		    for (float j = v.X + (float)Math.Floor((viewportLeft+objRight-v.X)/v.Map.Width) * v.Map.Width;
-			    j < viewportRight + objLeft; j += v.Map.Width)
+		    for (float j = v.X + (float)Math.Floor((viewportLeft+objRight-v.X)/RftVector.Map.Width) * RftVector.Map.Width;
+			    j < viewportRight + objLeft; j += RftVector.Map.Width)
 		    {
 			    positions.Add(new Vector2(j, i));
 		    }
@@ -51,11 +51,11 @@ public class WorldWrap : MonoBehaviour
 	    float viewportLeft, float viewportRight, float viewportTop, float viewportBottom)
     {
 	    var positions = new List<Vector2>();
-	    for (float i = v.Y + (float)Math.Floor((viewportTop+objBottom-v.Y)/v.Map.Height) * v.Map.Height;
-		    i > viewportBottom - objTop; i -= v.Map.Height)
+	    for (float i = v.Y + (float)Math.Floor((viewportTop+objBottom-v.Y)/RftVector.Map.Height) * RftVector.Map.Height;
+		    i > viewportBottom - objTop; i -= RftVector.Map.Height)
 	    {
-		    for (float j = v.X + (float)Math.Floor((viewportLeft+objRight-v.X)/v.Map.Width) * v.Map.Width;
-			    j < viewportRight + objLeft; j += v.Map.Width)
+		    for (float j = v.X + (float)Math.Floor((viewportLeft+objRight-v.X)/RftVector.Map.Width) * RftVector.Map.Width;
+			    j < viewportRight + objLeft; j += RftVector.Map.Width)
 		    {
 			    positions.Add(new Vector2(j, i));
 		    }

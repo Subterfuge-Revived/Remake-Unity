@@ -16,6 +16,7 @@ namespace Login
         // Start is called before the first frame update
         async void Start()
         {
+            Api api = new Api();
             string username = PlayerPrefs.GetString("username");
             string password = PlayerPrefs.GetString("password");
         
@@ -24,7 +25,6 @@ namespace Login
                 // TODO: Set a loading indicator variable here to let the user know that we are trying to log them in automatically.
             
                 // Try to login.
-                Api api = new Api("http://18.220.154.6/api");
                 NetworkResponse<LoginResponse> response = await api.Login(username, password);
                 if (response.IsSuccessStatusCode())
                 {

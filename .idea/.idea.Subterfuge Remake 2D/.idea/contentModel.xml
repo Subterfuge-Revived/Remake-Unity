@@ -44,12 +44,21 @@
             <e p="GameRoomButton.cs" t="Include" />
             <e p="LoadAvaliableRooms.cs" t="Include" />
           </e>
+          <e p="Loading" t="Include">
+            <e p="GameLoader.cs" t="Include" />
+          </e>
           <e p="Login" t="Include">
             <e p="CheckUserLogin.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
             <e p="LoadUser.cs" t="Include" />
             <e p="PlayGameButton.cs" t="Include" />
+          </e>
+          <e p="Translation" t="Include">
+            <e p="GameString.cs" t="Include" />
+            <e p="Language.cs" t="Include" />
+            <e p="StringFactory.cs" t="Include" />
+            <e p="Translator.cs" t="Include" />
           </e>
           <e p="WorldWrap.cs" t="Include" />
         </e>
