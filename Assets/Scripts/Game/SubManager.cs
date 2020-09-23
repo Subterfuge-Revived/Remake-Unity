@@ -75,6 +75,7 @@ public class SubManager : MonoBehaviour
         }
         else
         {
+            /*
             if ( PrefabUtility.IsPartOfPrefabInstance(transform) )
             {
                 //if a part of a prefab instance then get the instance handle
@@ -82,6 +83,7 @@ public class SubManager : MonoBehaviour
                 //destroy the handle
                 GameObject.DestroyImmediate(prefabInstance);
             }
+            */
             //the usual destroy immediate to clean up scene objects
             GameObject.DestroyImmediate(transform.gameObject,true);
         }

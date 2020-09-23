@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\Quinn\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Quinn\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Quinn\.Rider2019.3\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Quinn\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Quinn\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Subterfuge Remake 2D.284215258.00" t="ExcludeRecursive" />
     <e p="C:\Users\Quinn\Documents\Coding\UnitySubterfugeRemake\Subterfuge Remake 2D" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Assets" t="Include">
@@ -12,6 +16,7 @@
           </e>
         </e>
         <e p="LaunchModalSourceInformation.cs" t="Include" />
+        <e p="LocalFileLoader.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ApplicationState.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
@@ -88,6 +93,34 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="UniWebView" t="Include">
+          <e p="Editor" t="Include">
+            <e p="AndroidManifest.cs" t="Include" />
+            <e p="BuildGradle.cs" t="Include" />
+            <e p="GradleProperty.cs" t="Include" />
+            <e p="UniWebViewEditorSettings.cs" t="Include" />
+            <e p="UniWebViewPostBuildProcessor.cs" t="Include" />
+          </e>
+          <e p="Interface" t="Include">
+            <e p="UniWebViewAndroid.cs" t="Include" />
+            <e p="UniWebViewAndroidStaticListener.cs" t="Include" />
+            <e p="UniWebViewCocoa.cs" t="Include" />
+            <e p="UniWebViewPlaceholder.cs" t="Include" />
+          </e>
+          <e p="README.txt" t="Include" />
+          <e p="Script" t="Include">
+            <e p="UniWebView.cs" t="Include" />
+            <e p="UniWebViewContentInsetAdjustmentBehavior.cs" t="Include" />
+            <e p="UniWebViewHelper.cs" t="Include" />
+            <e p="UniWebViewLogger.cs" t="Include" />
+            <e p="UniWebViewMessage.cs" t="Include" />
+            <e p="UniWebViewNativeListener.cs" t="Include" />
+            <e p="UniWebViewSafeBrowingComponent.cs" t="Include" />
+            <e p="UniWebViewSafeBrowsing.cs" t="Include" />
+            <e p="UniWebViewToolbarPosition.cs" t="Include" />
+            <e p="UniWebViewTransitionEdge.cs" t="Include" />
           </e>
         </e>
       </e>

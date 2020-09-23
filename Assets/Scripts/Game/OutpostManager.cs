@@ -1,14 +1,7 @@
-﻿﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using SubterfugeCore.Core;
  using SubterfugeCore.Core.Entities.Positions;
  using TMPro;
- using UnityEditor.UI;
- using UnityEngine.UI;
- using UnityEngine.XR;
- using Object = System.Object;
 
  public class OutpostManager : MonoBehaviour
 {
