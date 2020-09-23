@@ -1,0 +1,8 @@
+/* Assets/StreamingAssets/local_www/style.css */
+h1 {
+  color: red;
+}
+
+html, body {
+	background-color: rgba(255, 0, 0, 0);
+}
