@@ -5,6 +5,9 @@
 [![discord](https://img.shields.io/discord/617149385196961792)](https://discord.gg/GNk7Xw4)
 [![issues](https://img.shields.io/github/issues/Subterfuge-Revived/Remake-Unity)](https://github.com/Subterfuge-Revived/Remake-Unity/issues?q=is%3Aopen)
 [![issues-closed-raw](https://img.shields.io/github/issues-closed/Subterfuge-Revived/Remake-Unity)](https://github.com/Subterfuge-Revived/Remake-Unity/issues?q=is%3Aclosed+)
+# Subterfuge Unity
+## v0.1
+
 ### Quick note:
 
 This document is in an unfinished state, if you find that something is wrong or missing let us know.
