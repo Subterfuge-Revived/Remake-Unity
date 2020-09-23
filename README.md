@@ -15,7 +15,7 @@ This document is in an unfinished state, if you find that something is wrong or 
 
 2. Once unity hub is installed, activate a new license (pro or personal is fine).
 
-3. After getting a license, Install unity version 2019.3.0f6 to be safe. I'm sure updated versions are fine, but this is what I started the project at.
+3. After getting a license, Install unity version 2019.3.0f6. Attempting to use an updated version will break the project for some reason.
 
 4. [Download Git](https://git-scm.com/downloads) to gain access to the code
 
@@ -24,3 +24,12 @@ This document is in an unfinished state, if you find that something is wrong or 
 6. In unity hub click "Import Project" and path yourself to the project folder. Once imported, start the project with unity.
 
 7. Unity defaults Visual Studios as the primary code editor. Configure Rider (or something else) as your default text editor by going to Edit > Preferences > External Tools and setting External Script Editor to your editor of choice.
+
+8. To use the core repository within Unity, look at the [API documentation](https://subterfuge-revived.github.io/Remake-Core/index.html). 
+
+## Plugins
+
+The following unity plugins are required to work on this project:
+
+[UniWebView](https://docs.uniwebview.com/) - $25 - [Api](https://docs.uniwebview.com/api/)
+If you are unable to purchase this plugin for yourself contact @QuinnBast for help.
