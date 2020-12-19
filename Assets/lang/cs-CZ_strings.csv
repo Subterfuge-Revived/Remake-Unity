@@ -16,7 +16,7 @@
 "Game_EventPanel_Title","""Events"" in game panel title","Události"
 "Game_GuiPanel_Chat","""Chat"" in game panel title","Zprávy"
 "Game_GuiPanel_Events","""Events"" in game GUI panel title","Události"
-"Game_GuiPanel_Log","""Logs"" in game GUI panel title","Záznamy"
+"Game_GuiPanel_Log","""Logs"" in game GUI panel title","Protokol hry"
 "Game_GuiPanel_Statistics","""Stats"" in game GUI panel title","Statistiky"
 "GameLobby_Label_Anonymous","""Anonymous"" - Game lobby anonymous mode identifier label","Anonymní"
 "GameLobby_Label_Title","""Lobby"" - Game lobby default title while in lobby","Místnost"
