@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cab4f52e08c9b3e937af3b0fb749c5f6afe4f7f8230d6aa207ed19bdfe5f1766
-size 635
+﻿using System.Collections;
+using System.Collections.Generic;
+using SubterfugeCore.Core.Players;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LoadUser : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        string username = PlayerPrefs.GetString("username");
+        Text text = gameObject.GetComponent<Text>();
+        if (username != null)
+        {
+            text.text = "Logged in as: " + username;
+        }
+        else
+        {
+            text.text = "Not logged in.";
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:49b63d5d6bed6dac4bd6f1ed20b03117c5353738ab068aaa639e2c53ef1619ba
-size 2257
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\Entities\Base\GameObject.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\Entities\Sub.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\Game.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\GameEvents\Base\GameEvent.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\GameState.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\Timing\GameTick.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Core\Timing\NtpConnector.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\SubterfugeCore.deps.json
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\SubterfugeCore.dll
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\SubterfugeCore.pdb
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.csprojAssemblyReference.cache
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.AssemblyInfoInputs.cache
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.AssemblyInfo.cs
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.dll
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.pdb
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+C:\Users\Quinn\source\repos\SubterfugeRemake.Shared\SubterfugeCore\obj\Debug\netstandard2.0\SubterfugeCore.csproj.CopyComplete

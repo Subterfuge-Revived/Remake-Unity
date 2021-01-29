@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:35b3b066bf054ee0515f4fcab82f6f6e903ef4720506c435ce44b030e4a9624a
-size 1059
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelUserStore">
+    <attachedFolders>
+      <Path>../../Subterfuge</Path>
+    </attachedFolders>
+    <explicitIncludes>
+      <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
+      <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.vscode@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.test-framework@1.1.13</Path>
+      <Path>Library/PackageCache/com.unity.test-framework@1.1.9</Path>
+      <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
+      <Path>Library/PackageCache/com.unity.timeline@1.2.10</Path>
+      <Path>Packages</Path>
+      <Path>ProjectSettings</Path>
+    </explicitIncludes>
+    <explicitExcludes>
+      <Path>.git</Path>
+      <Path>.idea</Path>
+      <Path>.vs</Path>
+      <Path>Library</Path>
+      <Path>Temp</Path>
+      <Path>obj</Path>
+    </explicitExcludes>
+  </component>
+</project>

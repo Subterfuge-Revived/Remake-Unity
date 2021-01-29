@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c45e4107ef0ae8671bd95bbc72179a306e37d4aac448a8c592aef95e1c553b92
-size 807
+﻿using System.Collections;
+using System.Collections.Generic;
+using SubterfugeCore.Core.Entities.Positions;
+using SubterfugeCore.Core.Interfaces;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SubLaunchInformation : MonoBehaviour
+{
+
+    public Outpost sourceOutpost;
+    public ITargetable destination;
+    public Slider slider;
+    public Text SubInformation;
+    public 
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        slider.minValue = 0;
+        slider.maxValue = sourceOutpost.GetDrillerCount();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        SubInformation.text = "Drillers: " + slider.value + "\n" +
+                              "Specialists: \n" +
+                              "Destination: " + destination;
+    }
+}

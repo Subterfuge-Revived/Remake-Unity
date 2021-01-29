@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e4f6988b9b5cc95217db32a6aca226c07b1095bf4207ef01be20f2a824e2dd1
-size 493
+﻿using System.Collections;
+using System.Collections.Generic;
+using SubterfugeCore.Core.Network;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameRoomButton : MonoBehaviour
+{
+    public GameRoom room;
+
+    // Update is called once per frame
+    public void onClick()
+    {
+        // Set the gameroom to the selected game
+        ApplicationState.currentGameRoom = room;
+        
+        // Load the game scene
+        SceneManager.LoadScene("GameLobby");
+    }
+    
+}

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8697d8f5592162d7b876d809fbeac2dfa1633eb1030feb87b2ab089a6d7312b4
-size 328
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/riderModule.iml" />
+    </modules>
+  </component>
+</project>

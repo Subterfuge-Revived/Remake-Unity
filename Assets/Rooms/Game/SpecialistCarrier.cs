@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:38eb9a5a4deac28184dd8ba0cf2e07cb161235cec242cfa0354e31c02c6a0c8e
-size 1161
+﻿using SubterfugeCore.Core.Entities.Specialists;
+using SubterfugeCore.Core.Interfaces;
+using UnityEditor;
+using UnityEngine;
+
+public class SpecialistCarrier : MonoBehaviour
+ {
+     private ISpecialistCarrier specialistCarrier;
+    
+     // Start is called before the first frame update
+     void Start()
+     {
+         OutpostManager outpostManager = gameObject.GetComponentInParent<OutpostManager>();
+         if (outpostManager != null)
+         {
+             specialistCarrier = outpostManager.outpost;
+         }
+         else
+         {
+             specialistCarrier = gameObject.GetComponentInParent<SubManager>().sub;
+         }
+     }
+
+     // Update is called once per frame
+     void Update()
+     {
+         // Show all specialists above the object.
+         foreach (Specialist s in specialistCarrier.GetSpecialistManager().GetSpecialists())
+         {
+             SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+             renderer.sprite = Resources.Load<Sprite>("Specialists/Queen");
+             Vector3 scale = gameObject.GetComponent<Transform>().localScale;
+             scale.Set(15, 15, 1);
+         }
+     }
+ }

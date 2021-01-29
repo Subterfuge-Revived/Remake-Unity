@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf316e867e727df68e53890f2b5d80f6b98023a540e640364e63e8d7666f38c3
-size 320
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.subterfuge-unity/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.subterfuge-unity/riderModule.iml" />
+    </modules>
+  </component>
+</project>

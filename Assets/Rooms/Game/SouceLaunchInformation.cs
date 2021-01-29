@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cd6a8503499bbe92bad6768cb16f5b9cbf2b1a9d03c87700c6a118bad9eb93d
-size 773
+﻿using System.Collections;
+using System.Collections.Generic;
+using SubterfugeCore.Core.Entities;
+using SubterfugeCore.Core.Entities.Positions;
+using SubterfugeCore.Core.Interfaces;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SouceLaunchInformation : MonoBehaviour
+{
+    public Outpost source;
+
+    // Update is called once per frame
+    void Update()
+    {
+        Text text = gameObject.GetComponentInChildren<Text>();
+        text.text = "====Source Outpost====\n" +
+                    "Outpost Id: " + source.GetId() + "\n" +
+                    "Shields: " + source.GetShields() + "\n" +
+                    "Drillers: " + source.GetDrillerCount() + "\n" +
+                    "Specialists: " + source.GetSpecialistManager().GetSpecialistCount();
+    }
+}

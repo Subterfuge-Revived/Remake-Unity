@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06eee60abe63f90282ce3674650286e360b4c9603a592ca380e743fafb1ab1a1
-size 2698
+﻿using System.Collections;
+using System.Collections.Generic;
+using SubterfugeCore.Core;
+using SubterfugeCore.Core.Timing;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class TimeMachineSlider : MonoBehaviour
+{
+
+    public Canvas rulerCanvas;
+    public Canvas rulerScrollCanvas;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        // Determine current game tick.
+        // GameTick tick = Game.TimeMachine.GetCurrentTick();
+        
+        // populate the rulers
+        Canvas image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b906030b3aa5e88130cfeaf62991cba4e41d1022d5f8aff8125ff352380954e
-size 316
+<<<<<<< Updated upstream
+fileFormatVersion: 2
+guid: 9f0420c55600434898caba028a965225
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
+﻿fileFormatVersion: 2
+guid: 9f0420c55600434898caba028a965225
+timeCreated: 1587698149
+>>>>>>> Stashed changes
