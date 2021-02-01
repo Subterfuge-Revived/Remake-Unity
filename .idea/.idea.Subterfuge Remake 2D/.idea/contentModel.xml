@@ -23,15 +23,17 @@
           <e p="SubterfugeCore.csproj.FileListAbsolute.txt" t="Include" />
         </e>
         <e p="Rooms" t="Include">
+          <e p="1-Loading" t="Include">
+            <e p="GameLoader.cs" t="Include" />
+          </e>
+          <e p="2-MainMenu" t="Include">
+            <e p="PlayGameButton.cs" t="Include" />
+            <e p="SinglePlayerButton.cs" t="Include" />
+          </e>
           <e p="ApplicationState.cs" t="Include" />
-          <e p="CameraController.cs" t="Include" />
-          <e p="CreateAccount" t="Include">
-            <e p="CreateAccountController.cs" t="Include" />
-          </e>
-          <e p="CreateGame" t="Include">
-            <e p="CreateGameController.cs" t="Include" />
-          </e>
           <e p="Game" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="GameLoader.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HudScript.cs" t="Include" />
             <e p="OutpostManager.cs" t="Include" />
@@ -44,28 +46,34 @@
             <e p="SubManager.cs" t="Include" />
             <e p="SubSpawn.cs" t="Include" />
             <e p="TimeMachineSlider.cs" t="Include" />
+            <e p="WorldWrap.cs" t="Include" />
           </e>
-          <e p="GameLobby" t="Include">
-            <e p="GameActionButton.cs" t="Include" />
-            <e p="LeaveGameButton.cs" t="Include" />
-            <e p="ShowLobbyInfo.cs" t="Include" />
+          <e p="Multiplayer" t="Include">
+            <e p="CreateAccount" t="Include">
+              <e p="CreateAccountController.cs" t="Include" />
+            </e>
+            <e p="CreateGame" t="Include">
+              <e p="CreateGameController.cs" t="Include" />
+            </e>
+            <e p="GameLobby" t="Include">
+              <e p="GameActionButton.cs" t="Include" />
+              <e p="LeaveGameButton.cs" t="Include" />
+              <e p="ShowLobbyInfo.cs" t="Include" />
+            </e>
+            <e p="GameSelect" t="Include">
+              <e p="GameRoomButton.cs" t="Include" />
+              <e p="LoadAvaliableRooms.cs" t="Include" />
+            </e>
+            <e p="LoadMultiplayer" t="Include">
+              <e p="LoadMultiplayer.cs" t="Include" />
+            </e>
+            <e p="Login" t="Include">
+              <e p="CheckUserLogin.cs" t="Include" />
+            </e>
           </e>
-          <e p="GameSelect" t="Include">
-            <e p="GameRoomButton.cs" t="Include" />
-            <e p="LoadAvaliableRooms.cs" t="Include" />
-          </e>
-          <e p="Loading" t="Include">
-            <e p="GameLoader.cs" t="Include" />
-          </e>
-          <e p="LoadMultiplayer" t="Include">
-            <e p="LoadMultiplayer.cs" t="Include" />
-          </e>
-          <e p="Login" t="Include">
-            <e p="CheckUserLogin.cs" t="Include" />
-          </e>
-          <e p="MainMenu" t="Include">
-            <e p="LoadUser.cs" t="Include" />
-            <e p="PlayGameButton.cs" t="Include" />
+          <e p="NetworkClient.cs" t="Include" />
+          <e p="SinglePlayer" t="Include">
+            <e p="SinglePlayerGameSelect.cs" t="Include" />
           </e>
           <e p="Translation" t="Include">
             <e p="GameString.cs" t="Include" />
@@ -73,7 +81,6 @@
             <e p="StringFactory.cs" t="Include" />
             <e p="Translator.cs" t="Include" />
           </e>
-          <e p="WorldWrap.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

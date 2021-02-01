@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using SubterfugeCore.Core;
-using SubterfugeCore.Core.Entities;
+﻿using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.GameEvents;
-using SubterfugeCore.Core.GameEvents.Base;
-using SubterfugeCore.Core.Network;
+using SubterfugeRemakeService;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,21 +13,24 @@ public class GameManager : MonoBehaviour
     public Outpost launchOutpost;
     public Outpost destinationOutpost;
     public Slider drillerSlider;
-    public Api api = new Api();
     
     // Start is called before the first frame update
     async void Start()
     {
         launchHud.SetActive(false);
-        NetworkResponse<GameEventResponse> gameEvents = await api.GetGameEvents(ApplicationState.currentGameRoom.Room_Id);
+        var client = ApplicationState.Client.getClient();
+        var gameEvents = client.GetGameRoomEvents(new GetGameRoomEventsRequest()
+        {
+            RoomId = ApplicationState.currentGameRoom.RoomId
+        });
 
-        if (gameEvents.IsSuccessStatusCode())
+        if (gameEvents.Status.IsSuccess)
         {
             // Parse game events here.
-            foreach (NetworkGameEvent gameEvent in gameEvents.Response.array)
+            foreach (GameEventModel gameEvent in gameEvents.GameEvents)
             {
                 // convert to a game event
-                LaunchEvent launch = LaunchEvent.FromJson(gameEvent.EventMsg);
+                LaunchEvent launch = LaunchEvent.FromJson(gameEvent.EventData);
                 Game.TimeMachine.AddEvent(launch);
             }
         } else {
@@ -109,7 +107,19 @@ public class GameManager : MonoBehaviour
     {
         LaunchEvent launchEvent = new LaunchEvent(Game.TimeMachine.CurrentTick, launchOutpost, (int)drillerSlider.value, destinationOutpost);
         Game.TimeMachine.AddEvent(launchEvent);
-        api.SubmitGameEvent(launchEvent, ApplicationState.currentGameRoom.Room_Id);
+        
+        
+        var client = ApplicationState.Client.getClient();
+        client.SubmitGameEvent(new SubmitGameEventRequest()
+        {
+            EventData = new GameEventRequest()
+            {
+                EventData = launchEvent.ToJson(),
+                OccursAtTick = launchEvent.GetTick().GetTick()
+            },
+            RoomId = ApplicationState.currentGameRoom.RoomId,
+        });
+        
         this.SetLaunchHub(false);
     }
     

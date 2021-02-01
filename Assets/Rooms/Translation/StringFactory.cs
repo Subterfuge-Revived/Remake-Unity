@@ -70,6 +70,7 @@ namespace Translation
         /// </summary>
         private static void SetDefaultStrings()
         {
+            Strings[GameString.Generic_Info_GameName] = "Subterfuge";
             Strings[GameString.Generic_Button_Back] = "Back";
             Strings[GameString.Generic_Button_Cancel] = "Cancel";
             Strings[GameString.Generic_Button_Submit] = "Submit";
@@ -103,6 +104,7 @@ namespace Translation
             Strings[GameString.Login_Error_InvalidCredentials] = "Invalid username or password";
             Strings[GameString.Login_Error_NoConnectivity] = "Unable to connect to the internet. Please check your connection.";
             Strings[GameString.Login_Info_NoAccount] = "No account?";
+            Strings[GameString.MainMenu_Button_Singleplayer] = "Singleplayer";
             Strings[GameString.MainMenu_Button_Account] = "Account";
             Strings[GameString.MainMenu_Button_Help] = "Help";
             Strings[GameString.MainMenu_Button_Multiplayer] = "Multiplayer";
@@ -116,6 +118,7 @@ namespace Translation
             Strings[GameString.Register_Error_InvalidUsername] = "Your username must be between 8-20 characters";
             Strings[GameString.CreateGame_Button_CreateGame] = "Create Game";
             Strings[GameString.CreateGame_Title_CreateGame] = "Create Game";
+            Strings[GameString.CreateGame_Label_MinutesPerTick] = "Minutes per tick";
             Strings[GameString.GameSelect_Button_CreateGame] = "Create Game";
             Strings[GameString.Game_ChatPanel_NewChat] = "New Chat";
             Strings[GameString.Game_ChatPanelTitle_Chats] = "Chats";

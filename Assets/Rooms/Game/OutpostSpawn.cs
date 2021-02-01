@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.Generation;
-using SubterfugeCore.Core.Network;
 using SubterfugeCore.Core.Players;
 using SubterfugeCore.Core.Topologies;
 
@@ -24,45 +21,8 @@ public class OutpostSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        // Get the gameroom from the applications state
-        GameRoom room = ApplicationState.currentGameRoom;
-        
-        // Generate players
-        foreach (NetworkUser networkUser in room.Players)
-        {
-            if (room.anonimity)
-            {
-                players.Add(new Player(networkUser.Id, "Player " + players.Count + 1)); 
-            }
-            else
-            {
-                players.Add(new Player(networkUser.Id, networkUser.Name));      
-            }
-        }
-
-        //Build config
-        GameConfiguration config = new GameConfiguration(players);
-        config.seed = room.seed;
-        config.dormantsPerPlayer = 3;
-        config.maxiumumOutpostDistance = 100;
-        config.minimumOutpostDistance = 30;
-        config.outpostsPerPlayer = 5;
-        */
-        
-        //////// GENERATE DUMMY PLAYERS ////////
-        // (comment out above code)
-        players.Add(new Player("1"));
-        players.Add(new Player("2"));
-
-        GameConfiguration config = new GameConfiguration(players);
-        config.Seed = 1234;
-        config.DormantsPerPlayer = 3;
-        config.MaxiumumOutpostDistance = 100;
-        config.MinimumOutpostDistance = 30;
-        config.OutpostsPerPlayer = 5; 
-        
-        Game server = new Game(config);
+        Game server = ApplicationState.CurrentGame;
+        GameConfiguration config = server.Configuration;
         List<Outpost> outposts;
         List<Vector3> outpostLocations = new List<Vector3>();
         outposts = Game.TimeMachine.GetState().GetOutposts();

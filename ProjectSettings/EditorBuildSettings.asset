@@ -9,39 +9,39 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Rooms/Loading/InitialLoad.unity
+    path: Assets/Rooms/1-Loading/InitialLoad.unity
     guid: acfc0c26da8b39843b8c0f25c717c534
   - enabled: 1
-    path: Assets/Rooms/Login/LoginScreen.unity
+    path: Assets/Rooms/Multiplayer/Login/LoginScreen.unity
     guid: a19501005d9c79a47b94f86623de1869
   - enabled: 1
-    path: Assets/Rooms/GameSelect/GameSelect.unity
+    path: Assets/Rooms/Multiplayer/GameSelect/GameSelect.unity
     guid: 34c3fd9fcb1e3184a836e824c2e2fa78
   - enabled: 1
     path: Assets/Rooms/Game/Game.unity
     guid: 0a4e55d47408c814f897527775c88c19
   - enabled: 1
-    path: Assets/Rooms/GameLobby/GameLobby.unity
+    path: Assets/Rooms/Multiplayer/GameLobby/GameLobby.unity
     guid: 74b861da1a9dea947aaab7fbb142e584
   - enabled: 1
-    path: Assets/Rooms/CreateGame/CreateGame.unity
+    path: Assets/Rooms/Multiplayer/CreateGame/CreateGame.unity
     guid: 395dc655b07723e42b2152b38de03de3
   - enabled: 1
-    path: Assets/Rooms/CreateAccount/CreateAccount.unity
+    path: Assets/Rooms/Multiplayer/CreateAccount/CreateAccount.unity
     guid: 309d494004b53214e8f57c6b70fc42bd
   - enabled: 1
-    path: Assets/Rooms/LoadMultiplayer/LoadMultiplayer.unity
+    path: Assets/Rooms/Multiplayer/LoadMultiplayer/LoadMultiplayer.unity
     guid: 9573d8d57c9887b46ac51db30846dddd
   - enabled: 1
-    path: Assets/Rooms/MainMenu/MainMenu.unity
+    path: Assets/Rooms/2-MainMenu/MainMenu.unity
     guid: d107f66be262d4b4eaa8940a1a2afaea
   - enabled: 0
-    path: Assets/Rooms/MainMenu/MainMenu.unity
+    path: Assets/Rooms/2-MainMenu/MainMenu.unity
     guid: d107f66be262d4b4eaa8940a1a2afaea
   - enabled: 0
-    path: Assets/Rooms/MainMenu/MainMenu.unity
+    path: Assets/Rooms/2-MainMenu/MainMenu.unity
     guid: d107f66be262d4b4eaa8940a1a2afaea
   - enabled: 0
-    path: Assets/Rooms/MainMenu/MainMenu.unity
+    path: Assets/Rooms/2-MainMenu/MainMenu.unity
     guid: d107f66be262d4b4eaa8940a1a2afaea
   m_configObjects: {}

@@ -10,6 +10,7 @@
     {
         
         // Generic strings that repeat through the game
+        Generic_Info_GameName,
         Generic_Info_Loading,
         Generic_Button_Back,
         Generic_Button_Cancel,
@@ -34,6 +35,7 @@
         Register_Error_InvalidEmail,
         
         // Main Menu
+        MainMenu_Button_Singleplayer,
         MainMenu_Button_Multiplayer,
         MainMenu_Button_Settings,
         MainMenu_Button_Help,
@@ -55,6 +57,7 @@
         CreateGame_Label_Ranked,
         CreateGame_Label_Anonymous,
         CreateGame_Button_CreateGame,
+        CreateGame_Label_MinutesPerTick,
         
         // Game Lobby
         GameLobby_Label_Title,
