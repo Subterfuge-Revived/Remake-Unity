@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e466a49c-ba9d-4904-894c-709c4f50488b" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Specialists.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Documentation/obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_site.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lib.meta" beforeDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Subterfuge Remake 2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" afterDir="false" />
@@ -15,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/lib/SubterfugeCore.dll" afterDir="false" />
+>>>>>>> FixMapWrapping
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +33,27 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Timing/TimeMachine.cs" root0="SKIP_HIGHLIGHTING" />
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/Documentation/docfx.json" root0="FORCE_HIGHLIGHTING" />
+=======
+>>>>>>> FixMapWrapping
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EBF11174-2519-413D-8CBD-EC5EF1EE6412/17/99c370ff/GameRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/GameRoomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateAccount/CreateAccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Documentation/manual/ModifyingTheGameState.md" root0="FORCE_HIGHLIGHTING" />
+=======
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreateGame/CreateGameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSelect/LoadAvaliableRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/ShowLobbyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> FixMapWrapping
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLobby/GameActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,9 +62,19 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/LoadUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Login/CheckUserLogin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldWrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostManager.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/CombatCleanup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/8a/08349c2f/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpecialistCarrier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/DrillerCombat.cs" root0="SKIP_HIGHLIGHTING" />
+=======
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SouceLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/Game.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,17 +89,32 @@
     <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/ReversibleEvents/DrillerCombat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lib/SubterfugeCore.deps.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> FixMapWrapping
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CreateAccount.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/LoginScreen.unity" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
+=======
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> FixMapWrapping
     <setting file="file://$USER_HOME$/source/repos/SubterfugeRemake.Shared/SubterfugeCore/Core/GameEvents/CombatEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameSelect.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/OutpostSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/77/bdad3d03/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/76/b28143ca/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+<<<<<<< HEAD
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/4d/e422aeb9/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TimeMachineSlider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RulerSlider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SendSubModal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/HudScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SouceLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SubLaunchInformation.cs" root0="FORCE_HIGHLIGHTING" />
+=======
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/Translator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Translation/StringFactory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,6 +124,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/LaunchModalSourceInformation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/fb/aadef9d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Loading/GameLoader.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> FixMapWrapping
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
