@@ -1,4 +1,5 @@
 ﻿using SubterfugeCore.Core.GameEvents;
+using SubterfugeCore.Core.Timing;
 using SubterfugeRemakeService;
 
 namespace Rooms.Game
@@ -14,6 +15,9 @@ namespace Rooms.Game
             }
             else
             {
+                // go to current tick.
+                GameTick.FromDate(NtpConnector.GetNetworkTime());
+                
                 var gameEvents = ApplicationState.Client.getClient().GetGameRoomEvents(
                     new GetGameRoomEventsRequest()
                     {

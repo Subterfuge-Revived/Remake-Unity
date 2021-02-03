@@ -119,6 +119,7 @@ namespace Translation
             Strings[GameString.CreateGame_Button_CreateGame] = "Create Game";
             Strings[GameString.CreateGame_Title_CreateGame] = "Create Game";
             Strings[GameString.CreateGame_Label_MinutesPerTick] = "Minutes per tick";
+            Strings[GameString.CreateGame_Label_Creator] = "Created By";
             Strings[GameString.GameSelect_Button_CreateGame] = "Create Game";
             Strings[GameString.Game_ChatPanel_NewChat] = "New Chat";
             Strings[GameString.Game_ChatPanelTitle_Chats] = "Chats";

@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 6817633043854774998, guid: 860bbd49168555d49b8f58d31316a9b3,
         type: 3}
       propertyPath: textToTranslate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860bbd49168555d49b8f58d31316a9b3, type: 3}
