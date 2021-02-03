@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83e09df010241be77976a8d6b0ac76f0c556890273aa829e69b3d1157d3a3c9a
-size 232
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.jetbrains.rider.android.RiderAndroidMiscFileCreationComponent">
+    <option name="ENSURE_MISC_FILE_EXISTS" value="true" />
+  </component>
+</project>

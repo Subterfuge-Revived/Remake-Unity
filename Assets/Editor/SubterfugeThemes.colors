@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12323, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SubterfugeThemes
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: 
+    m_Color: {r: 0.12941177, g: 0.105882354, b: 0.23137255, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.9411765, g: 0.15686275, b: 0.15686275, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.9843137, g: 0.47843137, b: 0.09411765, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.3647059, g: 0.11764706, b: 0.20392157, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.9882353, g: 0.31764707, b: 0.13725491, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.99607843, g: 0.99607843, b: 0.99607843, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.30355555, g: 0.251691, b: 0.5283019, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.305355, g: 0.30397832, b: 0.31132078, a: 1}
