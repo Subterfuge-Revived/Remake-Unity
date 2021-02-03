@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine.Assertions;
+using System.IO;
 
 namespace Translation
 {
@@ -14,7 +15,7 @@ namespace Translation
         /// <summary>
         /// The language that the user would like the string translated to.
         /// </summary>
-        public static Language Language { get; set; } = Language.English;
+        public static LanguageType Language { get; set; } = LanguageType.French;
         
         /// <summary>
         /// A dictionary of strings to display on the screen.
@@ -31,12 +32,41 @@ namespace Translation
         {
             // TODO: Add the Google sheets API and query from a google sheet
             SetDefaultStrings();
-            
+
+            if (Language != null)
+            {
+                SetLanguage(Language);
+            }
+
             // Ensure that all game strings have been populated.
             // When loading, if all strings are not populated, the `getString()` method will throw an error.
             foreach(GameString s in Enum.GetValues(typeof(GameString)))
             {
                 GetString(s);
+            }
+        }
+
+        /// <summary>
+        /// Method used to change the language.
+        /// Pass in the new language to use and the game strings will be updated.
+        /// </summary>
+        public static void SetLanguage(LanguageType language)
+        {
+            string fileName = LanguageLookup.languageLookup[language] + "_strings.csv";
+            StreamReader reader = new StreamReader($"Assets/lang/{fileName}");
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                if (!string.IsNullOrEmpty(line))
+                {
+                    var stringName = line.Split(',')[0];
+                    var stringValue = line.Split(',')[2];
+                    GameString.TryParse<GameString>(stringName, false, out GameString gameString);
+                    if (gameString != null)
+                    {
+                        Strings[gameString] = stringValue;
+                    }
+                }
             }
         }
 
@@ -52,17 +82,6 @@ namespace Translation
                 return Strings[gameString];
             }
             throw new Exception("Value for the string '" + gameString.ToString() + "' does not exist. Ensure a default has been set.");
-        }
-
-        /// <summary>
-        /// Gets the language representation of the string. For example "en" for english.
-        /// This is used for a lookup of the string
-        /// </summary>
-        /// <returns>The language code</returns>
-        private string GetLanguageString()
-        {
-            // TODO: Determine the language shorthand notations from the crowd sourced translation tool
-            return Language.ToString();
         }
 
         /// <summary>

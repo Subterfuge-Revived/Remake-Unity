@@ -78,7 +78,7 @@
           </e>
           <e p="Translation" t="Include">
             <e p="GameString.cs" t="Include" />
-            <e p="Language.cs" t="Include" />
+            <e p="LanguageType.cs" t="Include" />
             <e p="StringFactory.cs" t="Include" />
             <e p="Translator.cs" t="Include" />
           </e>

@@ -634,6 +634,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Singleplayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6995778039813592397, guid: 8f14f5582e46e4147bc12127bcc92a86,
+        type: 3}
+      propertyPath: textToTranslate
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6995778040188507665, guid: 8f14f5582e46e4147bc12127bcc92a86,
         type: 3}
       propertyPath: m_Name
