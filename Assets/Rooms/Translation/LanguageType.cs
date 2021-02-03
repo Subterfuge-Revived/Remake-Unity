@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Translation
+{
+    class LanguageLookup
+    {
+        public static Dictionary<LanguageType, String> languageLookup = new Dictionary<LanguageType, String>()
+        {
+            [LanguageType.English] = "en",
+            [LanguageType.Afrikaans] = "af",
+            [LanguageType.Arabic] = "ar",
+            [LanguageType.Bulgarian] = "bg",
+            [LanguageType.Catalan] = "ca",
+            [LanguageType.Chinese_Simplified] = "zh-CN",
+            [LanguageType.Chinese_Traditional] = "zh-TW",
+            [LanguageType.Croatioan] = "hr",
+            [LanguageType.Czech] = "cs",
+            [LanguageType.Danish] = "da",
+            [LanguageType.Finnish] = "fi",
+            [LanguageType.French] = "fr",
+            [LanguageType.French_Canada] = "fr-CA",
+            [LanguageType.German] = "de",
+            [LanguageType.Greek] = "el",
+            [LanguageType.Hebrew] = "he",
+            [LanguageType.Hungarian] = "hu",
+            [LanguageType.Indonesian] = "id",
+            [LanguageType.Italian] = "it",
+            [LanguageType.Japanese] = "ja",
+            [LanguageType.Korean] = "ko",
+            [LanguageType.Lithuanian] = "lt",
+            [LanguageType.Norwegian] = "no",
+            [LanguageType.Polish] = "pl",
+            [LanguageType.Portuguese] = "pt-PT",
+            [LanguageType.Portuguese_Brazillian] = "pt-BR",
+            [LanguageType.Romanian] = "ro",
+            [LanguageType.Russian] = "ru",
+            [LanguageType.Serbian_Cyrillic] = "sr",
+            [LanguageType.Spanish] = "es-ES",
+            [LanguageType.Swedish] = "sv-SE",
+            [LanguageType.Thai] = "th",
+            [LanguageType.Turkish] = "tr",
+            [LanguageType.Ukrainian] = "uk",
+            [LanguageType.Vietnamese] = "vi",
+        };
+    }
+    
+    public enum LanguageType
+    {
+        English,
+        Afrikaans,
+        Arabic,
+        Bulgarian,
+        Catalan,
+        Chinese_Simplified,
+        Chinese_Traditional,
+        Croatioan,
+        Czech,
+        Danish,
+        Dutch,
+        Finnish,
+        French,
+        French_Canada,
+        German,
+        Greek,
+        Hebrew,
+        Hungarian,
+        Indonesian,
+        Italian,
+        Japanese,
+        Korean,
+        Lithuanian,
+        Norwegian,
+        Polish,
+        Portuguese,
+        Portuguese_Brazillian,
+        Romanian,
+        Russian,
+        Serbian_Cyrillic,
+        Spanish,
+        Swedish,
+        Thai,
+        Turkish,
+        Ukrainian,
+        Vietnamese,
+    }
+}
