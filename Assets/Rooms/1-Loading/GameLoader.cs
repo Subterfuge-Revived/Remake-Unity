@@ -1,9 +1,11 @@
-﻿using Translation;
+﻿using System;
+using Translation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameLoader : MonoBehaviour
 {
+
     // Start is called before the first frame update
     async void Start()
     {
@@ -12,5 +14,7 @@ public class GameLoader : MonoBehaviour
 
         // Go to login screen.
         SceneManager.LoadScene("MainMenu");
+        
+        GameObject.FindGameObjectWithTag("Music").GetComponent<AudioPlayer>().Play();
     }
 }
