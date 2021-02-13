@@ -22,7 +22,9 @@ public class SubManager : MonoBehaviour
         Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
         Transform transform = GetComponent<Transform>();
         transform.localPosition = location;
-        transform.rotation = Quaternion.Euler(0, 0, (int)sub.GetRotationRadians());
+        
+        int rotationAngle = (int) (sub.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
+        transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
         
         // Set color based on the owner
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
@@ -74,7 +76,9 @@ public class SubManager : MonoBehaviour
             Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
             Transform transform = GetComponent<Transform>();
             transform.localPosition = location;
-            transform.rotation = Quaternion.Euler(0, 0, (int)sub.GetRotationRadians());
+            
+            int rotationAngle = (int) (sub.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
+            transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
         }
         else
         {
