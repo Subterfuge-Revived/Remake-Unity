@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
+using SubterfugeCore.Core.Config;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
 using UnityEngine;
@@ -24,12 +25,15 @@ public class SinglePlayerGameSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameConfiguration config = new GameConfiguration(players);
-        config.Seed = 123123;
-        config.DormantsPerPlayer = 3;
-        config.MaxiumumOutpostDistance = 130;
-        config.MinimumOutpostDistance = 30;
-        config.OutpostsPerPlayer = 3;
+        MapConfiguration mapConfiguration = new MapConfiguration(players);
+        mapConfiguration.Seed = 123123;
+        mapConfiguration.DormantsPerPlayer = 3;
+        mapConfiguration.MaxiumumOutpostDistance = 130;
+        mapConfiguration.MinimumOutpostDistance = 30;
+        mapConfiguration.OutpostsPerPlayer = 3;
+        
+        
+        GameConfiguration config = new GameConfiguration(players, DateTime.Now, mapConfiguration);
 
         Dictionary<String, GameConfiguration> puzzleList = new Dictionary<string, GameConfiguration>();
         puzzleList.Add("SampleGameNoNetwork", config);

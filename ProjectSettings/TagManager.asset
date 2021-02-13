@@ -9,6 +9,9 @@ TagManager:
   - Generator
   - Mine
   - Watchtower
+  - Outpost
+  - VisionMask
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - FogOfWarMain
+  - FogOfWarSecondary
   - 
   - 
   - 

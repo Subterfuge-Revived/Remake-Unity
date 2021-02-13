@@ -13,6 +13,9 @@
           <e p="Gui" t="Include">
             <e p="GameElements.txt" t="Include" />
           </e>
+          <e p="Materials" t="Include">
+            <e p="AlphaOverlapShader.shader" t="Include" />
+          </e>
         </e>
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
@@ -34,7 +37,6 @@
           <e p="ApplicationState.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="CameraController.cs" t="Include" />
-            <e p="GameLoader.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HudScript.cs" t="Include" />
             <e p="OutpostManager.cs" t="Include" />
@@ -47,7 +49,6 @@
             <e p="SubManager.cs" t="Include" />
             <e p="SubSpawn.cs" t="Include" />
             <e p="TimeMachineSlider.cs" t="Include" />
-            <e p="WorldWrap.cs" t="Include" />
           </e>
           <e p="Multiplayer" t="Include">
             <e p="CreateAccount" t="Include">

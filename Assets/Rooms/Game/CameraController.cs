@@ -14,7 +14,7 @@ using UnityEngine.EventSystems;
     public float cameraZoomDampen = 5;
     public float cameraZoomScrollSpeed = 0.33f; // Make this configurable in User Settings?
     public float maxZoomOrthographicSize = 3;
-    public float minZoomOrthographicSize = 100;
+    public float minZoomOrthographicSize = 300;
     public float mapHeight = 400; // This is the map height for the particular game. This only applies to rectangular maps.
     public float mapWidth = 200; // This is the map width for the particular game. This only applies to rectangular maps.
     private Vector3 dragOrigin;

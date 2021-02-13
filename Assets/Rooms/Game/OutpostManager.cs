@@ -7,7 +7,7 @@ using SubterfugeCore.Core;
 {
 
     private Animator OutpostAnimator;
-    public int ID;
+    public string ID;
     private float downtime;
     private bool expanded = false;
     private TextMeshPro textMesh;
@@ -24,6 +24,7 @@ using SubterfugeCore.Core;
     public readonly Color subPurple = new Color(0.42f, 0.333f, 0.557f);
     public readonly Color subNavy = new Color(0.227f, 0.294f, 0.639f);
     public readonly Color subBrown = new Color(0.545f, 0.369f, 0.235f);
+    public readonly Color subGrey = new Color(0.3f, 0.3f, 0.3f);
 
     // Start is called before the first frame update
     void Start()
@@ -37,17 +38,40 @@ using SubterfugeCore.Core;
     {
         // Set color based on the owner
         textMesh.text = outpost.GetDrillerCount().ToString();
+        
+        
+        // Determine the outpost vision mask.
+        if (outpost.GetOwner()?.GetId() == ApplicationState.player.GetId())
+        {
+            // Apply vision mask.
+            gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(outpost.getVisionRange() / 15.0f, outpost.getVisionRange() / 15.0f, 1);
+            gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            // remove vision mask.
+            gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(0, 0, 1);
+
+            if (ApplicationState.CurrentGame.TimeMachine.GetState().isInVisionRange(outpost, ApplicationState.player))
+            {
+                gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(0, 0, 1);
+            }
+        }
 
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
         if (outpost.GetOwner() != null)
         {
-            playerId = Game.TimeMachine.GetState().GetPlayers().IndexOf(outpost.GetOwner()) + 1;
+            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(outpost.GetOwner()) + 1;
         }
         switch (playerId)
         {
             case 0:
-                renderer.color = subSky;
+                renderer.color = subGrey;
                 break;
             case 1:
                 renderer.color = subRed;
@@ -69,6 +93,9 @@ using SubterfugeCore.Core;
                 break;
             case 7:
                 renderer.color = subBiege;
+                break;
+            case 8:
+                renderer.color = subSky;
                 break;
         }
         

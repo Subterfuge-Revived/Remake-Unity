@@ -5,15 +5,13 @@ using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
 using SubterfugeCore.Core.Topologies;
+using TMPro;
+using UnityEditor.iOS;
 
 public class OutpostSpawn : MonoBehaviour
 {
-    public Transform generator;
-    public Transform factory;
-    public Transform mine;
-    public Transform watchtower;
-    public Transform destroyed;
-    private Transform outpostObject;
+    public Transform outpostPrefab;
+    public Transform outpostObject;
     private System.Random rand = new System.Random(0);
     List<Player> players = new List<Player>();
 
@@ -25,97 +23,53 @@ public class OutpostSpawn : MonoBehaviour
         GameConfiguration config = server.Configuration;
         List<Outpost> outposts;
         List<Vector3> outpostLocations = new List<Vector3>();
-        outposts = Game.TimeMachine.GetState().GetOutposts();
+        outposts = ApplicationState.CurrentGame.TimeMachine.GetState().GetOutposts();
 
-        foreach (Outpost outpost in outposts) {
-            
-            Vector2 location = new Vector2(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y);
-            
-            // Determine all quadrants to spawn in.
-            Vector2 locationNorth = location;
-            Vector2 locationSouth = location;
-            Vector2 locationEast = location;
-            Vector2 locationWest = location;
-            Vector2 locationNorthWest = location;
-            Vector2 locationNorthEast = location;
-            Vector2 locationSouthWest = location;
-            Vector2 locationSouthEast = location;
-            
-            
-            locationNorth.y += RftVector.Map.Height;
-            locationSouth.y -= RftVector.Map.Height;
-            locationEast.x += RftVector.Map.Width;
-            locationWest.x -= RftVector.Map.Width;
+        foreach (Outpost outpost in outposts)
+        {
 
-            locationNorthEast.y += RftVector.Map.Height;
-            locationNorthEast.x += RftVector.Map.Width;
+            Sprite sprite = getOutpostSprite(outpost.GetOutpostType());
             
-            locationNorthWest.y += RftVector.Map.Height;
-            locationNorthWest.x -= RftVector.Map.Width;
-            
-            locationSouthEast.y -= RftVector.Map.Height;
-            locationSouthEast.x += RftVector.Map.Width;
-            
-            locationSouthWest.y -= RftVector.Map.Height;
-            locationSouthWest.x -= RftVector.Map.Width;
-
-            Transform instanceType = null;
-            
-            
-            /*
-            Vector3 location = new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0);*/
-            switch (outpost.GetOutpostType())
+            // Spawn in all 9 quadrants for map wrapping.
+            for (var vertical = 0; vertical < 3; vertical++)
             {
-                case OutpostType.Generator:
-                    instanceType = generator;
-                    break;
-                case OutpostType.Factory:
-                    instanceType = factory;
-                    break;
-                case OutpostType.Mine:
-                    instanceType = mine;
-                    break;
-                case OutpostType.Watchtower:
-                    instanceType = watchtower;
-                    break;
-                case OutpostType.Destroyed:
-                    instanceType = destroyed;
-                    break;
-                default:
-                    Debug.LogError("Could not spawn outpost");
-                    break;
+                for (var horizontal = 0; horizontal < 3; horizontal++)
+                {
+                    Vector2 location = new Vector2(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y);
+                    if (vertical == 0)
+                    {
+                        location.y -= RftVector.Map.Height;
+                    }
+
+                    if (vertical == 2)
+                    {
+                        location.y += RftVector.Map.Height;
+                    }
+
+                    if (horizontal == 0)
+                    {
+                        location.x -= RftVector.Map.Width;
+                    }
+
+                    if (horizontal == 2)
+                    {
+                        location.x += RftVector.Map.Width;
+                    }
+                    
+                    // Create a game object.
+                    outpostObject = Instantiate(outpostPrefab, location, Quaternion.identity);
+                    
+                    // Set the outpost sprite
+                    outpostObject.GetComponent<SpriteRenderer>().sprite = sprite;
+                    
+                    // Set the outpost and id in the manager.
+                    outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+                    outpostObject.GetComponent<OutpostManager>().outpost = outpost;
+                    
+                    outpostLocations.Add(location);
+                    
+                }
             }
-            
-            // Spawn all 9 regions.
-            outpostObject = Instantiate(instanceType, location, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostLocations.Add(location);
-            
-            outpostObject = Instantiate(instanceType, locationNorth, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationSouth, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationNorthEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationNorthWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationSouthEast, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
-            outpostObject = Instantiate(instanceType, locationSouthWest, Quaternion.identity); //new Vector3(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y, 0)
-            outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
-            outpostObject.GetComponent<OutpostManager>().outpost = outpost;
         }
 
         Debug.Log("Spawned outposts");
@@ -125,5 +79,33 @@ public class OutpostSpawn : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public Sprite getOutpostSprite(OutpostType type)
+    {
+        Sprite sprite = Resources.Load<Sprite>("Locations/Unknown");;
+        switch (type)
+        {
+            case OutpostType.Generator:
+                sprite = Resources.Load<Sprite>("Locations/GeneratorFill");
+                break;
+            case OutpostType.Destroyed:
+                sprite = Resources.Load<Sprite>("Locations/Destroyed");
+                break;
+            case OutpostType.Factory:
+                sprite = Resources.Load<Sprite>("Locations/FactoryFill");
+                break;
+            case OutpostType.Mine:
+                sprite = Resources.Load<Sprite>("Locations/MineFill");
+                break;
+            case OutpostType.Watchtower:
+                sprite = Resources.Load<Sprite>("Locations/Watchtower");
+                break;
+            default:
+                sprite = Resources.Load<Sprite>("Locations/Unknown");
+                break;
+        }
+
+        return sprite;
     }
 }

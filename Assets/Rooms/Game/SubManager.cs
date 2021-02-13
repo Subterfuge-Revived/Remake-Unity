@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities;
+using SubterfugeCore.Core.Timing;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -16,18 +17,19 @@ public class SubManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameTick currentTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick();
         // Update the position and rotation of the sub.
-        Vector3 location = new Vector3(sub.GetCurrentPosition().X, sub.GetCurrentPosition().Y, 0);
+        Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
         Transform transform = GetComponent<Transform>();
         transform.localPosition = location;
-        transform.rotation = Quaternion.Euler(0, 0, (int)(sub.GetRotation() * (360 / (2 * Math.PI))) - 135);
+        transform.rotation = Quaternion.Euler(0, 0, (int)sub.GetRotationRadians());
         
         // Set color based on the owner
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
         if (sub.GetOwner() != null)
         {
-            playerId = Game.TimeMachine.GetState().GetPlayers().IndexOf(sub.GetOwner()) + 1;
+            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(sub.GetOwner()) + 1;
         }
         switch (playerId)
         {
@@ -64,14 +66,15 @@ public class SubManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameTick currentTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick();
         textMesh.text = sub.GetDrillerCount().ToString();
-        if (Game.TimeMachine.GetState().SubExists(sub))
+        if (ApplicationState.CurrentGame.TimeMachine.GetState().SubExists(sub))
         {
             // Update the position and rotation of the sub.
-            Vector3 location = new Vector3(sub.GetCurrentPosition().X, sub.GetCurrentPosition().Y, 0);
+            Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
             Transform transform = GetComponent<Transform>();
             transform.localPosition = location;
-            transform.rotation = Quaternion.Euler(0, 0, (int) (sub.GetRotation() * (360 / (2 * Math.PI))) - 135);
+            transform.rotation = Quaternion.Euler(0, 0, (int)sub.GetRotationRadians());
         }
         else
         {

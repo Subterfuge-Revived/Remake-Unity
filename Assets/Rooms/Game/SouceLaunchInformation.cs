@@ -16,7 +16,7 @@ public class SouceLaunchInformation : MonoBehaviour
         Text text = gameObject.GetComponentInChildren<Text>();
         text.text = "====Source Outpost====\n" +
                     "Outpost Id: " + source.GetId() + "\n" +
-                    "Shields: " + source.GetShields() + "\n" +
+                    "Shields: " + source.GetShieldManager().GetShields() + "\n" +
                     "Drillers: " + source.GetDrillerCount() + "\n" +
                     "Specialists: " + source.GetSpecialistManager().GetSpecialistCount();
     }

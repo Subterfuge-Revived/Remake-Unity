@@ -17,6 +17,6 @@ public class HudScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = "GameTick: " + Game.TimeMachine.GetCurrentTick().GetTick().ToString();
+        textMesh.text = "GameTick: " + ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetTick().ToString();
     }
 }

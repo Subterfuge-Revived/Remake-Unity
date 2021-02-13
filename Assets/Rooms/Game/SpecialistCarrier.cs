@@ -10,7 +10,7 @@ public class SpecialistCarrier : MonoBehaviour
      // Start is called before the first frame update
      void Start()
      {
-         OutpostManager outpostManager = gameObject.GetComponentInParent<OutpostManager>();
+         OutpostManager outpostManager = gameObject.GetComponent<OutpostManager>();
          if (outpostManager != null)
          {
              specialistCarrier = outpostManager.outpost;
@@ -25,12 +25,12 @@ public class SpecialistCarrier : MonoBehaviour
      void Update()
      {
          // Show all specialists above the object.
-         foreach (Specialist s in specialistCarrier.GetSpecialistManager().GetSpecialists())
-         {
-             SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
-             renderer.sprite = Resources.Load<Sprite>("Specialists/Queen");
-             Vector3 scale = gameObject.GetComponent<Transform>().localScale;
-             scale.Set(15, 15, 1);
-         }
+         // foreach (Specialist s in specialistCarrier.GetSpecialistManager().GetSpecialists())
+         // {
+         //     SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+         //     renderer.sprite = Resources.Load<Sprite>("Specialists/Queen");
+         //     Vector3 scale = gameObject.GetComponent<Transform>().localScale;
+         //     scale.Set(15, 15, 1);
+         // }
      }
  }

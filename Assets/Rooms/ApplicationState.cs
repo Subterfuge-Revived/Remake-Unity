@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Rooms.Multiplayer;
 using SubterfugeCore.Core;
+using SubterfugeCore.Core.Config;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
 using SubterfugeRemakeService;
@@ -13,7 +15,7 @@ public static class ApplicationState
     public static Room currentGameRoom { get; set; }
     
     public static NetworkClient Client { get; } = new NetworkClient();
-    public static Player player { get; set; }
+    public static Player player { get; set; } = new Player("1"); // Default player
 
     public static void SetActiveRoom(Room room)
     {
@@ -24,11 +26,13 @@ public static class ApplicationState
             gamePlayers.Add(new Player(user.Id, user.Username));
         }
         
-        GameConfiguration config = new GameConfiguration(gamePlayers);
-        config.Seed = room.Seed;
-        config.DormantsPerPlayer = 3;
-        config.MaxiumumOutpostDistance = 140;
-        config.MinimumOutpostDistance = 30;
+        MapConfiguration mapConfiguration = new MapConfiguration(gamePlayers);
+        mapConfiguration.Seed = room.Seed;
+        mapConfiguration.DormantsPerPlayer = 3;
+        mapConfiguration.MaxiumumOutpostDistance = 140;
+        mapConfiguration.MinimumOutpostDistance = 30;
+        
+        GameConfiguration config = new GameConfiguration(gamePlayers, DateTime.FromFileTimeUtc(room.UnixTimeStarted), mapConfiguration);
         
         CurrentGame = new Game(config);
     }

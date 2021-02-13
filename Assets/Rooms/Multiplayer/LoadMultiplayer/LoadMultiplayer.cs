@@ -11,8 +11,8 @@ public class LoadMultiplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // String Hostname = "server"; // For docker
-        String Hostname = "localhost"; // For local
+        String Hostname = "52.14.116.178"; // For docker
+        // String Hostname = "localhost"; // For local
         int Port = 5000;
 
         var client = new SubterfugeClient.SubterfugeClient(Hostname, Port.ToString());

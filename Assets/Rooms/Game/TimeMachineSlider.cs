@@ -51,6 +51,42 @@ public class TimeMachineSlider : MonoBehaviour
         image = Instantiate(rulerCanvas);
         image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
         image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
+        image = Instantiate(rulerCanvas);
+        image.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 61);
+        image.transform.SetParent(rulerScrollCanvas.transform, false);
     }
 
     // Update is called once per frame
