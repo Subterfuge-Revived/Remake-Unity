@@ -25,6 +25,7 @@
           <e p="SubterfugeCore.AssemblyInfo.cs" t="Include" />
           <e p="SubterfugeCore.csproj.FileListAbsolute.txt" t="Include" />
         </e>
+        <e p="OnlineServicesPanelController.cs" t="Include" />
         <e p="Rooms" t="Include">
           <e p="1-Loading" t="Include">
             <e p="AudioPlayer.cs" t="Include" />

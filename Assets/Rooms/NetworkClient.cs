@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Grpc.Core;
+using SubterfugeCore.Core.Players;
 using SubterfugeRemakeService;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Rooms.Multiplayer
@@ -17,7 +20,7 @@ namespace Rooms.Multiplayer
             tryConnectServer();
         }
 
-        public bool tryConnectServer()
+        public async Task<bool> tryConnectServer()
         {
             String Hostname = "52.14.116.178"; // For server
             // String Hostname = "localhost"; // For local
@@ -28,7 +31,7 @@ namespace Rooms.Multiplayer
             // Ensure that the client can connect to the server.
             try
             {
-                client.HealthCheck(new HealthCheckRequest());
+                await client.HealthCheckAsync(new HealthCheckRequest());
                 return isConnected = true;
             }
             catch (RpcException exception)
@@ -36,6 +39,28 @@ namespace Rooms.Multiplayer
                 client = null;
                 return isConnected = false;
             }
+        }
+
+        public async Task<bool> IsPlayerLoggedIn()
+        {
+            // Check if user is logged in already.
+            var token = PlayerPrefs.GetString("token");
+            if (token != null)
+            {
+                var client = ApplicationState.Client.getClient();
+                var response = await client.LoginWithTokenAsync(new AuthorizedTokenRequest() {
+                    Token = token
+                });
+
+                if (response.Status.IsSuccess)
+                {
+                    ApplicationState.player = new Player(response.User.Id, response.User.Username);
+                    return true;
+                }
+                PlayerPrefs.DeleteKey("token");
+            }
+
+            return false;
         }
 
         public SubterfugeClient.SubterfugeClient getClient()

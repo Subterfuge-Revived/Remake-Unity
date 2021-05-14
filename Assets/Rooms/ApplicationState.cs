@@ -15,7 +15,7 @@ public static class ApplicationState
     public static Room currentGameRoom { get; set; }
     
     public static NetworkClient Client { get; } = new NetworkClient();
-    public static Player player { get; set; } = new Player("1"); // Default player
+    public static Player player { get; set; } = null; // Default player
 
     public static void SetActiveRoom(Room room)
     {
