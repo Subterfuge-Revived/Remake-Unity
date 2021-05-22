@@ -33,6 +33,9 @@
           <e p="CreateGame" t="Include">
             <e p="CreateGameController.cs" t="Include" />
           </e>
+          <e p="CustomSpecialists" t="Include">
+            <e p="CustomSpecialistGuiController.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />

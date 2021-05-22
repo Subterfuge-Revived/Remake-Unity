@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OnlineServicesPanelController : MonoBehaviour
 {
@@ -129,5 +130,10 @@ public class OnlineServicesPanelController : MonoBehaviour
         LoggedOutPanel.gameObject.SetActive(false);
         LoadingPanel.gameObject.SetActive(false);
         NotConnectedPanel.gameObject.SetActive(true);
+    }
+
+    public void goToSpecialistConfigurationPage()
+    {
+        SceneManager.LoadScene("CustomSpecialistInformation");
     }
 }
