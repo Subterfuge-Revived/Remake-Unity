@@ -5,6 +5,7 @@ using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
 using SubterfugeCore.Core.Topologies;
+using SubterfugeRemakeService;
 using TMPro;
 using UnityEditor.iOS;
 
@@ -28,7 +29,7 @@ public class OutpostSpawn : MonoBehaviour
         foreach (Outpost outpost in outposts)
         {
 
-            Sprite sprite = getOutpostSprite(outpost.GetOutpostType());
+            Sprite sprite = getOutpostSprite(outpost);
             
             // Spawn in all 9 quadrants for map wrapping.
             for (var vertical = 0; vertical < 3; vertical++)
@@ -81,29 +82,33 @@ public class OutpostSpawn : MonoBehaviour
         
     }
 
-    public Sprite getOutpostSprite(OutpostType type)
+    public Sprite getOutpostSprite(Outpost outpost)
     {
         Sprite sprite = Resources.Load<Sprite>("Locations/Unknown");;
-        switch (type)
+        if (outpost.IsDestroyed())
         {
-            case OutpostType.Generator:
-                sprite = Resources.Load<Sprite>("Locations/GeneratorFill");
-                break;
-            case OutpostType.Destroyed:
-                sprite = Resources.Load<Sprite>("Locations/Destroyed");
-                break;
-            case OutpostType.Factory:
-                sprite = Resources.Load<Sprite>("Locations/FactoryFill");
-                break;
-            case OutpostType.Mine:
-                sprite = Resources.Load<Sprite>("Locations/MineFill");
-                break;
-            case OutpostType.Watchtower:
-                sprite = Resources.Load<Sprite>("Locations/Watchtower");
-                break;
-            default:
-                sprite = Resources.Load<Sprite>("Locations/Unknown");
-                break;
+            sprite = Resources.Load<Sprite>("Locations/Destroyed");
+        }
+        else
+        {
+            switch (outpost.GetOutpostType())
+            {
+                case OutpostType.Generator:
+                    sprite = Resources.Load<Sprite>("Locations/GeneratorFill");
+                    break;
+                case OutpostType.Factory:
+                    sprite = Resources.Load<Sprite>("Locations/FactoryFill");
+                    break;
+                case OutpostType.Mine:
+                    sprite = Resources.Load<Sprite>("Locations/MineFill");
+                    break;
+                case OutpostType.Watchtower:
+                    sprite = Resources.Load<Sprite>("Locations/Watchtower");
+                    break;
+                default:
+                    sprite = Resources.Load<Sprite>("Locations/Unknown");
+                    break;
+            }
         }
 
         return sprite;

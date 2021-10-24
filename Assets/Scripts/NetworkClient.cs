@@ -22,8 +22,8 @@ namespace Rooms.Multiplayer
 
         public async Task<bool> tryConnectServer()
         {
-            String Hostname = "52.14.116.178"; // For server
-            // String Hostname = "localhost"; // For local
+            // String Hostname = "52.14.116.178"; // For server
+            String Hostname = "localhost"; // For local
             int Port = 5000;
 
             client = new SubterfugeClient.SubterfugeClient(Hostname, Port.ToString());

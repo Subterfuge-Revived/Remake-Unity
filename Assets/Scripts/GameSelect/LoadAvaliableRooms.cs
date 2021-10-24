@@ -34,12 +34,12 @@ public class LoadAvaliableRooms : MonoBehaviour
         }
     }
 
-    private void instantiateRoomButton(Room room)
+    private void instantiateRoomButton(GameConfiguration roomConfig)
     {
         // Create a new templated item
         GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate, scrollContentContainer.transform);
         scrollItem.gameObject.SetActive(true);
-        scrollItem.room = room;
+        scrollItem.room = roomConfig;
     }
 
     public async void LoadOpenRooms()
@@ -50,7 +50,7 @@ public class LoadAvaliableRooms : MonoBehaviour
 
         if (roomResponse.Status.IsSuccess)
         {
-            foreach (Room room in roomResponse.Rooms)
+            foreach (GameConfiguration room in roomResponse.Rooms)
             {
                 instantiateRoomButton(room);
             }
@@ -68,7 +68,7 @@ public class LoadAvaliableRooms : MonoBehaviour
         if (roomResponse.Status.IsSuccess)
         {
 
-            foreach (Room room in roomResponse.Games)
+            foreach (GameConfiguration room in roomResponse.Games)
             {
                 instantiateRoomButton(room);
             }

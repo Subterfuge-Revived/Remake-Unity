@@ -1,4 +1,5 @@
-﻿using SubterfugeRemakeService;
+﻿using SubterfugeCore.Core;
+using SubterfugeRemakeService;
 using Translation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,7 @@ public class LeaveGameButton : MonoBehaviour
     {
         //Determine if the user in in the game.
         bool isInGame = false;
-        foreach(User player in ApplicationState.currentGameRoom.Players)
+        foreach(User player in ApplicationState.currentGameConfig.Players)
         {
             if (!isInGame && player.Id == ApplicationState.player.GetId())
             {
@@ -23,7 +24,7 @@ public class LeaveGameButton : MonoBehaviour
         if (isInGame)
         {
             // Determine if the current user is the creator of the game
-            Room room = ApplicationState.currentGameRoom;
+            GameConfiguration room = ApplicationState.currentGameConfig;
             if (room.Creator.Id == ApplicationState.player.GetId())
             {
                 Text buttonText = leaveButton.GetComponentInChildren<Text>();
@@ -47,13 +48,13 @@ public class LeaveGameButton : MonoBehaviour
         var client = ApplicationState.Client.getClient();
         var leaveResponse = client.LeaveRoom(new LeaveRoomRequest()
         {
-            RoomId = ApplicationState.currentGameRoom.RoomId
+            RoomId = ApplicationState.currentGameConfig.Id
         });
 
         if (leaveResponse.Status.IsSuccess)
         {
             // Reload the scene to update lobby.
-            ApplicationState.currentGameRoom = null;
+            ApplicationState.currentGameConfig = null;
             SceneManager.LoadScene("GameSelect");
         }
         else

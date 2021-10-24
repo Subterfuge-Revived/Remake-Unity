@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using GameEventModels;
 using Google.Protobuf;
+using Rooms.Multiplayer.Game;
 using SubterfugeCore.Core;
 using SubterfugeCore.Core.Entities.Positions;
 using SubterfugeCore.Core.GameEvents;
@@ -8,6 +10,7 @@ using SubterfugeCore.Core.Timing;
 using SubterfugeRemakeService;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -17,13 +20,14 @@ public class GameManager : MonoBehaviour
     public Outpost launchOutpost;
     public Outpost destinationOutpost;
     public Slider drillerSlider;
+    public GameObject timeMachineHud;
     
     // Start is called before the first frame update
     async void Start()
     {
-        launchHud.SetActive(false);
+        this.SetLaunchHub(false);
         // TODO: Add a configuration to the `Game` object to determine if it is a multiplayer game.
-        if (ApplicationState.CurrentGame != null && ApplicationState.CurrentGame.Configuration.IsMultiplayer)
+        if (ApplicationState.CurrentGame != null && ApplicationState.isMultiplayer)
         {
             loadMultiplayerGame();
         }
@@ -95,6 +99,7 @@ public class GameManager : MonoBehaviour
     public void SetLaunchHub(bool state)
     {
         showLaunchHud = state;
+        timeMachineHud.SetActive(!state);
         launchHud.SetActive(state);
     }
 
@@ -117,7 +122,7 @@ public class GameManager : MonoBehaviour
         this.SetLaunchHub(false);
 
         // Submit event to online services.
-        if (ApplicationState.CurrentGame.Configuration.IsMultiplayer)
+        if (ApplicationState.isMultiplayer)
         {
             var client = ApplicationState.Client.getClient();
 
@@ -128,7 +133,7 @@ public class GameManager : MonoBehaviour
                     EventType = launchEvent.GetEventType(),
                     OccursAtTick = launchEvent.GetOccursAt().GetTick(),
                 },
-                RoomId = ApplicationState.currentGameRoom.RoomId
+                RoomId = ApplicationState.currentGameConfig.Id
             });
 
             if (!response.Status.IsSuccess)
@@ -151,7 +156,7 @@ public class GameManager : MonoBehaviour
             var gameEvents = ApplicationState.Client.getClient().GetGameRoomEvents(
                 new GetGameRoomEventsRequest()
                 {
-                    RoomId = ApplicationState.currentGameRoom.RoomId,
+                    RoomId = ApplicationState.currentGameConfig.Id,
                 });
 
             if (gameEvents.Status.IsSuccess)
@@ -162,7 +167,7 @@ public class GameManager : MonoBehaviour
             }
                 
             // go to current tick.
-            GameTick tick = new GameTick(ApplicationState.CurrentGame.Configuration.StartTime, NtpConnector.GetNetworkTime());
+            GameTick tick = new GameTick(DateTime.FromFileTimeUtc(ApplicationState.CurrentGame.Configuration.UnixTimeStarted), NtpConnector.GetNetworkTime());
             ApplicationState.CurrentGame.TimeMachine.GoTo(tick);
         }
     }
@@ -170,6 +175,11 @@ public class GameManager : MonoBehaviour
     public void loadSinglePlayerGame()
     {
             
+    }
+
+    public void back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     
     

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameRoomButton : MonoBehaviour
 {
-    public Room room;
+    public GameConfiguration room;
 
     public TextMeshProUGUI gameTitle;
     public TextMeshProUGUI minRating;
@@ -25,10 +25,10 @@ public class GameRoomButton : MonoBehaviour
         if (room != null)
         {
             gameTitle.text = room.RoomName;
-            minRating.text = room.RankedInformation.MinRating.ToString();
-            goal.text = room.Goal.ToString();
-            players.text = room.Players.Count + "/" + room.MaxPlayers;
-            minRating.text = room.Anonymous ? "Anon" : "";
+            minRating.text = room.GameSettings.IsRanked.ToString();
+            goal.text = room.GameSettings.Goal.ToString();
+            players.text = room.Players.Count + "/" + room.GameSettings.MaxPlayers;
+            minRating.text = room.GameSettings.Anonymous ? "Anon" : "";
         }
     }
 
@@ -38,7 +38,7 @@ public class GameRoomButton : MonoBehaviour
         // Set the gameroom to the selected game
         ApplicationState.SetActiveRoom(room);
 
-        if (room.MaxPlayers == room.Players.Count || room.RoomStatus == RoomStatus.Ongoing)
+        if (room.GameSettings.MaxPlayers == room.Players.Count || room.RoomStatus == RoomStatus.Ongoing)
         {
             // Load the game scene
             SceneManager.LoadScene("Game");   

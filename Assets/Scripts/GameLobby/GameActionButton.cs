@@ -12,7 +12,7 @@ public class GameActionButton : MonoBehaviour
     void Start()
     {
         // Determine if the current user is the creator of the game
-        Room room = ApplicationState.currentGameRoom;
+        GameConfiguration room = ApplicationState.currentGameConfig;
         if (room.Creator.Id == ApplicationState.player.GetId())
         {
             // Determine if there are more players than just the creator.
@@ -66,7 +66,7 @@ public class GameActionButton : MonoBehaviour
         var client = ApplicationState.Client.getClient();
         var joinResponse = client.JoinRoom(new JoinRoomRequest()
         {
-            RoomId = ApplicationState.currentGameRoom.RoomId
+            RoomId = ApplicationState.currentGameConfig.Id
         });
 
         if (joinResponse.Status.IsSuccess)
@@ -75,9 +75,9 @@ public class GameActionButton : MonoBehaviour
             user.Id = ApplicationState.player.GetId();
             user.Username = ApplicationState.player.GetPlayerName();
         
-            ApplicationState.currentGameRoom.Players.Add(user);
+            ApplicationState.currentGameConfig.Players.Add(user);
             
-            if(ApplicationState.currentGameRoom.Players.Count == ApplicationState.currentGameRoom.MaxPlayers)
+            if(ApplicationState.currentGameConfig.Players.Count == ApplicationState.currentGameConfig.GameSettings.MaxPlayers)
             {
                 SceneManager.LoadScene("Game");
             }
@@ -100,7 +100,7 @@ public class GameActionButton : MonoBehaviour
         var client = ApplicationState.Client.getClient();
         var startEarlyResponse = client.StartGameEarly(new StartGameEarlyRequest()
         {
-            RoomId = ApplicationState.currentGameRoom.RoomId,
+            RoomId = ApplicationState.currentGameConfig.Id,
         });
 
         if (startEarlyResponse.Status.IsSuccess)
@@ -120,7 +120,7 @@ public class GameActionButton : MonoBehaviour
 
     public async void onCancel()
     {
-        ApplicationState.currentGameRoom = null;
+        ApplicationState.currentGameConfig = null;
         SceneManager.LoadScene("GameSelect");
     }
 }

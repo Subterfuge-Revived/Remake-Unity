@@ -5,6 +5,8 @@ using SubterfugeCore.Core;
 using SubterfugeCore.Core.Config;
 using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
+using SubterfugeRemakeService;
+using UnityEditor.UnityLinker;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,15 +27,40 @@ public class SinglePlayerGameSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MapConfiguration mapConfiguration = new MapConfiguration(players);
-        mapConfiguration.Seed = 123123;
-        mapConfiguration.DormantsPerPlayer = 3;
-        mapConfiguration.MaxiumumOutpostDistance = 130;
-        mapConfiguration.MinimumOutpostDistance = 30;
-        mapConfiguration.OutpostsPerPlayer = 3;
+        MapConfiguration mapConfiguration = new MapConfiguration()
+        {
+            DormantsPerPlayer = 3,
+            MinimumOutpostDistance = 30,
+            MaximumOutpostDistance = 130,
+            OutpostDistribution = new OutpostWeighting()
+            {
+                FactoryWeight = 0.40f,
+                GeneratorWeight = 0.40f,
+                WatchtowerWeight = 0.20f,
+            },
+            OutpostsPerPlayer = 3,
+            Seed = 123123,
+            
+        };
         
-        
-        GameConfiguration config = new GameConfiguration(players, DateTime.Now, mapConfiguration);
+        GameConfiguration config = new GameConfiguration()
+        {
+            Creator = ApplicationState.player.toUser(),
+            GameSettings = new GameSettings()
+            {
+                Anonymous = false,
+                Goal = Goal.Domination,
+                IsRanked = false,
+                MaxPlayers = 6,
+                MinutesPerTick = 10,
+            },
+            Id = Guid.NewGuid().ToString(),
+            MapConfiguration = mapConfiguration,
+            RoomName = "LocalRoom",
+            RoomStatus = RoomStatus.Ongoing,
+            UnixTimeCreated = DateTime.Now.ToFileTimeUtc(),
+            UnixTimeStarted = DateTime.Now.ToFileTimeUtc()
+        };
 
         Dictionary<String, GameConfiguration> puzzleList = new Dictionary<string, GameConfiguration>();
         puzzleList.Add("SampleGameNoNetwork", config);

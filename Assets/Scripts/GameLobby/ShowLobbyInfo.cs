@@ -21,14 +21,14 @@ public class ShowLobbyInfo : MonoBehaviour
 
     public void displayLobbyInformation()
     {
-        Room room = ApplicationState.currentGameRoom;
+        GameConfiguration room = ApplicationState.currentGameConfig;
 
         GameLobbyTitle.text = room.RoomName;
-        IsAnonymous.text = room.Anonymous ? "Anonymous" : "";
-        IsRanked.text = room.RankedInformation.IsRanked ? "Ranked" : "Unrated";
+        IsAnonymous.text = room.GameSettings.Anonymous ? "Anonymous" : "";
+        IsRanked.text = room.GameSettings.IsRanked ? "Ranked" : "Unrated";
         Creator.text = room.Creator.Username;
-        MinutesPerTick.text = String.Format("{0}min/tick \n\nEstimated {1}days total", room.MinutesPerTick, Math.Round((room.MinutesPerTick * 700 / 60.0 / 24.0), 2));
-        MaxPlayers.text = $"Players ({room.Players.Count}/{room.MaxPlayers})";
+        MinutesPerTick.text = String.Format("{0}min/tick \n\nEstimated {1}days total", room.GameSettings.MinutesPerTick, Math.Round((room.GameSettings.MinutesPerTick * 700 / 60.0 / 24.0), 2));
+        MaxPlayers.text = $"Players ({room.Players.Count}/{room.GameSettings.MaxPlayers})";
 
         PlayerList.text = "";
         foreach (User user in room.Players)

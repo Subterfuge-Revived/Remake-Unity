@@ -40,27 +40,27 @@ using SubterfugeCore.Core;
         textMesh.text = outpost.GetDrillerCount().ToString();
         
         
-        // Determine the outpost vision mask.
-        if (outpost.GetOwner()?.GetId() == ApplicationState.player.GetId())
-        {
-            // Apply vision mask.
-            gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(outpost.getVisionRange() / 15.0f, outpost.getVisionRange() / 15.0f, 1);
-            gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
-        }
-        else
-        {
-            // remove vision mask.
-            gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(0, 0, 1);
-
-            if (ApplicationState.CurrentGame.TimeMachine.GetState().isInVisionRange(outpost, ApplicationState.player))
-            {
-                gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
-            }
-            else
-            {
-                gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(0, 0, 1);
-            }
-        }
+        // // Determine the outpost vision mask.
+        // if (outpost.GetOwner()?.GetId() == ApplicationState.player.GetId())
+        // {
+        //     // Apply vision mask.
+        //     gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(outpost.GetVisionRange() / 15.0f, outpost.GetVisionRange() / 15.0f, 1);
+        //     gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
+        // }
+        // else
+        // {
+        //     // remove vision mask.
+        //     gameObject.GetComponentInChildren<SpriteMask>().transform.localScale = new Vector3(0, 0, 1);
+        //
+        //     if (ApplicationState.CurrentGame.TimeMachine.GetState().isInVisionRange(outpost, ApplicationState.player))
+        //     {
+        //         gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(1, 1, 1);
+        //     }
+        //     else
+        //     {
+        //         gameObject.GetComponentInChildren<TextMeshPro>().transform.localScale = new Vector3(0, 0, 1);
+        //     }
+        // }
 
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
