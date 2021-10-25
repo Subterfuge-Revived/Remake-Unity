@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 namespace Rooms.Multiplayer.Game.Chat
 {
-    public class ChatGroup : MonoBehaviour
+    public class ChatGroupListItem : MonoBehaviour
     {
         private MessageGroup _messageGroup;
         public TextMeshProUGUI memberList;
@@ -24,7 +24,7 @@ namespace Rooms.Multiplayer.Game.Chat
 
         public void onClick()
         {
-            ChatController.showGroupChat(_messageGroup);
+            ChatController.showPrivateChat(_messageGroup);
         }
     }
 }

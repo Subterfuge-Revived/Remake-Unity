@@ -40,7 +40,10 @@
             <e p="CameraController.cs" t="Include" />
             <e p="Chat" t="Include">
               <e p="ChatController.cs" t="Include" />
-              <e p="ChatGroup.cs" t="Include" />
+              <e p="ChatGroupListItem.cs" t="Include" />
+              <e p="ChatOverviewLoader.cs" t="Include" />
+              <e p="PrivateChatLoader.cs" t="Include" />
+              <e p="PrivateMessageListItem.cs" t="Include" />
             </e>
             <e p="GameManager.cs" t="Include" />
             <e p="LaunchModalSourceInformation.cs" t="Include" />
