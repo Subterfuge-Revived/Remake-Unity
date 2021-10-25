@@ -38,6 +38,10 @@
           </e>
           <e p="Game" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="Chat" t="Include">
+              <e p="ChatController.cs" t="Include" />
+              <e p="ChatGroup.cs" t="Include" />
+            </e>
             <e p="GameManager.cs" t="Include" />
             <e p="LaunchModalSourceInformation.cs" t="Include" />
             <e p="OutpostManager.cs" t="Include" />
@@ -50,7 +54,10 @@
             <e p="SubManager.cs" t="Include" />
             <e p="SubSpawn.cs" t="Include" />
             <e p="TabGuiController.cs" t="Include" />
-            <e p="TimeMachineManager.cs" t="Include" />
+            <e p="TimeMachine" t="Include">
+              <e p="TimeControlButton.cs" t="Include" />
+              <e p="TimeMachineManager.cs" t="Include" />
+            </e>
           </e>
           <e p="GameLobby" t="Include">
             <e p="GameActionButton.cs" t="Include" />

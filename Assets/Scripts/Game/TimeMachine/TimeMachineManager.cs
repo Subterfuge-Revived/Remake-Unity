@@ -11,7 +11,7 @@ namespace Rooms.Multiplayer.Game
         public TextMeshProUGUI gameTickText;
         public TextMeshProUGUI tickTimeText;
         public Canvas timeMachineGui;
-        
+
         // Start is called before the first frame update
         void Start()
         {
