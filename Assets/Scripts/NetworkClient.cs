@@ -48,16 +48,22 @@ namespace Rooms.Multiplayer
             if (token != null)
             {
                 var client = ApplicationState.Client.getClient();
-                var response = await client.LoginWithTokenAsync(new AuthorizedTokenRequest() {
-                    Token = token
-                });
-
-                if (response.Status.IsSuccess)
+                try
                 {
-                    ApplicationState.player = new Player(response.User.Id, response.User.Username);
-                    return true;
+                    var response = await client.LoginWithTokenAsync(new AuthorizedTokenRequest()
+                    {
+                        Token = token
+                    });
+                    if (response.Status.IsSuccess)
+                    {
+                        ApplicationState.player = new Player(response.User.Id, response.User.Username);
+                        return true;
+                    }
+                    PlayerPrefs.DeleteKey("token");
+                } catch (RpcException exception)
+                {
+                    return false;
                 }
-                PlayerPrefs.DeleteKey("token");
             }
 
             return false;

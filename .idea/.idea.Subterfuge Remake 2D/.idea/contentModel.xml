@@ -32,6 +32,11 @@
           </e>
           <e p="CreateGame" t="Include">
             <e p="CreateGameController.cs" t="Include" />
+            <e p="GameConfigTabController.cs" t="Include" />
+            <e p="GeneralConfigController.cs" t="Include" />
+            <e p="MapConfigController.cs" t="Include" />
+            <e p="OutpostWeightDisplay.cs" t="Include" />
+            <e p="OutpostWeightDisplayController.cs" t="Include" />
           </e>
           <e p="CustomSpecialists" t="Include">
             <e p="CustomSpecialistGuiController.cs" t="Include" />
@@ -42,6 +47,8 @@
               <e p="ChatController.cs" t="Include" />
               <e p="ChatGroupListItem.cs" t="Include" />
               <e p="ChatOverviewLoader.cs" t="Include" />
+              <e p="NewChatController.cs" t="Include" />
+              <e p="ParticipantListing.cs" t="Include" />
               <e p="PrivateChatLoader.cs" t="Include" />
               <e p="PrivateMessageListItem.cs" t="Include" />
             </e>
@@ -69,7 +76,9 @@
           </e>
           <e p="GameSelect" t="Include">
             <e p="GameRoomButton.cs" t="Include" />
-            <e p="LoadAvaliableRooms.cs" t="Include" />
+            <e p="GameSelectController.cs" t="Include" />
+            <e p="MinutesPerTickSlider.cs" t="Include" />
+            <e p="SliderTextUpdater.cs" t="Include" />
           </e>
           <e p="Loading" t="Include">
             <e p="GameLoader.cs" t="Include" />

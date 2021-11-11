@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadAvaliableRooms : MonoBehaviour
+public class GameSelectController : MonoBehaviour
 {
 
     public GameRoomButton scrollItemTemplate;
@@ -76,8 +76,14 @@ public class LoadAvaliableRooms : MonoBehaviour
         // TODO: Add some text to notify the user that they are offline.
     }
     
-    public void onCreateGameClicked()
+    public void createPublicGame()
     {
+        SceneManager.LoadScene("CreateGame");
+    }
+    
+    public void createPrivateGame()
+    {
+        // TODO
         SceneManager.LoadScene("CreateGame");
     }
 

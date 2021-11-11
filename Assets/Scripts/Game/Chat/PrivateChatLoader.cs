@@ -55,10 +55,8 @@ namespace Rooms.Multiplayer.Game.Chat
                 GroupId = MessageGroup.GroupId,
                 Id = Guid.NewGuid().ToString(),
                 Message = message.text,
-                // RoomId = ApplicationState.CurrentGame.Configuration.Id,
-                RoomId = "Room!",
-                // SenderId = ApplicationState.player.GetId(),
-                SenderId = "Sender!!",
+                RoomId = ApplicationState.CurrentGame.Configuration.Id,
+                SenderId = ApplicationState.player.GetId(),
                 UnixTimeCreatedAt = DateTime.UtcNow.ToFileTimeUtc(),
             };
             
@@ -69,8 +67,7 @@ namespace Rooms.Multiplayer.Game.Chat
             {
                 GroupId = MessageGroup.GroupId,
                 Message = message.text,
-                // RoomId = ApplicationState.CurrentGame.Configuration.Id,
-                RoomId = "Room!",
+                RoomId = ApplicationState.CurrentGame.Configuration.Id,
             });
             
             message.text = null;

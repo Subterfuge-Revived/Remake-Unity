@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class CreateGameController : MonoBehaviour
 {
+    
 
     public Slider playerCount;
     public Text gameTitle;
@@ -55,6 +56,21 @@ public class CreateGameController : MonoBehaviour
             // TODO: Tell the user that their request failed. If error, show message, if timeout say offline.
             // If offline, potentially add their requests to a queue.
         }
+    }
+
+    public void showGeneralConfig()
+    {
+        
+    }
+
+    public void showMapConfig()
+    {
+        
+    }
+
+    public void showSpecialistConfig()
+    {
+        
     }
 
     public void onCancel()
