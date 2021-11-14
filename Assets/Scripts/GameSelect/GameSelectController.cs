@@ -14,9 +14,9 @@ public class GameSelectController : MonoBehaviour
     public GameRoomButton scrollItemTemplate;
     public GameObject scrollContentContainer;
     private SubterfugeClient.SubterfugeClient client = ApplicationState.Client.getClient();
+    private List<GameRoomButton> _instantiatedRooms = new List<GameRoomButton>();
 
-    // Start is called before the first frame update
-    async void Start()
+    public void Start()
     {
         LoadOpenRooms();
     }
@@ -24,13 +24,9 @@ public class GameSelectController : MonoBehaviour
     private void clearLobbyList()
     {
         // Destroy all existing rooms.
-        GameRoomButton[] existingButtons = FindObjectsOfType<GameRoomButton>();
-        foreach (GameRoomButton gameRoomButton in existingButtons)
+        foreach (GameRoomButton gameRoomButton in _instantiatedRooms)
         {
-            if (gameRoomButton.isActiveAndEnabled)
-            {
-                Destroy(gameRoomButton);
-            }
+            Destroy(gameRoomButton.gameObject);
         }
     }
 
@@ -39,12 +35,13 @@ public class GameSelectController : MonoBehaviour
         // Create a new templated item
         GameRoomButton scrollItem = (GameRoomButton) Instantiate(scrollItemTemplate, scrollContentContainer.transform);
         scrollItem.gameObject.SetActive(true);
-        scrollItem.room = roomConfig;
+        scrollItem.setGameRoom(roomConfig);
+        _instantiatedRooms.Add(scrollItem);
     }
 
     public async void LoadOpenRooms()
     {
-        var roomResponse = client.GetOpenLobbies(new OpenLobbiesRequest());
+        var roomResponse = await client.GetOpenLobbiesAsync(new OpenLobbiesRequest());
 
         clearLobbyList();
 

@@ -1,4 +1,5 @@
-﻿using SubterfugeRemakeService;
+﻿using System.Net.Configuration;
+using SubterfugeRemakeService;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,11 +14,32 @@ namespace Rooms.Multiplayer.CreateGame
         public Slider playerCountSlider;
         public Slider minutesPerTickSlider;
 
-        public GeneralConfig getConfiguredValues()
+        public void loadFromConfig(GameSettings config)
         {
-            var config = new GeneralConfig();
+            disableInput();
+            rankedToggle.isOn = config.IsRanked;
+            anonToggle.isOn = config.Anonymous;
+            miningToggle.isOn = config.Goal == Goal.Mining;
+            dominationToggle.isOn = config.Goal == Goal.Domination;
+            playerCountSlider.value = config.MaxPlayers;
+            minutesPerTickSlider.value = (float)config.MinutesPerTick;
+        }
+
+        public void disableInput()
+        {
+            rankedToggle.interactable = false;
+            anonToggle.interactable = false;
+            miningToggle.interactable = false;
+            dominationToggle.interactable = false;
+            playerCountSlider.interactable = false;
+            minutesPerTickSlider.interactable = false;
+        }
+
+        public GameSettings getConfiguredValues()
+        {
+            var config = new GameSettings();
+            config.Anonymous = anonToggle.isOn;
             config.IsRanked = rankedToggle.isOn;
-            config.IsAnonymous = anonToggle.isOn;
             config.Goal = miningToggle.isOn ? Goal.Mining : Goal.Domination;
             config.MaxPlayers = (int)playerCountSlider.value;
             config.MinutesPerTick = minutesPerTickSlider.value;

@@ -14,9 +14,9 @@ namespace Rooms.Multiplayer.CreateGame
         {
             var totalOutposts = (int)GeneralConfigController.playerCountSlider.value * 
                                 ((int)MapConfigController.dormantsPerPlayerSlider.value + (int)MapConfigController.startingOutpostsSlider.value);
-            var factoryCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().FactoryWeight);
-            var generatorCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().GeneratorWeight);
-            var watchtowerCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().WatchtowerWeight);
+            var factoryCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().OutpostDistribution.FactoryWeight);
+            var generatorCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().OutpostDistribution.GeneratorWeight);
+            var watchtowerCount = (int)Math.Round(totalOutposts * MapConfigController.getConfiguredValues().OutpostDistribution.WatchtowerWeight);
             
             OutpostWeightDisplay.setTotalFactories(factoryCount);
             OutpostWeightDisplay.setTotalGenerators(generatorCount);

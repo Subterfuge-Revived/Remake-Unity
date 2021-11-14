@@ -867,7 +867,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 144332474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 773310828}
+        m_MethodName: onCreateGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &144332474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3579,6 +3590,7 @@ GameObject:
   - component: {fileID: 426811869}
   - component: {fileID: 426811868}
   - component: {fileID: 426811867}
+  - component: {fileID: 426811870}
   m_Layer: 0
   m_Name: SpecialistConfigCanvas
   m_TagString: Untagged
@@ -3666,6 +3678,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &426811870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426811865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00638d43035bfed4892b6a215ffe15bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialistImportPopup: {fileID: 0}
+  specialistImportControl: {fileID: 0}
 --- !u!1 &433426419
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,7 +4599,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 556629980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 773310828}
+        m_MethodName: onCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &556629980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,6 +5239,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 426811870}
+        m_MethodName: toggleSpecialist
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 615652107}
+          m_ObjectArgumentAssemblyTypeName: SpecialistIconDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6659,6 +6707,7 @@ GameObject:
   - component: {fileID: 773310823}
   - component: {fileID: 773310822}
   - component: {fileID: 773310827}
+  - component: {fileID: 773310828}
   m_Layer: 0
   m_Name: CreateGameCanvas
   m_TagString: Untagged
@@ -6801,6 +6850,22 @@ MonoBehaviour:
   generalConfigDisplay: {fileID: 575225206}
   mapConfigDisplay: {fileID: 1873354888}
   specialistConfigDisplay: {fileID: 426811865}
+--- !u!114 &773310828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773310820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7441b72b4f0af4cbb1cf2f92f180c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generalConfig: {fileID: 575225212}
+  mapConfig: {fileID: 1873354894}
+  SpecialistConfigController: {fileID: 426811870}
+  gameTitle: {fileID: 2060257023}
 --- !u!1 &777252182
 GameObject:
   m_ObjectHideFlags: 0
@@ -16389,54 +16454,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883801508}
   m_CullTransparentMesh: 0
---- !u!1 &1885176126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885176128}
-  - component: {fileID: 1885176129}
-  m_Layer: 0
-  m_Name: CreateGameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1885176128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885176126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.509797, y: 1.0032406, z: -664.3279}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885176129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885176126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7441b72b4f0af4cbb1cf2f92f180c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCount: {fileID: 0}
-  gameTitle: {fileID: 0}
-  rankedToggle: {fileID: 0}
-  anonToggle: {fileID: 0}
-  minutesPerTick: {fileID: 0}
 --- !u!1 &1906571123
 GameObject:
   m_ObjectHideFlags: 0

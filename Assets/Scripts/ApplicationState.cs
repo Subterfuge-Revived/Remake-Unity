@@ -22,6 +22,9 @@ public static class ApplicationState
     public static void SetActiveRoom(GameConfiguration room)
     {
         currentGameConfig = room;
-        CurrentGame = new Game(currentGameConfig);
+        if (room.GameSettings.MaxPlayers == room.Players.Count)
+        {
+            CurrentGame = new Game(currentGameConfig);
+        }
     }
 }

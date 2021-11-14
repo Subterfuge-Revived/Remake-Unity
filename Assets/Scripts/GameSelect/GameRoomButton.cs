@@ -7,28 +7,34 @@ using UnityEngine.SceneManagement;
 
 public class GameRoomButton : MonoBehaviour
 {
-    public GameConfiguration room;
+    private GameConfiguration room;
 
     public TextMeshProUGUI gameTitle;
-    public TextMeshProUGUI minRating;
-    public TextMeshProUGUI goal;
+    public TextMeshProUGUI creatorName;
+    public GameObject rankedIcon;
+    public GameObject dominationIcon;
+    public GameObject miningIcon;
     public TextMeshProUGUI players;
-    public TextMeshProUGUI anon;
+    public GameObject anonIcon;
 
-    public void Start()
+    public void setGameRoom(GameConfiguration room)
     {
-        loadStrings();
-    }
-
-    public void loadStrings()
-    {
+        this.room = room;
         if (room != null)
         {
+            creatorName.text = "By: " + room.Creator.Username;
             gameTitle.text = room.RoomName;
-            minRating.text = room.GameSettings.IsRanked.ToString();
-            goal.text = room.GameSettings.Goal.ToString();
+            rankedIcon.SetActive(room.GameSettings.IsRanked);
+            if (room.GameSettings.Goal == Goal.Domination)
+            {
+                miningIcon.SetActive(false);
+            }
+            else
+            {
+                dominationIcon.SetActive(false);
+            }
             players.text = room.Players.Count + "/" + room.GameSettings.MaxPlayers;
-            minRating.text = room.GameSettings.Anonymous ? "Anon" : "";
+            anonIcon.SetActive(room.GameSettings.Anonymous);
         }
     }
 

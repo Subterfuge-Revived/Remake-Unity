@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
+using Rooms.Multiplayer.CreateGame;
 using SubterfugeCore.Core.Timing;
 using SubterfugeRemakeService;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,44 +11,28 @@ using Random = UnityEngine.Random;
 
 public class CreateGameController : MonoBehaviour
 {
-    
+    public GeneralConfigController generalConfig;
+    public MapConfigController mapConfig;
+    public SpecialistConfigController SpecialistConfigController;
 
-    public Slider playerCount;
-    public Text gameTitle;
-    public Toggle rankedToggle;
-    public Toggle anonToggle;
-    public Slider minutesPerTick;
+    public TMP_InputField gameTitle;
 
     public async void onCreateGame()
     {
+        var generalConfiguration = this.generalConfig.getConfiguredValues();
+        var mapConfiguration = mapConfig.getConfiguredValues();
+        generalConfiguration.AllowedSpecialists.AddRange(SpecialistConfigController.getConfiguredValues());
+
         var client = ApplicationState.Client.getClient();
-        var seed = DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Second + DateTime.Now.Millisecond;
-        var response = client.CreateNewRoom(new CreateRoomRequest(){
-            GameSettings = new GameSettings()
-            {
-                Anonymous = anonToggle.isOn,
-                Goal = Goal.Mining,
-                IsRanked = rankedToggle.isOn,
-                MaxPlayers = (int)playerCount.value,
-                MinutesPerTick = minutesPerTick.value,
-            },
+        var request = new CreateRoomRequest()
+        {
+            GameSettings = generalConfiguration,
             IsPrivate = false,
-            MapConfiguration = new MapConfiguration()
-            {
-                DormantsPerPlayer = 3,
-                MaximumOutpostDistance = 130,
-                MinimumOutpostDistance = 30,
-                OutpostDistribution = new OutpostWeighting()
-                {
-                    FactoryWeight = 0.40f,
-                    GeneratorWeight = 0.40f,
-                    WatchtowerWeight = 0.20f,
-                },
-                OutpostsPerPlayer = 4,
-                Seed = new SeededRandom(seed).NextRand(0, 999999)
-            },
+            MapConfiguration = mapConfiguration,
             RoomName = gameTitle.text,
-        });
+        };
+        
+        var response = await client.CreateNewRoomAsync(request);
 
         if (response.Status.IsSuccess)
         {
@@ -58,25 +45,9 @@ public class CreateGameController : MonoBehaviour
         }
     }
 
-    public void showGeneralConfig()
-    {
-        
-    }
-
-    public void showMapConfig()
-    {
-        
-    }
-
-    public void showSpecialistConfig()
-    {
-        
-    }
-
     public void onCancel()
     {
         SceneManager.LoadScene("GameSelect");
     }
-    
     
 }

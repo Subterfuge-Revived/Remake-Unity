@@ -37,6 +37,7 @@
             <e p="MapConfigController.cs" t="Include" />
             <e p="OutpostWeightDisplay.cs" t="Include" />
             <e p="OutpostWeightDisplayController.cs" t="Include" />
+            <e p="SpecialistConfigController.cs" t="Include" />
           </e>
           <e p="CustomSpecialists" t="Include">
             <e p="CustomSpecialistGuiController.cs" t="Include" />
@@ -70,9 +71,10 @@
             </e>
           </e>
           <e p="GameLobby" t="Include">
-            <e p="GameActionButton.cs" t="Include" />
-            <e p="LeaveGameButton.cs" t="Include" />
-            <e p="ShowLobbyInfo.cs" t="Include" />
+            <e p="GameLobbyButtonController.cs" t="Include" />
+            <e p="GameLobbyController.cs" t="Include" />
+            <e p="PlayerListLoader.cs" t="Include" />
+            <e p="PlayerProfile.cs" t="Include" />
           </e>
           <e p="GameSelect" t="Include">
             <e p="GameRoomButton.cs" t="Include" />

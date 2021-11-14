@@ -11,7 +11,7 @@ public class SpecialistIconDisplay : MonoBehaviour
     public Specialist Specialist;
     public Image image;
     public Image SpecialistIconTint;
-    private bool isActive = true;
+    public bool isActive = true;
 
     public void Start()
     {

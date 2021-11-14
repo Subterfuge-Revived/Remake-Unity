@@ -16,13 +16,42 @@ namespace Rooms.Multiplayer.CreateGame
         public Slider generatorWeightSlider;
         public Slider watchtowerWeightSlider;
 
-        public MapConfig getConfiguredValues()
+        public void loadFromConfig(MapConfiguration configuration)
         {
-            var config = new MapConfig();
-            config.StartingOutposts = (int)startingOutpostsSlider.value;
-            config.MinOutpostDistance = (int)minOutpostDistanceSlider.value;
-            config.MaxOutpostDistance = (int)maxOutpostDistanceSlider.value;
-            config.DormantsPerPlayer = (int)dormantsPerPlayerSlider.value;
+            disableInput();
+            startingOutpostsSlider.value = configuration.OutpostsPerPlayer;
+            minOutpostDistanceSlider.value = configuration.MinimumOutpostDistance;
+            maxOutpostDistanceSlider.value = configuration.MaximumOutpostDistance;
+            dormantsPerPlayerSlider.value = configuration.DormantsPerPlayer;
+            factoryWeightSlider.value = configuration.OutpostDistribution.FactoryWeight;
+            generatorWeightSlider.value = configuration.OutpostDistribution.GeneratorWeight;
+            watchtowerWeightSlider.value = configuration.OutpostDistribution.WatchtowerWeight;
+        }
+
+        private void disableInput()
+        {
+            startingOutpostsSlider.interactable = false;
+            minOutpostDistanceSlider.interactable = false;
+            maxOutpostDistanceSlider.interactable = false;
+            dormantsPerPlayerSlider.interactable = false;
+            factoryWeightSlider.interactable = false;
+            generatorWeightSlider.interactable = false;
+            watchtowerWeightSlider.interactable = false;
+            
+        }
+
+        public MapConfiguration getConfiguredValues()
+        {
+            var config = new MapConfiguration()
+            {
+                DormantsPerPlayer = (int)dormantsPerPlayerSlider.value,
+                MaximumOutpostDistance = (int)maxOutpostDistanceSlider.value,
+                MinimumOutpostDistance = (int)minOutpostDistanceSlider.value,
+                OutpostsPerPlayer = (int)startingOutpostsSlider.value,
+                Seed = (int)DateTime.Now.ToFileTimeUtc(),
+            };
+
+            var outpostWeights = new OutpostWeighting();
 
             var watchtowerWeight = Mathf.Round(watchtowerWeightSlider.value * 100f) * 0.01f;
             var factoryWeight = Mathf.Round(factoryWeightSlider.value * 100f) * 0.01f;
@@ -31,17 +60,18 @@ namespace Rooms.Multiplayer.CreateGame
 
             if (totalWeight < 0.001)
             {
-                config.FactoryWeight = 0.4;
-                config.GeneratorWeight = 0.4;
-                config.WatchtowerWeight = 0.2;
+                outpostWeights.FactoryWeight = 0.4f;
+                outpostWeights.GeneratorWeight = 0.4f;
+                outpostWeights.WatchtowerWeight = 0.2f;
             }
             else
             {
-                config.FactoryWeight = Math.Abs(factoryWeight) < 0.001 ? 0.0 : Mathf.Round(factoryWeight / totalWeight * 100f) * 0.01f;
-                config.GeneratorWeight = Math.Abs(generatorWeight) < 0.001 ? 0.0 : Mathf.Round(generatorWeight / totalWeight * 100f) * 0.01f;
-                config.WatchtowerWeight = Math.Abs(watchtowerWeight) < 0.001 ? 0.0 :Mathf.Round(watchtowerWeight / totalWeight * 100f) * 0.01f;
+                outpostWeights.FactoryWeight = Math.Abs(factoryWeight) < 0.001 ? 0.0f : Mathf.Round(factoryWeight / totalWeight * 100f) * 0.01f;
+                outpostWeights.GeneratorWeight = Math.Abs(generatorWeight) < 0.001 ? 0.0f : Mathf.Round(generatorWeight / totalWeight * 100f) * 0.01f;
+                outpostWeights.WatchtowerWeight = Math.Abs(watchtowerWeight) < 0.001 ? 0.0f :Mathf.Round(watchtowerWeight / totalWeight * 100f) * 0.01f;
             }
-            
+
+            config.OutpostDistribution = outpostWeights;
             
             return config;
         }
@@ -53,15 +83,4 @@ namespace Rooms.Multiplayer.CreateGame
         }
 
     }
-}
-
-public class MapConfig
-{
-    public int StartingOutposts { get; set; } = 4;
-    public int MinOutpostDistance { get; set; } = 120;
-    public int MaxOutpostDistance { get; set; } = 600;
-    public int DormantsPerPlayer { get; set; } = 6;
-    public double FactoryWeight { get; set; } = 0.4;
-    public double GeneratorWeight { get; set; } = 0.4;
-    public double WatchtowerWeight { get; set; } = 0.4;
 }
