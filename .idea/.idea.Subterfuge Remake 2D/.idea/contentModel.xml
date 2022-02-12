@@ -40,6 +40,9 @@
             <e p="SpecialistConfigController.cs" t="Include" />
           </e>
           <e p="CustomSpecialists" t="Include">
+            <e p="CreateCustomSpecialistGuiController.cs" t="Include" />
+            <e p="CustomSpecialistEffect.cs" t="Include" />
+            <e p="CustomSpecialistEffectListGuiController.cs" t="Include" />
             <e p="CustomSpecialistGuiController.cs" t="Include" />
           </e>
           <e p="Game" t="Include">

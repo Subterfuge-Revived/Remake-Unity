@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CustomSpecialistInformation.unity
     guid: 7c590c2f1ebfe5f40934563c3a98be0a
+  - enabled: 1
+    path: Assets/Scenes/CreateCustomSpecialist.unity
+    guid: 5e31b8542f8732243a52a71bc59abcb0
   m_configObjects: {}

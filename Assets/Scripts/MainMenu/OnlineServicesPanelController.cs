@@ -32,6 +32,7 @@ public class OnlineServicesPanelController : MonoBehaviour
             }
             else
             {
+                showLoggedInPanel();
                 showLoggedOutPanel();
             }
         }
@@ -39,6 +40,7 @@ public class OnlineServicesPanelController : MonoBehaviour
         {
             tryConnect();
             showDisconnectedPanel();
+            showLoggedInPanel();
         }
     }
 

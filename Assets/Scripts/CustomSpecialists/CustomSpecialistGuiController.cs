@@ -20,6 +20,11 @@ public class CustomSpecialistGuiController : MonoBehaviour
         
     }
 
+    public void createSpecialist()
+    {
+        SceneManager.LoadScene("CreateCustomSpecialist");
+    }
+
     public void toMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
