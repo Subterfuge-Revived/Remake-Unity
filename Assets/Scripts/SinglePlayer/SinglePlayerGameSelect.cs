@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
-using SubterfugeCore.Core.Config;
-using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
-using UnityEditor.UnityLinker;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +28,7 @@ public class SinglePlayerGameSelect : MonoBehaviour
             DormantsPerPlayer = 3,
             MinimumOutpostDistance = 30,
             MaximumOutpostDistance = 130,
-            OutpostDistribution = new OutpostWeighting()
+            OutpostDistribution = new OutpostDistribution()
             {
                 FactoryWeight = 0.40f,
                 GeneratorWeight = 0.40f,
@@ -45,10 +41,10 @@ public class SinglePlayerGameSelect : MonoBehaviour
         
         GameConfiguration config = new GameConfiguration()
         {
-            Creator = ApplicationState.player.toUser(),
+            Creator = ApplicationState.player.ToUser(),
             GameSettings = new GameSettings()
             {
-                Anonymous = false,
+                IsAnonymous = false,
                 Goal = Goal.Domination,
                 IsRanked = false,
                 MaxPlayers = 6,
@@ -58,8 +54,8 @@ public class SinglePlayerGameSelect : MonoBehaviour
             MapConfiguration = mapConfiguration,
             RoomName = "LocalRoom",
             RoomStatus = RoomStatus.Ongoing,
-            UnixTimeCreated = DateTime.Now.ToFileTimeUtc(),
-            UnixTimeStarted = DateTime.Now.ToFileTimeUtc()
+            TimeCreated = DateTime.UtcNow,
+            TimeStarted = DateTime.UtcNow
         };
 
         Dictionary<String, GameConfiguration> puzzleList = new Dictionary<string, GameConfiguration>();

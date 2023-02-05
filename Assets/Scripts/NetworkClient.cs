@@ -2,16 +2,16 @@
 using System.Threading.Tasks;
 using Grpc.Core;
 using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
+using SubterfugeRestApiClient;
+using SubterfugeRestApiClient.controllers.exception;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Rooms.Multiplayer
 {
     public class NetworkClient
     {
         
-        private SubterfugeClient.SubterfugeClient client = null;
+        private SubterfugeClient client = null;
 
         public bool isConnected { get; private set; } = false;
 
@@ -26,15 +26,15 @@ namespace Rooms.Multiplayer
             String Hostname = "localhost"; // For local
             int Port = 5000;
 
-            client = new SubterfugeClient.SubterfugeClient(Hostname, Port.ToString());
+            client = new SubterfugeClient(Hostname + ":" + Port);
         
             // Ensure that the client can connect to the server.
             try
             {
-                await client.HealthCheckAsync(new HealthCheckRequest());
+                await client.HealthClient.Ping();
                 return isConnected = true;
             }
-            catch (RpcException exception)
+            catch (SubterfugeClientException exception)
             {
                 client = null;
                 return isConnected = false;
@@ -50,13 +50,11 @@ namespace Rooms.Multiplayer
                 var client = ApplicationState.Client.getClient();
                 try
                 {
-                    var response = await client.LoginWithTokenAsync(new AuthorizedTokenRequest()
-                    {
-                        Token = token
-                    });
+                    client.UserApi.SetToken(token);
+                    var response = await client.HealthClient.AuthorizedPing();
                     if (response.Status.IsSuccess)
                     {
-                        ApplicationState.player = new Player(response.User.Id, response.User.Username);
+                        ApplicationState.player = new Player(response.LoggedInUser.Id, response.LoggedInUser.Username);
                         return true;
                     }
                     PlayerPrefs.DeleteKey("token");
@@ -69,7 +67,7 @@ namespace Rooms.Multiplayer
             return false;
         }
 
-        public SubterfugeClient.SubterfugeClient getClient()
+        public SubterfugeClient getClient()
         {
             return client;
         }

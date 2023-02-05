@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using SubterfugeRemakeService;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,8 +20,8 @@ namespace Rooms.Multiplayer.Game.Chat
         public void loadParticipantList()
         {
             clearScrollList();
-            var userlist = ApplicationState.CurrentGame?.Configuration?.Players?.ToList();
-            if (userlist == null)
+            var userlist = ApplicationState.currentGameConfig.PlayersInLobby?.ToList();
+            if (userlist.Count == 0)
             {
                 userlist = new List<User>();
                 userlist.Add(new User() { Id = "1", Username = "R10t--"});
@@ -70,30 +69,25 @@ namespace Rooms.Multiplayer.Game.Chat
 
         public async void sendChatMessage(Text message)
         {
-            var messageGroupRequest = new CreateMessageGroupRequest()
-            {
-                RoomId = ApplicationState.CurrentGame.Configuration.Id,
-            };
+            var messageGroupRequest = new CreateMessageGroupRequest();
             messageGroupRequest.UserIdsInGroup.AddRange(selectedParticipants.ConvertAll(participant => participant.Id));
             
-            var groupResponse = await ApplicationState.Client.getClient().CreateMessageGroupAsync(messageGroupRequest);
+            var groupResponse = await ApplicationState.Client.getClient().GroupClient.CreateMessageGroup(messageGroupRequest, ApplicationState.currentGameConfig.Id);
             if (!groupResponse.Status.IsSuccess)
             {
                 // TODO: !
             }
 
             // Additionally, send the message to the group
-            var response = await ApplicationState.Client.getClient().SendMessageAsync(new SendMessageRequest()
+            var response = await ApplicationState.Client.getClient().GroupClient.SendMessage(new SendMessageRequest()
             {
-                GroupId = groupResponse.GroupId,
                 Message = message.text,
-                RoomId = ApplicationState.CurrentGame.Configuration.Id,
-            });
+            }, ApplicationState.currentGameConfig.Id, groupResponse.GroupId);
             
             message.text = null;
             
-            var loadGroup = await ApplicationState.Client.getClient().GetMessageGroupsAsync(new GetMessageGroupsRequest());
-            ChatController.showPrivateChat(loadGroup.MessageGroups.First(group => group.GroupId == groupResponse.GroupId));
+            var reloadGroupMessages = await ApplicationState.Client.getClient().GroupClient.GetMessageGroups(ApplicationState.currentGameConfig.Id);
+            ChatController.showPrivateChat(reloadGroupMessages.MessageGroups.First(group => group.Id == groupResponse.GroupId));
         }
 
         

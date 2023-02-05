@@ -1,10 +1,6 @@
-﻿using System;
-using SubterfugeCore.Core.Timing;
-using SubterfugeRemakeService;
+﻿using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using Random = System.Random;
 
 namespace Rooms.Multiplayer.Game.Chat

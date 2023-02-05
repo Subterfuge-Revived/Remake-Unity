@@ -1,5 +1,5 @@
 ﻿using System;
-using SubterfugeRemakeService;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,7 +51,7 @@ namespace Rooms.Multiplayer.CreateGame
                 Seed = (int)DateTime.Now.ToFileTimeUtc(),
             };
 
-            var outpostWeights = new OutpostWeighting();
+            var outpostWeights = new OutpostDistribution();
 
             var watchtowerWeight = Mathf.Round(watchtowerWeightSlider.value * 100f) * 0.01f;
             var factoryWeight = Mathf.Round(factoryWeightSlider.value * 100f) * 0.01f;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
+using SubterfugeCore.Core.Components;
 using SubterfugeCore.Core.Entities;
 using SubterfugeCore.Core.Timing;
 using TMPro;
@@ -18,20 +19,25 @@ public class SubManager : MonoBehaviour
     void Start()
     {
         GameTick currentTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick();
+        PositionManager pm = sub.GetComponent<PositionManager>();
+        var currentPosition = pm.GetPositionAt(currentTick);
+        var drillerCarrier = sub.GetComponent<DrillerCarrier>();
+        var owner = drillerCarrier.GetOwner();
+        
         // Update the position and rotation of the sub.
-        Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
+        Vector3 location = new Vector3(currentPosition.X, currentPosition.Y, 0);
         Transform transform = GetComponent<Transform>();
         transform.localPosition = location;
         
-        int rotationAngle = (int) (sub.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
+        int rotationAngle = (int) (pm.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
         transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
         
         // Set color based on the owner
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
-        if (sub.GetOwner() != null)
+        if (owner != null)
         {
-            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(sub.GetOwner()) + 1;
+            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(owner) + 1;
         }
         switch (playerId)
         {
@@ -69,15 +75,20 @@ public class SubManager : MonoBehaviour
     void Update()
     {
         GameTick currentTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick();
-        textMesh.text = sub.GetDrillerCount().ToString();
+        var drillerCarrier = sub.GetComponent<DrillerCarrier>();
+        PositionManager pm = sub.GetComponent<PositionManager>();
+        var currentPosition = pm.GetPositionAt(currentTick);
+        
+        
+        textMesh.text = drillerCarrier.GetDrillerCount().ToString();
         if (ApplicationState.CurrentGame.TimeMachine.GetState().SubExists(sub))
         {
             // Update the position and rotation of the sub.
-            Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
+            Vector3 location = new Vector3(currentPosition.X, currentPosition.Y, 0);
             Transform transform = GetComponent<Transform>();
             transform.localPosition = location;
             
-            int rotationAngle = (int) (sub.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
+            int rotationAngle = (int) (pm.GetRotationRadians() * (360 / (2 * Math.PI)) - 90);
             transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
         }
         else

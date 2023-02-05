@@ -1,19 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using SubterfugeCore.Core.Generation;
-using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
+﻿using System.Collections.Generic;
+using SubterfugeCore.Models.GameEvents;
+using SubterfugeRestApiClient;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameSelectController : MonoBehaviour
 {
 
     public GameRoomButton scrollItemTemplate;
     public GameObject scrollContentContainer;
-    private SubterfugeClient.SubterfugeClient client = ApplicationState.Client.getClient();
+    private SubterfugeClient client = ApplicationState.Client.getClient();
     private List<GameRoomButton> _instantiatedRooms = new List<GameRoomButton>();
 
     public void Start()
@@ -41,13 +37,13 @@ public class GameSelectController : MonoBehaviour
 
     public async void LoadOpenRooms()
     {
-        var roomResponse = await client.GetOpenLobbiesAsync(new OpenLobbiesRequest());
+        var roomResponse = await client.LobbyClient.GetLobbies( new GetLobbyRequest(){ RoomStatus = RoomStatus.Open });
 
         clearLobbyList();
 
         if (roomResponse.Status.IsSuccess)
         {
-            foreach (GameConfiguration room in roomResponse.Rooms)
+            foreach (GameConfiguration room in roomResponse.Lobbies)
             {
                 instantiateRoomButton(room);
             }
@@ -58,14 +54,14 @@ public class GameSelectController : MonoBehaviour
 
     public async void LoadOngoingRooms()
     {
-        var roomResponse = client.GetPlayerCurrentGames(new PlayerCurrentGamesRequest());
+        var roomResponse = await client.LobbyClient.GetLobbies(new GetLobbyRequest(){ UserIdInRoom = ApplicationState.player.GetId() });
         
         clearLobbyList();
 
         if (roomResponse.Status.IsSuccess)
         {
 
-            foreach (GameConfiguration room in roomResponse.Games)
+            foreach (GameConfiguration room in roomResponse.Lobbies)
             {
                 instantiateRoomButton(room);
             }

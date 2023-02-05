@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using SubterfugeCore.Core;
+using SubterfugeCore.Core.Components;
 using SubterfugeCore.Core.Entities;
 using SubterfugeCore.Core.Players;
 using SubterfugeCore.Core.Timing;
@@ -27,15 +28,16 @@ public class SubSpawn : MonoBehaviour
         {
             if (!subSpawned(sub))
             {
-                Vector3 location = new Vector3(sub.GetCurrentPosition(currentTick).X, sub.GetCurrentPosition(currentTick).Y, 0);
+                Vector3 location = new Vector3(sub.GetComponent<PositionManager>().GetPositionAt(currentTick).X, sub.GetComponent<PositionManager>().GetPositionAt(currentTick).Y, 0);
                 subObject = Instantiate(this.sub, location, Quaternion.identity);
                 subObject.GetComponent<SubManager>().sub = sub;
                 
-                if (!spawnedSubs.ContainsKey(sub.GetOwner()))
+                var owner = sub.GetComponent<DrillerCarrier>().GetOwner();
+                if (!spawnedSubs.ContainsKey(owner))
                 {
-                    spawnedSubs[sub.GetOwner()] = new List<Sub>();
+                    spawnedSubs[owner] = new List<Sub>();
                 }
-                spawnedSubs[sub.GetOwner()].Add(sub);
+                spawnedSubs[owner].Add(sub);
             }
         }
         
@@ -58,15 +60,15 @@ public class SubSpawn : MonoBehaviour
         // Cleanup orphaned subs
         foreach (Sub s in orphans)
         {
-            spawnedSubs[s.GetOwner()].Remove(s);
+            spawnedSubs[s.GetComponent<DrillerCarrier>().GetOwner()].Remove(s);
         }
     }
 
     private bool subSpawned(Sub sub)
     {
-        if (spawnedSubs.ContainsKey(sub.GetOwner()))
+        if (spawnedSubs.ContainsKey(sub.GetComponent<DrillerCarrier>().GetOwner()))
         {
-            foreach (Sub playerSub in spawnedSubs[sub.GetOwner()])
+            foreach (Sub playerSub in spawnedSubs[sub.GetComponent<DrillerCarrier>().GetOwner()])
             {
                 if (playerSub.Equals(sub))
                 {

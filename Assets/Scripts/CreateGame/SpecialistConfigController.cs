@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using SubterfugeCore.Core.Entities.Specialists;
-using SubterfugeRemakeService;
+﻿using System.Collections.Generic;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
-using SpecialistConfiguration = SubterfugeRemakeService.SpecialistConfiguration;
 
 public class SpecialistConfigController : MonoBehaviour
 {
@@ -48,17 +45,17 @@ public class SpecialistConfigController : MonoBehaviour
         }
     }
 
-    public List<SubterfugeRemakeService.SpecialistConfiguration> getConfiguredValues()
+    public List<SpecialistConfiguration> getConfiguredValues()
     {
-        var configList = new List<SubterfugeRemakeService.SpecialistConfiguration>();
+        var configList = new List<SpecialistConfiguration>();
         foreach(SpecialistIconDisplay specialist in SelectedSpecialists)
         {
-            configList.Add(new SubterfugeRemakeService.SpecialistConfiguration()
+            configList.Add(new SpecialistConfiguration()
             {
                 Id = "SomeId",
                 Priority = 1,
                 SpecialistName = "SpecialistName",
-                Creator = new User()
+                Creator = new SimpleUser()
                 {
                     Id = "SomeUserId",
                     Username = "SomeUserName",

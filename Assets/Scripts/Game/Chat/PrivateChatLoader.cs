@@ -1,7 +1,5 @@
 ﻿using System;
-using SubterfugeRemakeService;
-using TMPro;
-using UnityEditor;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +25,7 @@ namespace Rooms.Multiplayer.Game.Chat
             }
         }
         
-        private void instantiateChatMessage(MessageModel message)
+        private void instantiateChatMessage(ChatMessage message)
         {
             // Create a new templated item
             PrivateMessageListItem chatGroupListItem = Instantiate(scrollItemTemplate, scrollContentContainer.transform);
@@ -41,7 +39,7 @@ namespace Rooms.Multiplayer.Game.Chat
             clearScrollList();
             if (MessageGroup != null)
             {
-                foreach (MessageModel message in MessageGroup.Messages)
+                foreach (ChatMessage message in MessageGroup.Messages)
                 {
                     instantiateChatMessage(message);
                 }
@@ -50,25 +48,18 @@ namespace Rooms.Multiplayer.Game.Chat
 
         public void sendChatMessage(Text message)
         {
-            var model = new MessageModel()
-            {
-                GroupId = MessageGroup.GroupId,
-                Id = Guid.NewGuid().ToString(),
-                Message = message.text,
-                RoomId = ApplicationState.CurrentGame.Configuration.Id,
-                SenderId = ApplicationState.player.GetId(),
-                UnixTimeCreatedAt = DateTime.UtcNow.ToFileTimeUtc(),
-            };
-            
             // TODO: Create a 'Pending' message until we recieve a confirmation from the server.
-            instantiateChatMessage(model);
-
-            ApplicationState.Client.getClient().SendMessage(new SendMessageRequest()
+            instantiateChatMessage(new ChatMessage()
             {
-                GroupId = MessageGroup.GroupId,
                 Message = message.text,
-                RoomId = ApplicationState.CurrentGame.Configuration.Id,
+                SentAt = DateTime.UtcNow,
+                SentBy = ApplicationState.player.ToUser().ToSimpleUser()
             });
+
+            ApplicationState.Client.getClient().GroupClient.SendMessage(new SendMessageRequest()
+            {
+                Message = message.text,
+            }, ApplicationState.currentGameConfig.Id, MessageGroup.Id);
             
             message.text = null;
         }

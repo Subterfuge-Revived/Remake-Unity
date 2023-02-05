@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using SubterfugeCore.Core.Entities;
+﻿using SubterfugeCore.Core.Components;
 using SubterfugeCore.Core.Entities.Positions;
-using SubterfugeCore.Core.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +12,9 @@ public class SouceLaunchInformation : MonoBehaviour
     {
         Text text = gameObject.GetComponentInChildren<Text>();
         text.text = "====Source Outpost====\n" +
-                    "Outpost Id: " + source.GetId() + "\n" +
-                    "Shields: " + source.GetShieldManager().GetShields() + "\n" +
-                    "Drillers: " + source.GetDrillerCount() + "\n" +
-                    "Specialists: " + source.GetSpecialistManager().GetSpecialistCount();
+                    "Outpost Id: " + source.GetComponent<IdentityManager>().GetId() + "\n" +
+                    "Shields: " + source.GetComponent<ShieldManager>().GetShields() + "\n" +
+                    "Drillers: " + source.GetComponent<DrillerCarrier>().GetDrillerCount() + "\n" +
+                    "Specialists: " + source.GetComponent<SpecialistManager>().GetSpecialistCount();
     }
 }

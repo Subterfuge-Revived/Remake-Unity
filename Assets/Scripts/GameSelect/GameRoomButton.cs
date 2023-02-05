@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using SubterfugeRemakeService;
+﻿using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,8 +31,8 @@ public class GameRoomButton : MonoBehaviour
             {
                 dominationIcon.SetActive(false);
             }
-            players.text = room.Players.Count + "/" + room.GameSettings.MaxPlayers;
-            anonIcon.SetActive(room.GameSettings.Anonymous);
+            players.text = room.PlayersInLobby.Count + "/" + room.GameSettings.MaxPlayers;
+            anonIcon.SetActive(room.GameSettings.IsAnonymous);
         }
     }
 
@@ -44,7 +42,7 @@ public class GameRoomButton : MonoBehaviour
         // Set the gameroom to the selected game
         ApplicationState.SetActiveRoom(room);
 
-        if (room.GameSettings.MaxPlayers == room.Players.Count || room.RoomStatus == RoomStatus.Ongoing)
+        if (room.GameSettings.MaxPlayers == room.PlayersInLobby.Count || room.RoomStatus == RoomStatus.Ongoing)
         {
             // Load the game scene
             SceneManager.LoadScene("Game");   

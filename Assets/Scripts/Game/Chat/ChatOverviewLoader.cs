@@ -1,5 +1,6 @@
 ﻿using System;
-using SubterfugeRemakeService;
+using SubterfugeCore.Models.GameEvents;
+using SubterfugeRestApiClient;
 using UnityEngine;
 
 namespace Rooms.Multiplayer.Game.Chat
@@ -10,20 +11,16 @@ namespace Rooms.Multiplayer.Game.Chat
         public ChatGroupListItem scrollItemTemplate;
         public GameObject scrollContentContainer;
         
-        private SubterfugeClient.SubterfugeClient client = ApplicationState.Client.getClient();
+        private SubterfugeClient client = ApplicationState.Client.getClient();
         
         private GetMessageGroupsResponse groups = null;
         
-        void Start()
+        async void Start()
         {
             if (ApplicationState.isMultiplayer)
             {
                 // Load chat messages.
-                groups = client.GetMessageGroups(
-                    new GetMessageGroupsRequest()
-                    {
-                        RoomId = ApplicationState.CurrentGame.Configuration.Id,
-                    });
+                groups = await client.GroupClient.GetMessageGroups(ApplicationState.currentGameConfig.Id);
             }
             else
             {
@@ -36,7 +33,7 @@ namespace Rooms.Multiplayer.Game.Chat
         {
             var group = new MessageGroup()
             {
-                GroupId = "myGroup",
+                Id = "myGroup",
             };
             group.Messages.Add(createSampleMessage("SomeUser", "Some Message!"));
             group.Messages.Add(createSampleMessage("SomeUserTwo", "Some Other Message!"));
@@ -64,16 +61,17 @@ namespace Rooms.Multiplayer.Game.Chat
             groups.MessageGroups.Add(group);
         }
         
-        private MessageModel createSampleMessage(string userId, string message)
+        private ChatMessage createSampleMessage(string userId, string message)
         {
-            return new MessageModel()
+            return new ChatMessage()
             {
                 GroupId = "myGroup",
                 Id = "123123",
                 Message = message,
                 RoomId = "RoomId",
-                SenderId = userId,
-                UnixTimeCreatedAt = DateTime.UtcNow.ToFileTimeUtc(),
+                
+                SentBy = ApplicationState.player.ToUser().ToSimpleUser(),
+                SentAt = DateTime.UtcNow,
             };
         }
         

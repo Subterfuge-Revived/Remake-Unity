@@ -1,10 +1,8 @@
 ﻿using System;
 using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
+using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class CreateAccountController : MonoBehaviour
 {
@@ -22,7 +20,7 @@ public class CreateAccountController : MonoBehaviour
     public async void onRegister()
     {
         var client = ApplicationState.Client.getClient();
-        var response = client.RegisterAccount(new AccountRegistrationRequest()
+        var response = await client.UserApi.RegisterAccount(new AccountRegistrationRequest()
         {
             // DeviceIdentifier = SystemInfo.deviceUniqueIdentifier,
             DeviceIdentifier = Guid.NewGuid().ToString(),

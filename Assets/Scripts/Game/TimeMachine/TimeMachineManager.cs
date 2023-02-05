@@ -21,9 +21,7 @@ namespace Rooms.Multiplayer.Game
         void Update()
         {
             gameTickText.text = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetTick().ToString();
-            tickTimeText.text = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetDate(
-                                    DateTime.FromFileTimeUtc(ApplicationState.CurrentGame.Configuration.UnixTimeStarted).ToLocalTime()
-                                ).ToString(CultureInfo.CurrentCulture);
+            tickTimeText.text = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetDate(ApplicationState.currentGameConfig.TimeStarted.ToLocalTime()).ToString(CultureInfo.CurrentCulture);
         }
 
         public void forwardTick(int amount)

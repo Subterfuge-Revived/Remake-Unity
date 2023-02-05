@@ -1,4 +1,4 @@
-﻿using SubterfugeRemakeService;
+﻿using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
 

@@ -1,5 +1,4 @@
-﻿using System.Net.Configuration;
-using SubterfugeRemakeService;
+﻿using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +17,7 @@ namespace Rooms.Multiplayer.CreateGame
         {
             disableInput();
             rankedToggle.isOn = config.IsRanked;
-            anonToggle.isOn = config.Anonymous;
+            anonToggle.isOn = config.IsAnonymous;
             miningToggle.isOn = config.Goal == Goal.Mining;
             dominationToggle.isOn = config.Goal == Goal.Domination;
             playerCountSlider.value = config.MaxPlayers;
@@ -38,7 +37,7 @@ namespace Rooms.Multiplayer.CreateGame
         public GameSettings getConfiguredValues()
         {
             var config = new GameSettings();
-            config.Anonymous = anonToggle.isOn;
+            config.IsAnonymous = anonToggle.isOn;
             config.IsRanked = rankedToggle.isOn;
             config.Goal = miningToggle.isOn ? Goal.Mining : Goal.Domination;
             config.MaxPlayers = (int)playerCountSlider.value;

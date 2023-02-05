@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SubterfugeCore.Core;
-using SubterfugeCore.Core.Config;
-using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
-using UnityEditor.VersionControl;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,10 +33,10 @@ public class SinglePlayerButton : MonoBehaviour
         
         GameConfiguration config = new GameConfiguration()
         {
-            Creator = ApplicationState.player.toUser(),
+            Creator = ApplicationState.player.ToUser(),
             GameSettings = new GameSettings()
             {
-                Anonymous = false,
+                IsAnonymous = false,
                 Goal = Goal.Mining,
                 IsRanked = false,
                 MaxPlayers = 4,
@@ -52,7 +48,7 @@ public class SinglePlayerButton : MonoBehaviour
                 DormantsPerPlayer = 4,
                 MinimumOutpostDistance = 50,
                 MaximumOutpostDistance = 210,
-                OutpostDistribution = new OutpostWeighting()
+                OutpostDistribution = new OutpostDistribution()
                 {
                     FactoryWeight = 0.40f,
                     GeneratorWeight = 0.40f,
@@ -63,10 +59,10 @@ public class SinglePlayerButton : MonoBehaviour
             },
             RoomName = "LocalRoom",
             RoomStatus = RoomStatus.Ongoing,
-            UnixTimeCreated = DateTime.Now.ToFileTimeUtc(),
-            UnixTimeStarted = DateTime.Now.ToFileTimeUtc(),
+            TimeCreated = DateTime.UtcNow,
+            TimeStarted = DateTime.UtcNow,
         };
-        config.Players.AddRange(players.ConvertAll(player => player.toUser()));
+        config.PlayersInLobby.AddRange(players.Select(player => player.ToUser()));
         
         Game game = new Game(config);
         ApplicationState.CurrentGame = game;

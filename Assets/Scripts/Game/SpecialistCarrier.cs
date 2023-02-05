@@ -1,11 +1,9 @@
-﻿using SubterfugeCore.Core.Entities.Specialists;
-using SubterfugeCore.Core.Interfaces;
-using UnityEditor;
+﻿using SubterfugeCore.Core.Components;
 using UnityEngine;
 
 public class SpecialistCarrier : MonoBehaviour
  {
-     private ISpecialistCarrier specialistCarrier;
+     private SpecialistManager specialistCarrier;
     
      // Start is called before the first frame update
      void Start()
@@ -13,11 +11,11 @@ public class SpecialistCarrier : MonoBehaviour
          OutpostManager outpostManager = gameObject.GetComponent<OutpostManager>();
          if (outpostManager != null)
          {
-             specialistCarrier = outpostManager.outpost;
+             specialistCarrier = outpostManager.outpost.GetComponent<SpecialistManager>();
          }
          else
          {
-             specialistCarrier = gameObject.GetComponentInParent<SubManager>().sub;
+             specialistCarrier = gameObject.GetComponentInParent<SubManager>().sub.GetComponent<SpecialistManager>();
          }
      }
 

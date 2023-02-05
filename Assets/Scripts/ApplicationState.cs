@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Rooms.Multiplayer;
+﻿using Rooms.Multiplayer;
 using SubterfugeCore.Core;
-using SubterfugeCore.Core.Config;
-using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
-using UnityEngine;
+using SubterfugeCore.Models.GameEvents;
 
 public static class ApplicationState
 {
@@ -22,7 +16,7 @@ public static class ApplicationState
     public static void SetActiveRoom(GameConfiguration room)
     {
         currentGameConfig = room;
-        if (room.GameSettings.MaxPlayers == room.Players.Count)
+        if (room.GameSettings.MaxPlayers == room.PlayersInLobby.Count)
         {
             CurrentGame = new Game(currentGameConfig);
         }

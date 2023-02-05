@@ -1,10 +1,7 @@
-﻿using System;
-using SubterfugeCore.Core.Players;
-using SubterfugeRemakeService;
+﻿using SubterfugeCore.Core.Players;
+using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Login
 {
@@ -19,7 +16,7 @@ namespace Login
         public async void onLogin()
         {
             var client = ApplicationState.Client.getClient();
-            var response = await client.LoginAsync(new AuthorizationRequest() {
+            var response = await client.UserApi.Login(new AuthorizationRequest() {
                 Username = username.text,
                 Password = password.text,
             });

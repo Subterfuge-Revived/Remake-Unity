@@ -1,13 +1,8 @@
-﻿using System;
-using System.Linq;
-using Rooms.Multiplayer.CreateGame;
-using SubterfugeCore.Core.Timing;
-using SubterfugeRemakeService;
+﻿using Rooms.Multiplayer.CreateGame;
+using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 public class CreateGameController : MonoBehaviour
 {
@@ -32,7 +27,7 @@ public class CreateGameController : MonoBehaviour
             RoomName = gameTitle.text,
         };
         
-        var response = await client.CreateNewRoomAsync(request);
+        var response = await client.LobbyClient.CreateNewRoom(request);
 
         if (response.Status.IsSuccess)
         {

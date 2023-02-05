@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using SubterfugeCore.Core;
- using SubterfugeCore.Core.Entities.Positions;
+using SubterfugeCore.Core.Components;
+using SubterfugeCore.Core.Entities.Positions;
  using TMPro;
 
  public class OutpostManager : MonoBehaviour
@@ -37,7 +38,7 @@ using SubterfugeCore.Core;
     void Update()
     {
         // Set color based on the owner
-        textMesh.text = outpost.GetDrillerCount().ToString();
+        textMesh.text = outpost.GetComponent<DrillerCarrier>().GetDrillerCount().ToString();
         
         
         // // Determine the outpost vision mask.
@@ -64,9 +65,9 @@ using SubterfugeCore.Core;
 
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         int playerId = 0;
-        if (outpost.GetOwner() != null)
+        if (outpost.GetComponent<DrillerCarrier>().GetOwner() != null)
         {
-            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(outpost.GetOwner()) + 1;
+            playerId = ApplicationState.CurrentGame.TimeMachine.GetState().GetPlayers().IndexOf(outpost.GetComponent<DrillerCarrier>().GetOwner()) + 1;
         }
         switch (playerId)
         {

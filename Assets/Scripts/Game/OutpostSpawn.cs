@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using SubterfugeCore.Core;
+using SubterfugeCore.Core.Components;
 using SubterfugeCore.Core.Entities.Positions;
-using SubterfugeCore.Core.Generation;
 using SubterfugeCore.Core.Players;
 using SubterfugeCore.Core.Topologies;
-using SubterfugeRemakeService;
-using TMPro;
-using UnityEditor.iOS;
+using SubterfugeCore.Models.GameEvents;
 
 public class OutpostSpawn : MonoBehaviour
 {
@@ -20,8 +18,8 @@ public class OutpostSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Game server = ApplicationState.CurrentGame;
-        GameConfiguration config = server.Configuration;
+        Game currentGame = ApplicationState.CurrentGame;
+        GameConfiguration config = ApplicationState.currentGameConfig;
         List<Outpost> outposts;
         List<Vector3> outpostLocations = new List<Vector3>();
         outposts = ApplicationState.CurrentGame.TimeMachine.GetState().GetOutposts();
@@ -36,7 +34,7 @@ public class OutpostSpawn : MonoBehaviour
             {
                 for (var horizontal = 0; horizontal < 3; horizontal++)
                 {
-                    Vector2 location = new Vector2(outpost.GetCurrentPosition().X, outpost.GetCurrentPosition().Y);
+                    Vector2 location = new Vector2(outpost.GetComponent<PositionManager>().GetExpectedDestination().X, outpost.GetComponent<PositionManager>().GetExpectedDestination().Y);
                     if (vertical == 0)
                     {
                         location.y -= RftVector.Map.Height;
@@ -64,7 +62,7 @@ public class OutpostSpawn : MonoBehaviour
                     outpostObject.GetComponent<SpriteRenderer>().sprite = sprite;
                     
                     // Set the outpost and id in the manager.
-                    outpostObject.GetComponent<OutpostManager>().ID = outpost.GetId();
+                    outpostObject.GetComponent<OutpostManager>().ID = outpost.GetComponent<IdentityManager>().GetId();
                     outpostObject.GetComponent<OutpostManager>().outpost = outpost;
                     
                     outpostLocations.Add(location);
@@ -85,7 +83,7 @@ public class OutpostSpawn : MonoBehaviour
     public Sprite getOutpostSprite(Outpost outpost)
     {
         Sprite sprite = Resources.Load<Sprite>("Locations/Unknown");;
-        if (outpost.IsDestroyed())
+        if (outpost.GetComponent<DrillerCarrier>().IsDestroyed())
         {
             sprite = Resources.Load<Sprite>("Locations/Destroyed");
         }

@@ -7,15 +7,14 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "SubterfugeCore/1.0.0": {
+      "SubterfugeRestApiClient/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.0.0",
           "Models": "1.0.0",
-          "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "13.0.2",
-          "System.Numerics.Vectors": "4.6.0-preview5.19224.8"
+          "NETStandard.Library": "2.0.3"
         },
         "runtime": {
-          "SubterfugeCore.dll": {}
+          "SubterfugeRestApiClient.dll": {}
         }
       },
       "JsonSubTypes/2.0.1": {
@@ -26,6 +25,17 @@
           "lib/netstandard2.0/JsonSubTypes.dll": {
             "assemblyVersion": "2.0.1.0",
             "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.11001.0"
           }
         }
       },
@@ -43,14 +53,6 @@
           }
         }
       },
-      "System.Numerics.Vectors/4.6.0-preview5.19224.8": {
-        "runtime": {
-          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
-            "assemblyVersion": "4.1.5.0",
-            "fileVersion": "4.700.19.22408"
-          }
-        }
-      },
       "Models/1.0.0": {
         "dependencies": {
           "JsonSubTypes": "2.0.1",
@@ -63,7 +65,7 @@
     }
   },
   "libraries": {
-    "SubterfugeCore/1.0.0": {
+    "SubterfugeRestApiClient/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -74,6 +76,13 @@
       "sha512": "sha512-1Po+Ypf0SjCeEKx5+C89Nb5OgTcqNvfS3uTI46MUM+KEp6Rq/M0h+vVsTUt/6DFRwZMTpsAJM4yJrZmEObVANA==",
       "path": "jsonsubtypes/2.0.1",
       "hashPath": "jsonsubtypes.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Client/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OMTp9ot40TZgZxnFO+S0ac0EY5CtQs6KTHkMSHmNFDc+a0tWMCsSBuOG6HoH9+G95wNhEfZrZ20btAsHMlQe7w==",
+      "path": "microsoft.aspnet.webapi.client/5.0.0",
+      "hashPath": "microsoft.aspnet.webapi.client.5.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -95,13 +104,6 @@
       "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "path": "newtonsoft.json/13.0.2",
       "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
-    },
-    "System.Numerics.Vectors/4.6.0-preview5.19224.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-W3rBTrGme5c2Eh4cgn0N7pQCV3Rn8+tX4VDPnXj8X9ZMVD4dVaNytnsovrJ1EVN+OWtyRfHq5nCTI84xqnYt5g==",
-      "path": "system.numerics.vectors/4.6.0-preview5.19224.8",
-      "hashPath": "system.numerics.vectors.4.6.0-preview5.19224.8.nupkg.sha512"
     },
     "Models/1.0.0": {
       "type": "project",

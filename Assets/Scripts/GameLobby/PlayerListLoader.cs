@@ -1,5 +1,4 @@
-﻿using SubterfugeRemakeService;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Rooms.Multiplayer.GameLobby
 {
@@ -10,7 +9,7 @@ namespace Rooms.Multiplayer.GameLobby
         
         public void Start()
         {
-            foreach (User user in ApplicationState.currentGameConfig.Players)
+            foreach (var user in ApplicationState.currentGameConfig.PlayersInLobby)
             {
                 var player = Instantiate(scrollTemplate, scrollContent.transform);
                 player.gameObject.SetActive(true);

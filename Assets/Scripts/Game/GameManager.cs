@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq;
-using GameEventModels;
-using Google.Protobuf;
-using Rooms.Multiplayer.Game;
-using SubterfugeCore.Core;
+using System.Threading.Tasks;
+using SubterfugeCore.Core.Components;
 using SubterfugeCore.Core.Entities.Positions;
-using SubterfugeCore.Core.GameEvents;
+using SubterfugeCore.Core.GameEvents.PlayerTriggeredEvents;
 using SubterfugeCore.Core.Timing;
-using SubterfugeRemakeService;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -65,7 +63,7 @@ public class GameManager : MonoBehaviour
                     
                     // only show the hud if the souce outpost is owned by the current player & the destination is not the source.
                     if (launchOutpost != destinationOutpost &&
-                        launchOutpost.GetOwner().GetId() == ApplicationState.player.GetId())
+                        launchOutpost.GetComponent<DrillerCarrier>().GetOwner().GetId() == ApplicationState.player.GetId())
                     {
 
                         SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
@@ -73,7 +71,7 @@ public class GameManager : MonoBehaviour
                         SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
                         informationPanel.destination = destinationOutpost;
                         informationPanel.sourceOutpost = launchOutpost;
-                        drillerSlider.maxValue = launchOutpost.GetDrillerCount();
+                        drillerSlider.maxValue = launchOutpost.GetComponent<DrillerCarrier>().GetDrillerCount();
 
                         this.SetLaunchHub(true);
                     }
@@ -103,19 +101,24 @@ public class GameManager : MonoBehaviour
         launchHud.SetActive(state);
     }
 
-    public void launchSub()
+    public async Task launchSub()
     {
-        LaunchEvent launchEvent = new LaunchEvent(
-            new GameEventModel()
+        var gameEventData = new GameEventData()
+        {
+            EventData = new LaunchEventData()
             {
-                EventData = new LaunchEventData()
-                {
-                    SourceId = launchOutpost.GetId(),
-                    DestinationId = destinationOutpost.GetId(),
-                    DrillerCount = (int) drillerSlider.value,
-                    SpecialistIds = { },
-                }.ToByteString(),
-                OccursAtTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetTick(),
+                SourceId = launchOutpost.GetComponent<IdentityManager>().GetId(),
+                DestinationId = destinationOutpost.GetComponent<IdentityManager>().GetId(),
+                DrillerCount = (int)drillerSlider.value,
+                SpecialistIds = { },
+            },
+            OccursAtTick = ApplicationState.CurrentGame.TimeMachine.GetCurrentTick().GetTick()
+        };
+        
+        LaunchEvent launchEvent = new LaunchEvent(
+            new GameRoomEvent()
+            {
+                GameEventData = gameEventData
             });
         
         ApplicationState.CurrentGame.TimeMachine.AddEvent(launchEvent);
@@ -126,15 +129,10 @@ public class GameManager : MonoBehaviour
         {
             var client = ApplicationState.Client.getClient();
 
-            var response = client.SubmitGameEvent(new SubmitGameEventRequest()
+            var response = await client.GameEventClient.SubmitGameEvent(new SubmitGameEventRequest()
             {
-                EventData = new GameEventRequest() {
-                    EventData = launchEvent.ToGameEventModel().ToByteString(),
-                    EventType = launchEvent.GetEventType(),
-                    OccursAtTick = launchEvent.GetOccursAt().GetTick(),
-                },
-                RoomId = ApplicationState.currentGameConfig.Id
-            });
+                GameEventData = gameEventData,
+            }, ApplicationState.currentGameConfig.Id);
 
             if (!response.Status.IsSuccess)
             {
@@ -144,7 +142,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void loadMultiplayerGame()
+    public async Task loadMultiplayerGame()
     {
 
         if (!ApplicationState.Client.isConnected)
@@ -153,11 +151,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            var gameEvents = ApplicationState.Client.getClient().GetGameRoomEvents(
-                new GetGameRoomEventsRequest()
-                {
-                    RoomId = ApplicationState.currentGameConfig.Id,
-                });
+            var gameEvents = await ApplicationState.Client.getClient().GameEventClient.GetGameRoomEvents(ApplicationState.currentGameConfig.Id);
 
             if (gameEvents.Status.IsSuccess)
             {
@@ -167,7 +161,7 @@ public class GameManager : MonoBehaviour
             }
                 
             // go to current tick.
-            GameTick tick = new GameTick(DateTime.FromFileTimeUtc(ApplicationState.CurrentGame.Configuration.UnixTimeStarted), NtpConnector.GetNetworkTime());
+            GameTick tick = new GameTick(ApplicationState.currentGameConfig.TimeStarted, NtpConnector.GetNetworkTime());
             ApplicationState.CurrentGame.TimeMachine.GoTo(tick);
         }
     }

@@ -1,4 +1,5 @@
-﻿using SubterfugeRemakeService;
+﻿using System.Threading.Tasks;
+using SubterfugeCore.Models.GameEvents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,7 @@ namespace Rooms.Multiplayer.GameLobby
             updateButtonControls();
         }
 
-        public void onJoin() {
+        public async Task onJoin() {
             if (isPlayerInGame())
             {
                 updateButtonControls();
@@ -27,10 +28,7 @@ namespace Rooms.Multiplayer.GameLobby
             else
             {
                 var client = ApplicationState.Client.getClient();
-                var joinResponse = client.JoinRoom(new JoinRoomRequest()
-                {
-                    RoomId = ApplicationState.currentGameConfig.Id
-                });
+                var joinResponse = await client.LobbyClient.JoinRoom(new JoinRoomRequest(), ApplicationState.currentGameConfig.Id);
 
                 if (joinResponse.Status.IsSuccess)
                 {
@@ -38,9 +36,9 @@ namespace Rooms.Multiplayer.GameLobby
                     user.Id = ApplicationState.player.GetId();
                     user.Username = ApplicationState.player.GetPlayerName();
 
-                    ApplicationState.currentGameConfig.Players.Add(user);
+                    ApplicationState.currentGameConfig.PlayersInLobby.Add(user);
 
-                    if (ApplicationState.currentGameConfig.Players.Count ==
+                    if (ApplicationState.currentGameConfig.PlayersInLobby.Count ==
                         ApplicationState.currentGameConfig.GameSettings.MaxPlayers)
                     {
                         SceneManager.LoadScene("Game");
@@ -59,14 +57,11 @@ namespace Rooms.Multiplayer.GameLobby
             }
         }
         
-        public void onLeave() {
+        public async Task onLeave() {
             if (isPlayerInGame())
             {
                 var client = ApplicationState.Client.getClient();
-                var leaveResponse = client.LeaveRoom(new LeaveRoomRequest()
-                {
-                    RoomId = ApplicationState.currentGameConfig.Id
-                });
+                var leaveResponse = await client.LobbyClient.LeaveRoom(ApplicationState.currentGameConfig.Id);
 
                 if (leaveResponse.Status.IsSuccess)
                 {
@@ -85,14 +80,11 @@ namespace Rooms.Multiplayer.GameLobby
             }
         }
         
-        public void onStartEarly() {
+        public async Task onStartEarly() {
             if (didPlayerCreateGame())
             {
                 var client = ApplicationState.Client.getClient();
-                var startEarlyResponse = client.StartGameEarly(new StartGameEarlyRequest()
-                {
-                    RoomId = ApplicationState.currentGameConfig.Id,
-                });
+                var startEarlyResponse = await client.LobbyClient.StartGameEarly(ApplicationState.currentGameConfig.Id);
 
                 if (startEarlyResponse.Status.IsSuccess)
                 {
@@ -135,7 +127,7 @@ namespace Rooms.Multiplayer.GameLobby
         
         private bool isPlayerInGame()
         {
-            foreach(User player in ApplicationState.currentGameConfig.Players)
+            foreach(User player in ApplicationState.currentGameConfig.PlayersInLobby)
             {
                 if (player.Id == ApplicationState.player.GetId())
                 {
@@ -172,7 +164,7 @@ namespace Rooms.Multiplayer.GameLobby
             leaveButton.SetActive(false);
             joinButton.SetActive(false);
             deleteLobbyButton.SetActive(true);
-            if (ApplicationState.currentGameConfig.Players.Count > 1)
+            if (ApplicationState.currentGameConfig.PlayersInLobby.Count > 1)
             {
                 startEarlyButton.SetActive(true);
             }

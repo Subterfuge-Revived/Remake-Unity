@@ -1,9 +1,7 @@
-﻿using System;
-using System.Linq;
-using SubterfugeRemakeService;
+﻿using System.Linq;
+using SubterfugeCore.Models.GameEvents;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Rooms.Multiplayer.Game.Chat
 {
