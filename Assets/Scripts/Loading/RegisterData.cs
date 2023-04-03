@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7928d304809807bef1f9d328ca424523dd208beb273b2f16108f1b71f57c0392
-size 451
+﻿using TMPro;
+using UnityEngine;
+
+namespace Rooms.Multiplayer.Loading
+{
+    public class RegisterData : MonoBehaviour
+    {
+        public TMP_InputField Username;
+        public TMP_InputField Phone;
+        public TMP_InputField Password;
+        public TMP_InputField ConfirmPassword;
+
+        public bool Validate()
+        {
+            return Phone.text.Length <= 11 && Password.text == ConfirmPassword.text;
+        }
+    }
+}

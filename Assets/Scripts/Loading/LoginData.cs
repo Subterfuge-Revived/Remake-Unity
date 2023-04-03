@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8b64a0024dd95f92f314709920e630f1e03abebfb120b7b2a4fdef168c64aabb
-size 220
+﻿using TMPro;
+using UnityEngine;
+
+namespace Rooms.Multiplayer.Loading
+{
+    public class LoginData : MonoBehaviour
+    {
+        public TMP_InputField Username;
+        public TMP_InputField Password;
+    }
+}

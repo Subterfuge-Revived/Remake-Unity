@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:537214372be376af411a84aba7cba06bd72a24ddfced18ee6065740cd56a5d34
-size 1426
+﻿using System.Collections.Generic;
+
+namespace CollectionUtilities
+{
+    public class ToggleableCollectionSelector<T>
+    {
+        private List<T> _selectedElements = new List<T>();
+        private List<T> _unnselectedElements;
+
+        public ToggleableCollectionSelector(List<T> initialCollection)
+        {
+            _unnselectedElements = initialCollection;
+        }
+
+
+        public IEnumerable<T> GetSelectedElements()
+        {
+            return _selectedElements;
+        }
+        
+        public IEnumerable<T> GetUnselectedElements()
+        {
+            return _unnselectedElements;
+        }
+        
+        public IEnumerable<T> GetAllElements()
+        {
+            var allInList = new List<T>();
+            allInList.AddRange(_unnselectedElements);
+            allInList.AddRange(_selectedElements);
+            return allInList;
+        }
+
+        public void ToggleElement(T selectElement)
+        {
+            bool isSelected = false;
+            if (_selectedElements.Contains(selectElement))
+            {
+                _selectedElements.Remove(selectElement);
+                _unnselectedElements.Add(selectElement);
+            }
+            else
+            {
+                isSelected = true;
+                _selectedElements.Add(selectElement);
+                _unnselectedElements.Remove(selectElement);
+            }
+        }
+    }
+}

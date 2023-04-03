@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be79cb90c107ede71e4339c21a26ff592dd73f1571ecf923d9723704d1bf11ba
-size 1133
+﻿using Subterfuge.Remake.Api.Network;
+using TMPro;
+using UnityEngine;
+using Random = System.Random;
+
+namespace Rooms.Multiplayer.Game.Chat
+{
+    public class ParticipantListing : MonoBehaviour
+    {
+        public NewChatController NewChatController;
+        public TextMeshProUGUI participantName;
+        public TextMeshProUGUI participantExpLevel;
+        public GameObject selectedIcon;
+        // TODO: ParticipantSymbol
+
+        private User user;
+        private bool isSelected = false;
+
+        public void setUser(User participant)
+        {
+            user = participant;
+            participantName.text = participant.Username;
+            participantExpLevel.text = "Lv. " + new Random().Next(0, 100);
+        }
+
+        public void OnSelect()
+        {
+            isSelected = !isSelected;
+            selectedIcon.SetActive(isSelected);
+            if (isSelected)
+            {
+                NewChatController.selectParticipant(user);
+            }
+            else
+            {
+                NewChatController.deselectParticipant(user);
+            }
+        }
+    }
+}

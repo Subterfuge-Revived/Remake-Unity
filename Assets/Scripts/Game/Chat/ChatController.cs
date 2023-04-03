@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5fd0bed6a33b8e4b2fb1f5a4a31b48d2eee7c3558b95450a59ab5166ee0e032f
-size 1287
+﻿using Subterfuge.Remake.Api.Network;
+using UnityEngine;
+
+namespace Rooms.Multiplayer.Game.Chat
+{
+    public class ChatController : MonoBehaviour
+    {
+        public GameObject ChatOverviewCanvas;
+        public GameObject PrivateChatViewCanvas;
+        public GameObject NewChatViewCanvas;
+
+        private void Start()
+        {
+            showChatOverview();
+        }
+
+        public void showChatOverview()
+        {
+            disableAll();
+            ChatOverviewCanvas.SetActive(true);
+        }
+
+        public void showPrivateChat(MessageGroup messageGroup)
+        {
+            disableAll();
+            PrivateChatViewCanvas.SetActive(true);
+            ((PrivateChatLoader)PrivateChatViewCanvas.GetComponent<PrivateChatLoader>()).loadChatMessages(messageGroup);
+        }
+
+        public void showCreateNewChat()
+        {
+            disableAll();
+            NewChatViewCanvas.SetActive(true);
+            ((NewChatController)NewChatViewCanvas.GetComponent<NewChatController>()).loadParticipantList();
+        }
+
+        public void disableAll()
+        {
+            ChatOverviewCanvas.SetActive(false);
+            PrivateChatViewCanvas.SetActive(false);
+            NewChatViewCanvas.SetActive(false);
+        }
+    }
+}

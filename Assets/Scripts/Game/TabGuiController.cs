@@ -1,3 +1,55 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fab5fc39f4d43585b3a95eaa1365d301fb434c99e5dfe76d2009386cd70f0f46
-size 1315
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace Rooms.Multiplayer.Game
+{
+    public class TabGuiController : MonoBehaviour
+    {
+        public GameObject chatWindow;
+        public GameObject eventWindow;
+        public GameObject statsWindow;
+        public GameObject logWindow;
+
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                // Determine if the click was in the panel
+                if (!EventSystem.current.IsPointerOverGameObject()) disableAll();
+            }
+        }
+        
+        public void showChat()
+        {
+            disableAll();
+            chatWindow.SetActive(true);
+        }
+        
+        public void showEventWindow()
+        {
+            disableAll();
+            eventWindow.SetActive(true);
+        }
+        
+        public void showStatsWindow()
+        {
+            disableAll();
+            statsWindow.SetActive(true);
+        }
+        
+        public void showLogWindow()
+        {
+            disableAll();
+            logWindow.SetActive(true);
+        }
+
+        public void disableAll()
+        {
+            chatWindow.SetActive(false);
+            eventWindow.SetActive(false);
+            statsWindow.SetActive(false);
+            logWindow.SetActive(false);
+        }
+        
+    }
+}

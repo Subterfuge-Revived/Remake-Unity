@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:088b3ba460bc1be20af4e35757aded9acc77059326dff93e63f030b7e1918692
-size 1531
+﻿using System;
+using Subterfuge.Remake.Api.Network;
+using Subterfuge.Remake.Core.Players;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+public class CreateAccountController : MonoBehaviour
+{
+    public TMP_InputField username;
+    public TMP_InputField password;
+    public TMP_InputField phoneNumber;
+    public TextMeshProUGUI responseInfo;
+    public OnlineServicesPanelController menuPanelController;
+    
+    public void Start()
+    {
+        responseInfo.text = "";
+    }
+
+    public async void onRegister()
+    {
+        var client = ApplicationState.Client.getClient();
+        var response = await client.UserApi.RegisterAccount(new AccountRegistrationRequest()
+        {
+            // DeviceIdentifier = SystemInfo.deviceUniqueIdentifier,
+            DeviceIdentifier = Guid.NewGuid().ToString(),
+            Password = password.text,
+            Username = username.text,
+            PhoneNumber = phoneNumber.text,
+        });
+
+        response.Get(
+            (success) =>
+            {
+                ApplicationState.player = new Player(success.User);
+                PlayerPrefs.SetString("username", username.text);
+                PlayerPrefs.SetString("password", password.text);
+                PlayerPrefs.SetString("token", success.Token);
+                menuPanelController.showLoggedInPanel();
+            },
+            (failure) =>
+            {
+                responseInfo.text = failure.Detail;
+            }
+        );
+    }
+}

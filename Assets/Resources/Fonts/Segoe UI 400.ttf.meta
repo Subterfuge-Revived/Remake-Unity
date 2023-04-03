@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:508a3aef68d7df4ace657bf0e68e9fbe61bceecf004e118a0ca847f7f2260acb
-size 563
+fileFormatVersion: 2
+guid: 52ed8ba48fae3244287694af5b66b881
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Segoe UI
+  fontNames:
+  - Segoe UI
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f1f09dfd2682e76429afacfad098d2b4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

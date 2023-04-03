@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a2f614a070f5eb7ebfca5a1b40c6a6587de76e41321b3480e78a4115b7d30d0
-size 449
+﻿using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Rooms.Multiplayer.GameSelect
+{
+    public class SliderTextUpdater : MonoBehaviour
+    {
+        public TextMeshProUGUI textValue;
+        public String textPrefix;
+
+        public void setValue(Slider slider)
+        {
+            var roundedVal = Mathf.Round(slider.value * 100f) * 0.01f;
+            textValue.text = $"{textPrefix}: {roundedVal}";
+        }
+    }
+}

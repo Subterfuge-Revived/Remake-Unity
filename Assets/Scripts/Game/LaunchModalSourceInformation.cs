@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25393e62b54b84689dc85d0e2f57859a8bde80164e36e0b7c28a06373a619197
-size 316
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LaunchModalSourceInformation : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+}

@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:623be06a47293b4b37cd8e993f62048e5d44e7fe568dd0d984adce4712a72006
-size 857
+﻿using Subterfuge.Remake.Core.Entities;
+using Subterfuge.Remake.Core.Entities.Components;
+using Subterfuge.Remake.Core.Entities.Positions;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SubLaunchInformation : MonoBehaviour
+{
+
+    public Outpost sourceOutpost;
+    public Entity destination;
+    public Slider slider;
+    public Text SubInformation;
+    public 
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        slider.minValue = 0;
+        slider.maxValue = sourceOutpost.GetComponent<DrillerCarrier>().GetDrillerCount();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        SubInformation.text = "Drillers: " + slider.value + "\n" +
+                              "Specialists: \n" +
+                              "Destination: " + destination;
+    }
+}

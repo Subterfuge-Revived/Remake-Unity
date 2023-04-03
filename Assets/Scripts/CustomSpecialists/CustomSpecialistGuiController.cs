@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e83204cf26deb3b514b516bfe53e2de493987be245a17a4b10ddbf2d7aa6ac67
-size 946
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CustomSpecialistGuiController : MonoBehaviour
+{
+    public Canvas SpecialistListCanvas;
+    public Canvas PackageListCanvas;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void createSpecialist()
+    {
+        SceneManager.LoadScene("CreateCustomSpecialist");
+    }
+
+    public void toMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void showSpecialistView()
+    {
+        SpecialistListCanvas.gameObject.SetActive(true);
+        PackageListCanvas.gameObject.SetActive(false);
+    }
+
+    public void showPackageView()
+    {
+        SpecialistListCanvas.gameObject.SetActive(false);
+        PackageListCanvas.gameObject.SetActive(true);
+    }
+}
