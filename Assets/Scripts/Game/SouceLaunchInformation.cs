@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cbde8b4f3167199654467a5ae78b6e66903640ad738de190f7c24dd70a572989
-size 826
+﻿using Subterfuge.Remake.Core.Entities.Components;
+using Subterfuge.Remake.Core.Entities.Positions;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SouceLaunchInformation : MonoBehaviour
+{
+    public Outpost source;
+
+    // Update is called once per frame
+    void Update()
+    {
+        Text text = gameObject.GetComponentInChildren<Text>();
+        text.text = "====Source Outpost====\n" +
+                    "Outpost Id: " + source.GetComponent<IdentityManager>().GetId() + "\n" +
+                    "Shields: " + source.GetComponent<ShieldManager>().GetShields() + "\n" +
+                    "Drillers: " + source.GetComponent<DrillerCarrier>().GetDrillerCount() + "\n" +
+                    "Specialists: " + source.GetComponent<SpecialistManager>().GetUncapturedSpecialistCount();
+    }
+}

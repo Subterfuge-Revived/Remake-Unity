@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d8008af7ceb9ec4e89f2734fcf4eece40f45ed644a889794ee89511d12a349e
-size 1057
+﻿using Rooms.Multiplayer.CreateGame;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace Rooms.Multiplayer.GameLobby
+{
+    public class GameLobbyController : MonoBehaviour
+    {
+
+        public TextMeshProUGUI GameLobbyName;
+        public TextMeshProUGUI GameLobbyAuthor;
+
+        public GeneralConfigController GeneralConfigController;
+        public MapConfigController MapConfigController;
+        public void Start()
+        {
+            GameLobbyName.text = ApplicationState.currentGameConfig.RoomName;
+            GameLobbyAuthor.text = ApplicationState.currentGameConfig.Creator.Username;
+            
+            // Load values from configuration value.
+            GeneralConfigController.loadFromConfig(ApplicationState.currentGameConfig.GameSettings);
+            MapConfigController.loadFromConfig(ApplicationState.currentGameConfig.MapConfiguration);
+        }
+        
+        public void back()
+        {
+            SceneManager.LoadScene("GameSelect");
+        }
+        
+    }
+}

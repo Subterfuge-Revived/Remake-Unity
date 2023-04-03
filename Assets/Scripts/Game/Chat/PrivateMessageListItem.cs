@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95251f6955b47abf14a311b1edebd21d1288286da948e7196679f23a6e1cbf5d
-size 605
+﻿using System.Globalization;
+using Subterfuge.Remake.Api.Network;
+using TMPro;
+using UnityEngine;
+
+namespace Rooms.Multiplayer.Game.Chat
+{
+    public class PrivateMessageListItem : MonoBehaviour
+    {
+        private ChatMessage _message;
+        public TextMeshProUGUI SenderInfo;
+        public TextMeshProUGUI messageContent;
+
+        public void setMessage(ChatMessage _message)
+        {
+            SenderInfo.text = _message.SentBy.Username + "   at " + _message.SentAt.ToString(CultureInfo.CurrentCulture);
+            messageContent.text = _message.Message;
+        }
+    }
+}

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:456021497367023872e5445d26f5e159d5d4f125b0d1e89b20f693b1fbc46092
-size 641
+﻿using UnityEngine;
+
+namespace Rooms.Multiplayer
+{
+    public class GlobalColorScheme
+    {
+        private static ColorScheme _colorScheme = ColorScheme.Of(ColorPallet.Cadet);
+
+        public static ColorScheme getColorScheme()
+        {
+            if (_colorScheme == null)
+            {
+                _colorScheme = ColorScheme.Of(ColorPallet.Cadet);
+            }
+
+            return _colorScheme;
+        }
+
+        public static void SetColorScheme(ColorScheme newScheme)
+        {
+            if (newScheme != null)
+            {
+                _colorScheme = newScheme;
+            }
+        }
+    }
+}

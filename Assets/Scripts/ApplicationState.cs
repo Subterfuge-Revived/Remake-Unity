@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af6ece57a5a7befd1c2793ecec3404735edfa915eca1cc897f8d48b845392ba5
-size 774
+﻿using Rooms.Multiplayer;
+using Subterfuge.Remake.Api.Network;
+using Subterfuge.Remake.Core;
+using Subterfuge.Remake.Core.Players;
+
+public static class ApplicationState
+{
+    public static Game CurrentGame { get; set; }
+    public static GameConfiguration currentGameConfig { get; set; }
+    public static bool isMultiplayer { get; set; }
+    
+    
+    public static NetworkClient Client { get; } = new NetworkClient();
+    public static Player player { get; set; } = null; // Default player
+
+    public static void SetActiveRoom(GameConfiguration room)
+    {
+        currentGameConfig = room;
+        if (room.GameSettings.MaxPlayers == room.PlayersInLobby.Count)
+        {
+            CurrentGame = new Game(currentGameConfig);
+        }
+    }
+}

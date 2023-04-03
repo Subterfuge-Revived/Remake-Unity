@@ -1,3 +1,64 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:939fd3ccb2e5f57f113f1cbb8ed16483c7c3b1d8c6febb39089aba822d630f4f
-size 2141
+﻿using Subterfuge.Remake.Api.Network;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Rooms.Multiplayer.CreateGame
+{
+    public class GeneralConfigController : MonoBehaviour
+    {
+        public Toggle rankedToggle;
+        public Toggle anonToggle;
+        public Toggle miningToggle;
+        public Toggle dominationToggle;
+        public Slider playerCountSlider;
+        public Slider minutesPerTickSlider;
+
+        public void loadFromConfig(GameSettings config)
+        {
+            disableInput();
+            rankedToggle.isOn = config.IsRanked;
+            anonToggle.isOn = config.IsAnonymous;
+            miningToggle.isOn = config.Goal == Goal.Mining;
+            dominationToggle.isOn = config.Goal == Goal.Domination;
+            playerCountSlider.value = config.MaxPlayers;
+            minutesPerTickSlider.value = (float)config.MinutesPerTick;
+        }
+
+        public void disableInput()
+        {
+            rankedToggle.interactable = false;
+            anonToggle.interactable = false;
+            miningToggle.interactable = false;
+            dominationToggle.interactable = false;
+            playerCountSlider.interactable = false;
+            minutesPerTickSlider.interactable = false;
+        }
+
+        public GameSettings getConfiguredValues()
+        {
+            var config = new GameSettings();
+            config.IsAnonymous = anonToggle.isOn;
+            config.IsRanked = rankedToggle.isOn;
+            config.Goal = miningToggle.isOn ? Goal.Mining : Goal.Domination;
+            config.MaxPlayers = (int)playerCountSlider.value;
+            config.MinutesPerTick = minutesPerTickSlider.value;
+            return config;
+        }
+
+        // Check if the selected options are valid.
+        public void validate()
+        {
+            
+        }
+
+    }
+}
+
+public class GeneralConfig
+{
+    public bool IsRanked { get; set; } = true;
+    public bool IsAnonymous { get; set; } = false;
+    public Goal Goal { get; set; }= Goal.Mining;
+    public int MaxPlayers { get; set; } = 6;
+    public double MinutesPerTick { get; set; }= 10.0;
+}

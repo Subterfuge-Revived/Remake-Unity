@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:606f4e312d1ea1cf90781e3bad62296f540e3cb164615098fd4b928bf9ddf9bf
-size 851
+﻿using TMPro;
+using UnityEngine;
+
+namespace Rooms.Multiplayer.CreateGame
+{
+    public class OutpostWeightDisplay : MonoBehaviour
+    {
+        public TextMeshProUGUI totalOutposts;
+        public TextMeshProUGUI factoryCount;
+        public TextMeshProUGUI generatorCount;
+        public TextMeshProUGUI watchtowerCount;
+
+        public void setTotalOutposts(int count)
+        {
+            totalOutposts.text = count.ToString();
+        }
+        
+        public void setTotalFactories(int count)
+        {
+            factoryCount.text = count.ToString();
+        }
+        
+        public void setTotalGenerators(int count)
+        {
+            generatorCount.text = count.ToString();
+        }
+        
+        public void setTotalWatchtowers(int count)
+        {
+            watchtowerCount.text = count.ToString();
+        }
+        
+    }
+}

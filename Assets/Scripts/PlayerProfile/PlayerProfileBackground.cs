@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b5376c8d577da530f195201e2a526f3f3d4e70fd56812a2fd956a614d0709ac
-size 467
+﻿namespace Rooms.Multiplayer.PlayerProfile
+{
+    public enum PlayerProfileBackground
+    {
+        None = 0,
+        Solid = 1,
+        GradientHorizontal = 2,
+        GradientDiagonal = 3,
+        GradientConicalCorner = 4,
+        GradientConicalEdge = 5,
+        GradientMiddleOut = 6,
+        GradientRadial = 7,
+        GradientSpiral = 8,
+        GradientStar = 9,
+    }
+
+    public enum PlayerProfileBorder
+    {
+        None = 0,
+    }
+}

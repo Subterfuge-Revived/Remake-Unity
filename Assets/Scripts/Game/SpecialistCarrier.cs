@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:faedb0bf7102098443e9a5ebf0fb9577358e493e8e11dc87126ab00ae9542d57
-size 1016
+﻿using System;
+using System.Linq;
+using Subterfuge.Remake.Core.Entities.Components;
+using TMPro;
+using UnityEngine;
+
+public class SpecialistCarrier : MonoBehaviour
+ {
+     private SpecialistManager specialistCarrier;
+     public TextMeshPro specialistText;
+    
+     // Start is called before the first frame update
+     void Start()
+     {
+         OutpostManager outpostManager = gameObject.GetComponent<OutpostManager>();
+         if (outpostManager != null)
+         {
+             specialistCarrier = outpostManager.outpost.GetComponent<SpecialistManager>();
+         }
+         else
+         {
+             specialistCarrier = gameObject.GetComponentInParent<SubManager>().sub.GetComponent<SpecialistManager>();
+         }
+     }
+
+     // Update is called once per frame
+     void Update()
+     {
+         var specialists = String.Join(",", specialistCarrier.GetSpecialists().Select(it => it.GetSpecialistId().ToString()));
+         specialistText.text = specialists;
+     }
+ }
