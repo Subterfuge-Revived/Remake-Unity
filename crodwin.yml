@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72f568c61c1a0592fb508f51b97d383f5056943f609d66105ef147df2b123201
-size 142
+files:
+  - source: /Assets/lang/strings.csv
+    translation: /Assets/lang/%locale%_strings.csv
+    scheme: 'source_phrase,context,translation'
