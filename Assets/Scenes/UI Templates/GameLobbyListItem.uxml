@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; height: 32px; background-color: rgba(145, 152, 168, 0.83); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+        <ui:GroupBox name="LobbyTitle" style="height: 50%; flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:GroupBox name="GameTitle" style="width: 70%;">
+                <ui:Label tabindex="-1" text="Game Title" display-tooltip-when-elided="true" />
+            </ui:GroupBox>
+            <ui:GroupBox name="PlayerCount" style="width: 20%;">
+                <ui:Label tabindex="-1" text="0/10" display-tooltip-when-elided="true" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+        <ui:GroupBox name="GameDetails" style="height: 50%; flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:GroupBox name="Creator" style="width: 50%;">
+                <ui:Label tabindex="-1" text="By: Username" display-tooltip-when-elided="true" />
+            </ui:GroupBox>
+            <ui:GroupBox name="GameModeFlags" style="width: 50%;">
+                <ui:Label tabindex="-1" text="Flags" display-tooltip-when-elided="true" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
