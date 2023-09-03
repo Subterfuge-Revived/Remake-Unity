@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Subterfuge.Remake.Api.Network;
-using Subterfuge.Remake.Core;
+using Subterfuge.Remake.Core.Entities;
 using Subterfuge.Remake.Core.Entities.Components;
 using Subterfuge.Remake.Core.Entities.Positions;
 using Subterfuge.Remake.Core.GameEvents.PlayerTriggeredEvents;
 using Subterfuge.Remake.Core.Players;
 using Subterfuge.Remake.Core.Timing;
+using Subterfuge.Remake.Core.Topologies;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,72 +23,97 @@ public class GameManager : MonoBehaviour
     public Outpost destinationOutpost;
     public Slider drillerSlider;
     public GameObject timeMachineHud;
+    public Camera camera;
     
     // Start is called before the first frame update
     async void Start()
     {
-        this.SetLaunchHub(false);
+        SetLaunchHub(false);
         // TODO: Add a configuration to the `Game` object to determine if it is a multiplayer game.
         if (ApplicationState.CurrentGame != null && ApplicationState.isMultiplayer)
         {
             loadMultiplayerGame();
         }
-        else
+        
+        // Set the default camera location to center on your player's outposts and set the zoom level to maximum of 1/2 the map size.
+        camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, -1);
+    }
+    
+    private float GetDistanceToTouch(RftVector worldCoordinate, IEntity go)
+    {
+        return System.Numerics.Vector2.Distance(worldCoordinate.ToVector2(),
+            go.GetComponent<PositionManager>().CurrentLocation.ToVector2());
+    }
+
+    private Outpost GetOutpostClosestToTouch(Touch touch)
+    {
+        // Set "z" to be 20 units away from the camera/UI layer to be able to raycast to the touch point.
+        Vector3 touchVector = new Vector3(touch.position.x, touch.position.y, 20);
+
+        // Raycast to the UI plane to determine the world coordinates from the touch.
+        Vector3 worldPoint = camera.ScreenToWorldPoint(touchVector);
+        RftVector worldCoordinate = new RftVector(worldPoint.x, worldPoint.y);
+
+        List<Outpost> entitiesNearTouch = ApplicationState.CurrentGame.TimeMachine
+            .GetState()
+            .GetOutposts()
+            .OrderBy(go => GetDistanceToTouch(worldCoordinate, go))
+            .ToList();
+
+        IEntity closestEntity = entitiesNearTouch.FirstOrDefault();
+        float distanceToClosestEntity = GetDistanceToTouch(worldCoordinate, closestEntity);
+
+        if (distanceToClosestEntity > 8.0f)
         {
-            loadSinglePlayerGame();
+            Debug.unityLogger.Log(
+                $"No entities near touch. Closest: {closestEntity.GetComponent<IdentityManager>().GetName()} - {distanceToClosestEntity}rft");
+            return null;
         }
+
+        // Set the closest entity to touch.
+        Outpost touchedOutpost = entitiesNearTouch.First() as Outpost;
+        String sourceName = touchedOutpost.GetComponent<IdentityManager>().GetName();
+        String sourceOwner = touchedOutpost.GetComponent<DrillerCarrier>().GetOwner()?.GetPlayerName();
+        Debug.unityLogger.Log($"Touched {sourceName}({sourceOwner})");
+        return touchedOutpost;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount == 1)
         {
-            // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
+            Touch touch = Input.touches.First();
+
+            if (touch.phase == TouchPhase.Began)
             {
-                // Clicked object is an outpost, don't move the camera.
-                launchOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
-                return;
-            }   
-        }
-        // If the mouse button is released, apply velocity to the map to scroll
-        if (Input.GetMouseButtonUp(0))
-        {
-            // If the first click was on an outpost, check if the second is on another outpost for a launch.
-            if (launchOutpost != null && showLaunchHud == false)
-            {
-                // Check if the pressed location was an outpost. If it was, the user is trying to launch a sub.
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-                if (hit.collider != null && hit.collider.gameObject.tag == "Outpost")
+                Outpost touchedOutpost = GetOutpostClosestToTouch(touch);
+
+                // Only set the launch outpost if the player owns it.
+                if (Equals(touchedOutpost.GetComponent<DrillerCarrier>().GetOwner(), ApplicationState.player))
                 {
-                    // Clicked object is an outpost, don't move the camera.
-                    destinationOutpost = hit.collider.gameObject.GetComponent<OutpostManager>().outpost;
-                    
-                    // only show the hud if the souce outpost is owned by the current player & the destination is not the source.
-                    if (launchOutpost != destinationOutpost &&
-                        launchOutpost.GetComponent<DrillerCarrier>().GetOwner().GetId() == ApplicationState.player.GetId())
-                    {
-
-                        SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
-                        sourcePanel.source = launchOutpost;
-                        SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
-                        informationPanel.destination = destinationOutpost;
-                        informationPanel.sourceOutpost = launchOutpost;
-                        drillerSlider.maxValue = launchOutpost.GetComponent<DrillerCarrier>().GetDrillerCount();
-
-                        this.SetLaunchHub(true);
-                    }
-                    else
-                    {
-                        launchOutpost = null;
-                    }
+                    launchOutpost = touchedOutpost;
                 }
-            } else if (showLaunchHud)
+            }
+            
+            if (touch.phase == TouchPhase.Ended && launchOutpost != null)
             {
-                // Determine if the click was in the panel
-                if (EventSystem.current.IsPointerOverGameObject()) return;
-                this.SetLaunchHub(false);
+                Debug.unityLogger.Log("Touch ended with valid launch outpost...");
+                destinationOutpost = GetOutpostClosestToTouch(touch);
+
+                if (destinationOutpost == launchOutpost) return;
+                String destinationName = destinationOutpost.GetComponent<IdentityManager>().GetName();
+                String destinationOwner =
+                    destinationOutpost.GetComponent<DrillerCarrier>().GetOwner()?.GetPlayerName();
+                Debug.unityLogger.Log($"Destination: {destinationName}({destinationOwner})");
+
+                SouceLaunchInformation sourcePanel = launchHud.GetComponentInChildren<SouceLaunchInformation>();
+                sourcePanel.source = launchOutpost;
+                SubLaunchInformation informationPanel = launchHud.GetComponentInChildren<SubLaunchInformation>();
+                informationPanel.destination = destinationOutpost;
+                informationPanel.sourceOutpost = launchOutpost;
+                drillerSlider.maxValue = launchOutpost.GetComponent<DrillerCarrier>().GetDrillerCount();
+
+                SetLaunchHub(true);
             }
         }
     }
@@ -189,82 +213,6 @@ public class GameManager : MonoBehaviour
                 }
             );
         }
-    }
-
-    public void loadSinglePlayerGame()
-    {
-        var players = new List<User>()
-        {
-            new User() { Id = "1", Username = "DefaultUser" },
-            new User() { Id = "2", Username = "AnotherUser" },
-        };
-        
-        GameConfiguration localConfig = new GameConfiguration()
-        {
-            Creator = players[0],
-            ExpiresAt = DateTime.MaxValue,
-            GameSettings = new GameSettings()
-            {
-                Goal = Goal.Domination,
-                IsAnonymous = false,
-                IsPrivate = false,
-                IsRanked = false,
-                MaxPlayers = 2,
-                MinutesPerTick = 0.2
-            },
-            GameVersion = GameVersion.ALPHA01,
-            Id = "Test",
-            MapConfiguration = new MapConfiguration()
-            {
-                DormantsPerPlayer = 3,
-                MaximumOutpostDistance = 200,
-                MinimumOutpostDistance = 50,
-                OutpostDistribution = new OutpostDistribution()
-                {
-                    FactoryWeight = 0.33f,
-                    GeneratorWeight = 0.33f,
-                    WatchtowerWeight = 0.33f
-                },
-                OutpostsPerPlayer = 5,
-                Seed = 12345
-            },
-            PlayersInLobby = players,
-            PlayerSpecialistDecks = new Dictionary<string, List<SpecialistTypeId>>()
-            {
-                { "1", new List<SpecialistTypeId>
-                {
-                    SpecialistTypeId.Advisor, SpecialistTypeId.Amnesiac, SpecialistTypeId.Assasin,
-                    SpecialistTypeId.Automation, SpecialistTypeId.Bolster, SpecialistTypeId.Breeder, SpecialistTypeId.Dispatcher,
-                    SpecialistTypeId.Economist, SpecialistTypeId.Enforcer, SpecialistTypeId.Engineer, SpecialistTypeId.Escort,
-                    SpecialistTypeId.Foreman, SpecialistTypeId.Helmsman, SpecialistTypeId.Hypnotist, SpecialistTypeId.Icicle,
-                    SpecialistTypeId.Industrialist ,SpecialistTypeId.Infiltrator, SpecialistTypeId.Inspector, SpecialistTypeId.Martyr,
-                    SpecialistTypeId.Merchant, SpecialistTypeId.Pirate, SpecialistTypeId.Princess, SpecialistTypeId.Queen,
-                    SpecialistTypeId.Saboteur, SpecialistTypeId.Sapper, SpecialistTypeId.Scrutineer, SpecialistTypeId.Sentry,
-                    SpecialistTypeId.Smuggler, SpecialistTypeId.Sniper, SpecialistTypeId.Technician, SpecialistTypeId.Theif,
-                    SpecialistTypeId.Tinkerer, SpecialistTypeId.Veteran, SpecialistTypeId.Warden, SpecialistTypeId.Double_Agent,
-                    SpecialistTypeId.Intelligence_Officer, SpecialistTypeId.Iron_Maiden, SpecialistTypeId.Revered_Elder, SpecialistTypeId.SignalJammer
-                } }, 
-                { "2", new List<SpecialistTypeId>
-                {
-                    SpecialistTypeId.Advisor, SpecialistTypeId.Amnesiac, SpecialistTypeId.Assasin,
-                    SpecialistTypeId.Automation, SpecialistTypeId.Bolster, SpecialistTypeId.Breeder, SpecialistTypeId.Dispatcher,
-                    SpecialistTypeId.Economist, SpecialistTypeId.Enforcer, SpecialistTypeId.Engineer, SpecialistTypeId.Escort,
-                    SpecialistTypeId.Foreman, SpecialistTypeId.Helmsman, SpecialistTypeId.Hypnotist, SpecialistTypeId.Icicle,
-                    SpecialistTypeId.Industrialist ,SpecialistTypeId.Infiltrator, SpecialistTypeId.Inspector, SpecialistTypeId.Martyr,
-                    SpecialistTypeId.Merchant, SpecialistTypeId.Pirate, SpecialistTypeId.Princess, SpecialistTypeId.Queen,
-                    SpecialistTypeId.Saboteur, SpecialistTypeId.Sapper, SpecialistTypeId.Scrutineer, SpecialistTypeId.Sentry,
-                    SpecialistTypeId.Smuggler, SpecialistTypeId.Sniper, SpecialistTypeId.Technician, SpecialistTypeId.Theif,
-                    SpecialistTypeId.Tinkerer, SpecialistTypeId.Veteran, SpecialistTypeId.Warden, SpecialistTypeId.Double_Agent,
-                    SpecialistTypeId.Intelligence_Officer, SpecialistTypeId.Iron_Maiden, SpecialistTypeId.Revered_Elder, SpecialistTypeId.SignalJammer
-                } }
-            },
-            RoomName = "Sample Lobby",
-            RoomStatus = RoomStatus.Ongoing,
-        };
-        Game game = new Game(localConfig);
-        ApplicationState.CurrentGame = game;
-        ApplicationState.currentGameConfig = localConfig;
-        ApplicationState.player = new Player(players[0]);
     }
 
     public void back()

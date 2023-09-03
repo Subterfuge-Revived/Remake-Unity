@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center; align-self: center; height: 100%; width: 100%;">
+        <ui:VisualElement name="player-profile-container" style="flex-grow: 1; width: 10%; display: none;">
+            <ui:VisualElement name="player-profile" style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgba(224, 52, 52, 0.51); margin-bottom: 5px; margin-top: 5px; margin-right: 5px; margin-left: 5px; -unity-background-scale-mode: scale-to-fit;">
+                <ui:VisualElement name="user-info-mid" style="flex-grow: 1; flex-direction: row; justify-content: center; align-self: center; height: 15%; margin-bottom: 0; flex-shrink: 1; align-items: center; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;">
+                    <ui:Label tabindex="-1" text="Lv. 7" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-font-style: bold; align-items: flex-start; justify-content: flex-start; align-self: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 12px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: flex-end; align-self: center;">
+                        <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-image: resource(&apos;Gui/Icons/TrophyIcon&apos;); align-items: center; justify-content: center; align-self: center; -unity-background-scale-mode: scale-to-fit; height: 100%; width: 20%; -unity-text-align: upper-center;" />
+                        <ui:Label tabindex="-1" text="32" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-align: upper-center; justify-content: center; align-self: center; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="user-names" style="flex-grow: 1; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 60%; display: flex; visibility: visible; width: 100%;">
+                    <ui:Label tabindex="-1" text="Qu" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-font-style: bold; align-items: flex-start; justify-content: center; align-self: center; font-size: 18px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    <ui:Label tabindex="-1" text="Scientific" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-font-style: bold; align-items: flex-start; justify-content: center; align-self: center; font-size: 8px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="player-profile-simple" style="flex-grow: 1; color: rgb(255, 255, 255); flex-direction: row; width: 10%;">
+            <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Gui/Icons/AccountIcon&apos;); -unity-background-scale-mode: scale-to-fit; width: 20%;" />
+            <ui:Label tabindex="-1" text="Username" display-tooltip-when-elided="true" style="width: 80%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="player-currency" style="flex-grow: 1; width: 50%; flex-direction: row; align-self: center;">
+            <ui:VisualElement name="np-currency" style="flex-grow: 1; align-items: center; justify-content: center; align-self: auto; width: 80%;">
+                <ui:VisualElement name="np-icon" style="flex-grow: 0; width: 50%; justify-content: center; align-self: center; align-items: center; flex-direction: row; -unity-text-align: upper-center;">
+                    <ui:VisualElement name="np-left-cap" style="flex-grow: 0; align-items: center; justify-content: center; align-self: center; flex-shrink: 0; -unity-text-align: upper-center; background-color: rgb(255, 255, 255); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 2px; border-right-width: 0; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 0; border-bottom-right-radius: 0; height: 100%; padding-right: 0; width: 20%;">
+                        <ui:VisualElement style="flex-grow: 1; background-image: resource(&apos;Gui/Icons/Neptunium&apos;); -unity-background-image-tint-color: rgb(195, 189, 135); align-items: center; justify-content: center; align-self: center; -unity-background-scale-mode: scale-to-fit; height: 100%; width: 100%; left: 2px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="np-amount" style="background-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); align-items: center; justify-content: center; align-self: center; height: 100%; width: 40%;">
+                        <ui:Label tabindex="-1" text="1522" display-tooltip-when-elided="true" name="Label" style="font-size: 8px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="np-right-cap" style="flex-grow: 0; align-items: center; justify-content: center; align-self: center; flex-shrink: 0; -unity-text-align: upper-center; background-color: rgb(255, 255, 255); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 0; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 40px; border-bottom-right-radius: 40px; height: 100%; width: 20%;">
+                        <ui:VisualElement name="add-button" style="flex-grow: 1; background-image: resource(&apos;Gui/Icons/AddIcon&apos;); width: 100%; height: 95%; align-items: center; justify-content: center; align-self: center; -unity-background-image-tint-color: rgb(0, 0, 0); flex-shrink: 1; -unity-text-align: upper-center; -unity-background-scale-mode: scale-to-fit;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 20%;">
+                <ui:Button display-tooltip-when-elided="true" name="settings-button" style="width: 100%; height: 100%; background-image: resource(&apos;Gui/Icons/SettingsIcon&apos;); background-color: rgba(188, 188, 188, 0); -unity-background-scale-mode: scale-to-fit; padding-bottom: 0; padding-top: 0; padding-right: 0; padding-left: 0; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

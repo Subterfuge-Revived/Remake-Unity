@@ -15,8 +15,9 @@ public class GameLoader : MonoBehaviour
     // Retry info
     private DateTime nextRetry = DateTime.Now.AddSeconds(-1);
     private int retryCount = 0;
-    
 
+
+    public Canvas FullCanvasDisableWhenOnline;
     public Canvas loadingCanvas;
     public TextMeshProUGUI loadingText;
     public Canvas serverOfflineCanvas;
@@ -27,6 +28,9 @@ public class GameLoader : MonoBehaviour
     public Canvas loginCanvas;
     public Canvas registerAccountCanvas;
 
+    public Canvas MainMenuCanvas;
+    public bool skipServerCheck;
+
     // Start is called before the first frame update
     async void Start()
     {
@@ -34,13 +38,19 @@ public class GameLoader : MonoBehaviour
         // Load language strings.
         loadingText.text = "Loading Languages...";
         StringFactory.LoadStrings();
-        loadingText.text = "Loading music...";
-        GameObject.FindGameObjectWithTag("Music").GetComponent<AudioPlayer>().Play();
         loadingText.text = "Connecting to Server...";
         
         // Check if the server is online.
-        await LoopUntilConnected();
-        await AttemptLogin();
+        if (!skipServerCheck)
+        {
+            await LoopUntilConnected();
+            await AttemptLogin();
+        }
+        else
+        {
+            MainMenuCanvas.gameObject.SetActive(true);
+            FullCanvasDisableWhenOnline.gameObject.SetActive(false);
+        }
     }
 
     public void Update()
@@ -99,7 +109,8 @@ public class GameLoader : MonoBehaviour
         
         if (isLoggedIn)
         {
-            SceneManager.LoadScene("MainMenu");
+            MainMenuCanvas.gameObject.SetActive(true);
+            FullCanvasDisableWhenOnline.gameObject.SetActive(false);
             return true;
         }
         else

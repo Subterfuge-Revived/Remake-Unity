@@ -153,29 +153,34 @@ using UnityEngine;
 
     private void ScaleTextToZoom()
     {
-        if (Input.mouseScrollDelta.y > 0)
-        {
-            if (zoomsSkipped < 0 || !(outpostNameText.fontSize > 6))
-            {
-                zoomsSkipped++;
-                return;
-            }
-
-            // Zooming In, decrease font size.
-            outpostNameText.fontSize -= 2;
-            drillerCountText.fontSize -= 2;
-        }
-        else
-        {
-            if (zoomsSkipped > 0 || !(outpostNameText.fontSize < 18))
-            {
-                zoomsSkipped--;
-                return;
-            }
-            
-            outpostNameText.fontSize += 2;
-            drillerCountText.fontSize += 2;
-        }
+        float finalSize = (float)Screen.width/20.0f;
+        outpostNameText.fontSize = (int)finalSize;
+        drillerCountText.fontSize = (int)finalSize;
+        // guiText.pixelOffset = new Vector2( offset.x * Screen.width, offset.y * Screen.height);
+        
+        // if (Input.mouseScrollDelta.y > 0)
+        // {
+        //     if (zoomsSkipped < 0 || !(outpostNameText.fontSize > 6))
+        //     {
+        //         zoomsSkipped++;
+        //         return;
+        //     }
+        //
+        //     // Zooming In, decrease font size.
+        //     outpostNameText.fontSize -= 2;
+        //     drillerCountText.fontSize -= 2;
+        // }
+        // else
+        // {
+        //     if (zoomsSkipped > 0 || !(outpostNameText.fontSize < 18))
+        //     {
+        //         zoomsSkipped--;
+        //         return;
+        //     }
+        //     
+        //     outpostNameText.fontSize += 2;
+        //     drillerCountText.fontSize += 2;
+        // }
     }
 
     public void Expand()
